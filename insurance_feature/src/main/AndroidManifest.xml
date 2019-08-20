@@ -1,0 +1,19 @@
+<manifest
+        xmlns:dist="http://schemas.android.com/apk/distribution"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.pede.insurance_feature">
+    <dist:module
+            dist:onDemand="true"
+            dist:instant="false"
+            dist:title="@string/title_insurance_feature">
+        <dist:fusing dist:include="true"/>
+    </dist:module>
+
+    <application>
+        <activity android:name=".ui.activity.InsuranceHomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
