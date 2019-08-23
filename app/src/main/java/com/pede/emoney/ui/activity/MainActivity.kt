@@ -83,12 +83,12 @@ class MainActivity : BaseActivity() {
         manager.startInstall(request)
 
         if (manager.installedModules.contains(moduleInsurance)) {
-            onSuccessfulLoad(moduleInsurance, launch = true)
+            onSuccessfulLoad(launch = true)
             return
         }
     }
 
-    private fun onSuccessfulLoad(moduleName: String, launch: Boolean) {
+    private fun onSuccessfulLoad(launch: Boolean) {
         if (launch) {
             launchActivity(MODULE_INSURANCE_CLASSNAME)
         }
