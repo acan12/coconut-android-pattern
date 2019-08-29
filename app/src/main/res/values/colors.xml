@@ -3,4 +3,9 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <!-- Trio Bar Colors -->
+    <color name="trio_bar_blue">#3AD4DE</color>
+    <color name="trio_bar_orange">#FFB800</color>
+    <color name="trio_bar_red">#F26253</color>
 </resources>
