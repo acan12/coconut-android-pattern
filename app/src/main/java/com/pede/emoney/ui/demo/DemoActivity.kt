@@ -35,12 +35,13 @@ class DemoActivity : BaseActivity() {
         setContentView(R.layout.activity_demo)
 
         manager = SplitInstallManagerFactory.create(this)
+        val event = App.getEvent()
         val navigation = App.getNavigationComponent()
 
 
         RxTimer.doTimer(10000, false, object : RxTimer() {
             override fun onCallback(along: Long?) {
-                navigation.homeNavigation(intent).showLabelManager(
+                event.showLabelManager(
                     "Demo Dependency Injection OK!",
                     labelText,
                     this@DemoActivity
@@ -117,7 +118,7 @@ class DemoActivity : BaseActivity() {
                 showResult(it)
                 if (it.toLowerCase().contains("done")) {
                     loadInsuranceModule()
-//                    App.getNavigationComponent().homeNavigation(intent).goSecondPage(it, this)
+                    App.getNavigationComponent().homeNavigation(intent).goSecondPage(it, this)
                 }
             }
 
@@ -158,7 +159,12 @@ class DemoActivity : BaseActivity() {
             val tw = object : TextWatcher {
                 override fun afterTextChanged(s: Editable?) = Unit
 
-                override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
+                override fun beforeTextChanged(
+                    s: CharSequence?,
+                    start: Int,
+                    count: Int,
+                    after: Int
+                ) = Unit
 
                 override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                     s?.toString()?.let { emit.onNext(it) }

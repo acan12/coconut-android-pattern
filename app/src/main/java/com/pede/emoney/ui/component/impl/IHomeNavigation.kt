@@ -6,7 +6,5 @@ import android.widget.TextView
 
 interface IHomeNavigation : IBaseNavigation {
 
-    fun showLabelManager(label: String, labelTextView: TextView, context: Context)
-
     fun goSecondPage(txt: String, context: Context)
 }

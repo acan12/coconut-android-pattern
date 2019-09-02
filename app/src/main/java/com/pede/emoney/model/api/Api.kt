@@ -5,6 +5,7 @@ import com.pede.emoney.App
 import com.pede.emoney.IConfig
 import com.pede.emoney.model.api.request.SignInRequestModel
 import com.pede.emoney.model.api.request.SignUpRequesModel
+import com.pede.emoney.model.api.response.CheckVersionResponseModel
 import com.pede.emoney.model.api.response.SignInResponseModel
 import com.pede.emoney.model.api.response.SignUpResponseModel
 import com.pede.emoney.ui.component.manager.SessionManager
@@ -36,16 +37,24 @@ class Api : BaseApi() {
         /**
          * USERS
          */
-
         @Synchronized
         fun doSignUp(request: SignUpRequesModel): Observable<SignUpResponseModel> {
             return initApiDomain().signUp(initHeader(), request)
         }
 
-
         @Synchronized
         fun doSignIn(request: SignInRequestModel): Observable<SignInResponseModel> {
             return initApiDomain().signIn(initHeader(), request)
+        }
+
+        /**
+         * CMS
+         */
+
+        // CMS Check App Version
+        @Synchronized
+        fun checkAppVersion(): Observable<CheckVersionResponseModel> {
+            return initApiDomain().checkAppVersion(initHeader())
         }
     }
 }

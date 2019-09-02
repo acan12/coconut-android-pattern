@@ -4,7 +4,7 @@ interface IConfig {
     companion object {
 
         val KEY_DATA_SECOND_ACTIVITY = "KEY_SECOND"
-        val API_BASE_URL = "http://"
+        val API_BASE_URL = "https://indoalliz-test.apigee.net/indoalliz/api/v1/";
         val SESSION_TOKEN_CREDENTIAL = ""
         val SESSION_LOGIN_KEY = "session_login"
 

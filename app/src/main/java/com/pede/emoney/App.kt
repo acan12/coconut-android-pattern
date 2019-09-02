@@ -15,6 +15,9 @@ import com.pede.emoney.ui.component.module.NavModule
 
 class App : BaseApp() {
 
+    init {
+        instance = this
+    }
 
     companion object {
 

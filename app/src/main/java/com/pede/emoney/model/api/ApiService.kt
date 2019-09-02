@@ -2,13 +2,12 @@ package app.clappingape.com.elevaniamartpos.model.api
 
 import com.pede.emoney.model.api.request.SignInRequestModel
 import com.pede.emoney.model.api.request.SignUpRequesModel
+import com.pede.emoney.model.api.response.CheckVersionResponseModel
 import com.pede.emoney.model.api.response.SignInResponseModel
 import com.pede.emoney.model.api.response.SignUpResponseModel
 import io.reactivex.Observable
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.HeaderMap
-import retrofit2.http.POST
+import retrofit2.http.*
 
 
 interface ApiService {
@@ -23,6 +22,17 @@ interface ApiService {
     //Users - Sign In
     @POST("users/login")
     fun signIn(@HeaderMap headers: Map<String, String>, @Body signInRequest: SignInRequestModel): Observable<SignInResponseModel>
+
+
+    /**
+     * CMS
+     */
+    //CMS Check App Version
+    @GET("check/version")
+    fun checkAppVersion(@HeaderMap headers: Map<String, String>): Observable<CheckVersionResponseModel>
+
+
+
 
 //    //Users - Forgot Pin
 //    @Headers("Content-Type:" + ApiConfigs.CONTENT_TYPE, "partnerCode:" + ApiConfigs.PARTNER_CODE)
