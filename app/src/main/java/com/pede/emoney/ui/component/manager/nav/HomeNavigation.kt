@@ -1,8 +1,7 @@
-package com.pede.emoney.ui.component.manager
+package com.pede.emoney.ui.component.manager.nav
 
 import android.content.Context
 import android.content.Intent
-import android.widget.TextView
 import com.pede.emoney.IConfig
 import com.pede.emoney.ui.activity.SecondActivity
 import com.pede.emoney.ui.component.impl.IHomeNavigation

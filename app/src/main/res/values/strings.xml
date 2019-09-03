@@ -1,4 +1,1495 @@
 <resources>
-    <string name="app_name">AndroidPedeKotlin</string>
+
     <string name="title_insurance_feature">Insurance Module</string>
+    <string name="netcore_app_id">19fbb75db22a96be095d5a0ac636a493</string>
+
+    <string name="app_name_pede">pede</string>
+    <string name="app_name">pede-android</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_more_menu"></string>
+    <string name="action_chat"></string>
+    <string name="action_close">Tutup</string>
+
+    <!-- General -->
+    <string name="total_pembayaran">Total Pembayaran</string>
+    <string name="tagihan">Tagihan</string>
+    <string name="pembayaran_string">Pembayaran %1$s</string>
+    <string name="waktu_transaksi">Waktu Transaksi : %1$s</string>
+    <string name="selengkapnya">Selengkapnya</string>
+    <string name="lanjutkan">Lanjutkan</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="ubah">Ubah</string>
+    <string name="jangan_tampilkan_lagi">Jangan tampilkan lagi</string>
+
+    <!-- Splash Activity -->
+    <string name="title_activity_splash">Splash</string>
+    <string name="splash_taglines">Ponsel</string>
+    <string name="splash_taglines_semua">Duit</string>
+
+    <!-- Main Activity -->
+    <string name="main_activity_label_belanja_dan_tagihan">Belanja dan Tagihan</string>
+    <string name="main_activity_msg_double_back_to_exit">Tekan sekali lagi untuk keluar</string>
+    <string name="main_activity_dialog_detail_saldo_title">Rincian Saldo</string>
+    <string name="main_activity_dialog_detail_saldo_label_kamu">Saldo milik kamu</string>
+    <string name="main_activity_dialog_detail_saldo_label_kamu_desc">Saldo milik kamu merupakan gabungan dari:</string>
+    <string name="main_activity_dialog_detail_saldo_label_ottocash">Saldo PedeCash</string>
+    <string name="main_activity_dialog_detail_saldo_label_phl">Saldo Pede Hasil Lebih</string>
+    <string name="main_activity_dialog_detail_saldo_btn_top_up">Top Up</string>
+    <string name="main_activity_dialog_detail_saldo_msg_saldo_empty">Saldo 0, silahkan Top Up Dulu</string>
+    <string name="main_activity_bottom_beranda">Beranda</string>
+    <string name="main_activity_bottom_lainnya">Lainnya</string>
+    <string name="main_activity_bottom_riwayat">Riwayat</string>
+    <string name="main_activity_bottom_qr_scan">Bayar</string>
+    <string name="main_activity_bottom_investasi">Investasi</string>
+    <string name="main_activity_bottom_asuransi">Asuransi</string>
+    <string name="main_activity_seluruh_produk">Seluruh Produk</string>
+
+    <!-- Sign Up Activity -->
+    <string name="title_activity_sign_up">Sign Up</string>
+    <string name="sign_up_tab_title_sign_in">Masuk Akun</string>
+    <string name="sign_up_tab_title_sign_up">Buat Akun</string>
+    <string name="sign_up_tab_title_register">Daftar</string>
+    <string name="sign_up_label_name">Nama Anda</string>
+    <string name="sign_up_label_email">Email Akun</string>
+    <string name="sign_up_label_no_handphone">Nomor Handphone</string>
+    <string name="sign_up_label_dob">Tanggal Lahir</string>
+    <string name="sign_up_label_pin">Kode Pin</string>
+    <string name="sign_up_msg_invalid_fullname">Nama tidak boleh mengandung angka dan simbol</string>
+    <string name="sign_up_label_tac_link"><![CDATA[ Saya telah setuju dengan <u><font color="#3AD4DE">syarat dan ketentuan</font></u> dan <u><font color="#3AD4DE">kebijakan privasi</font></u> Pede yang berlaku. ]]></string>
+    <string name="sign_up_label_tac2_link"><![CDATA[ Hubungkan akun Pede dengan PedeCash\nSaya setuju dengan <u><font color="#3AD4DE">syarat dan ketentuan</font></u> dari PedeCash untuk menghubungkan akun.]]></string>
+    <string name="sign_up_btn_forgot_pin">Lupa PIN?</string>
+    <string name="sign_up_btn_sign_in">Masuk</string>
+    <string name="sign_up_btn_sign_up">Buat Akun</string>
+    <string name="sign_up_msg_sign_up_success">Buat Akun Baru Sukses</string>
+    <string name="signin_no_handphone_hint_resize"><font size="15">Masukkan nomor HP cth 0812 *** ****</font></string>
+    <string name="signin_no_handphone_hint"><font size="15">Masukkan nomor HP cth 0812 *** ****</font></string>
+    <string name="signin_pin_hint"><font size="15">Masukkan kode pin</font></string>
+    <string name="signup_username_hint"><font size="15">Masukkan nama Anda disini</font></string>
+    <string name="signup_email_hint"><font size="15">Masukkan email disini cth sasha@pede.id</font></string>
+    <string name="signup_no_handphone_note">Pastikan normor HP aktif karena akan dikirim kode OTP ke nomor tersebut</string>
+    <string name="setup_pin_label_referral_code">Kode Referal</string>
+    <string name="setup_pin_label_optional"><font size="15">Optional</font></string>
+
+    <!-- Sign In Activity -->
+    <string name="title_activity_sign_in">Sign In</string>
+    <string name="title_activity_no_account"><![CDATA[ Tidak Punya akun ? <u><font color="#3ad4de">Daftar disini</font></u> ]]></string>
+
+    <!-- Forgot Pin Activity -->
+    <string name="title_activity_forgot_pin">Lupa PIN</string>
+    <string name="forgot_pin_label_phone">Nomor Telepon Anda</string>
+    <string name="forgot_pin_btn_reset">Reset PIN</string>
+
+    <!-- OTP Verification Activity -->
+    <string name="title_activity_otp_verification">Otentikasi Akun</string>
+    <string name="otp_verification_label_input_otp">Masukkan 6 digit Kode OTP</string>
+    <string name="otp_verification_msg_otp_not_match">OTP tidak sesuai</string>
+    <string name="otp_verification_btn_resend_otp">Tidak menerima kode verifikasi ? Anda bisa mencoba meminta OTP lagi setelah waktu habis</string>
+    <string name="otp_verification_msg_phone_number">6 Digit kode OTP telah dikirimkan ke nomor %1$s, Silahkan cek HP Anda</string>
+
+    <!-- Setup PIN Activity -->
+    <string name="title_activity_setup_pin">Registrasi PedeCash</string>
+    <string name="setup_pin_label_title">Set PIN Kamu</string>
+    <string name="setup_pin_label_subtitle">Set pin kamu untuk kemudahan bertransaksi di PEDE menggunakan PedeCash</string>
+    <string name="setup_pin_label_pin">PIN PedeCash</string>
+    <string name="setup_pin_label_pin_2">Konfirmasi PIN PedeCash</string>
+    <string name="setup_pin_label_pin_desc">PIN berfungsi untuk menjamin keamanan Anda dalam bertransaksi</string>
+    <string name="setup_pin_btn_next">Aktifkan</string>
+
+    <!-- Success Activation Activity -->
+    <string name="success_activation_header_title">Aktivasi Berhasil</string>
+    <string name="success_activation_title">Akun Berhasil di Aktifkan</string>
+    <string name="success_activation_subtitle">Hai %1$s, Aktivasi akun PedeCash kamu sudah berhasil. Nikmati kemudahan bertransaksi dengan PedeCash di Pede</string>
+    <string name="success_activation_button">Selesai</string>
+
+    <!-- Profile Fragment -->
+    <string name="title_fragment_activity_setting">Profil</string>
+    <string name="profile_fragment_label_premium">PREMIUM</string>
+    <string name="profile_fragment_label_lihat_profile">Lihat Profile</string>
+    <string name="profile_fragment_label_pede_hasil_lebih">Pede Hasil Lebih</string>
+    <string name="profile_fragment_label_pede_cash">PedeCash</string>
+    <string name="profile_fragment_label_ajak_teman_kamu">Ajak Teman Kamu</string>
+    <string name="profile_fragment_label_dapatkan_saldo">Dapatkan saldo hingga Rp 500.000* dengan membagikan kode referral kamu sebanyak-banyaknya</string>
+    <string name="profile_fragment_label_kode_referral_kamu">Kode Referral Kamu :</string>
+    <string name="profile_fragment_label_bagikan">Bagikan</string>
+    <string name="profile_fragment_label_keluar_akun">KELUAR AKUN</string>
+
+    <!-- Notification Activity -->
+    <string name="title_activity_notification">Notification</string>
+
+    <!-- Account Setting Activity -->
+    <string name="title_activity_account_setting">Detil Profil</string>
+
+    <!-- Bank Account List Activity -->
+    <string name="title_activity_bank_account_list">Rekening Bank</string>
+    <string name="title_activity_bank_account_list_transfer">Transfer</string>
+    <string name="bank_account_list_title">Daftar Rekening</string>
+    <string name="bank_account_btn_add">Tambah Rekening</string>
+
+    <!-- Change PIN Activity -->
+    <string name="title_activity_change_pin">Ganti Pin</string>
+    <string name="title_activity_reset_pin">Reset Pin</string>
+    <string name="change_pin_label_old_pin">Kode PIN Lama</string>
+    <string name="change_pin_label_new_pin">Kode PIN Baru</string>
+    <string name="change_pin_label_new_pin_2">Ulangi Kode PIN Baru</string>
+    <string name="change_pin_btn_save">Simpan</string>
+    <string name="change_pin_msg_change_pin_success">Ganti pin berhasil</string>
+    <string name="change_pin_msg_pin_not_match">Pin anda salah</string>
+
+    <!-- Personal Data Setting Activity -->
+    <string name="title_activity_personal_data_setting">Pengaturan Data Pribadi</string>
+    <string name="personal_data_setting_label_data_investasi">Data Investasi</string>
+    <string name="personal_data_setting_label_rekening_bank">Rekening Bank</string>
+    <string name="personal_data_setting_label_bank_qty">%1$d Bank</string>
+    <string name="personal_data_setting_label_data_ktp">Data KTP</string>
+    <string name="personal_data_setting_label_data_ktp_desc">Ganti data KTP</string>
+
+    <!-- Change Profile Picture Activity -->
+    <string name="title_activity_change_profile_picture">Ganti Foto</string>
+    <string name="change_profile_picture_btn_camera">Kamera</string>
+    <string name="change_profile_picture_btn_gallery">Pilih dari Galeri</string>
+
+    <!-- Pede Cash Detail Activity -->
+    <string name="title_activity_pede_cash_detail">PedeCash Plus</string>
+    <string name="title_activity_pede_cash_detail_reg">PedeCash Reguler</string>
+    <string name="title_activity_saldo_pedecash">Saldo PedeCash</string>
+    <string name="title_activity_riwayat_transaksi">Riwayat Transaksi</string>
+    <string name="title_activity_tunjukkan_lebih">Tunjukkan Lebih</string>
+    <string name="title_activity_pede_cash_plus">Saldo PedeCash Plus</string>
+    <string name="title_activity_pede_cash_reg">Saldo PedeCash Reguler</string>
+
+    <!-- Transaction History Activity -->
+    <string name="title_activity_transaction_history">Riwayat</string>
+    <string name="transaction_history_label_empty">Belum ada Transaksi</string>
+    <string name="transaction_history_label_empty_activity">Belum ada Aktivitas</string>
+    <string name="transaction_history_btn_tab_transaction">Transaksi</string>
+    <string name="transaction_history_btn_tab_activity">Aktivitas</string>
+
+    <!-- Point Activity -->
+    <string name="title_activity_point">Point Pede</string>
+
+    <!-- Top Up Activity -->
+    <string name="title_activity_top_up">Top Up PedeCash</string>
+
+    <!-- Contact Activity -->
+    <string name="title_activity_contact">Kontak Pede</string>
+    <string name="contact_activity_label_contact">Kontak</string>
+    <string name="contact_activity_hint_search">Cari kontak Pede...</string>
+
+    <!-- Pulsa Paket Activity -->
+    <string name="title_activity_pulsa_paket">Pulsa dan Paket</string>
+    <string name="pulsa_paket_label_pulsa">Pulsa</string>
+    <string name="pulsa_paket_label_price">Harga</string>
+    <string name="pulsa_paket_label_paket">Paket Data</string>
+    <string name="pulsa_paket_hint_no_handpkone">Masukkan nomor ponsel</string>
+    <string name="pulsa_paket_msg_intro">Masukkan nomor ponsel yang akan diisi pulsa/paket data,
+        lalu enter atau cari nomor dari kontak pribadi anda dengan tap button:</string>
+    <string name="pulsa_paket_label_company">Pihak Penagih</string>
+    <string name="pulsa_paket_label_customer_id">ID Pelanggan / Nama Pelanggan</string>
+    <string name="pulsa_paket_btn_tab_prabayar">Prabayar</string>
+    <string name="pulsa_paket_btn_tab_pascabayar">Pascabayar</string>
+    <string name="pulsa_paket_btn_tab_paket_data">Paket Data</string>
+    <string name="pulsa_paket_btn_buy">Beli Sekarang</string>
+    <string name="pulsa_paket_btn_pay_now">Bayar Sekarang</string>
+
+    <!-- BPJS Activity -->
+    <string name="title_activity_bpjs">Bayar BPJS</string>
+    <string name="bpjs_label_bayar">Bayar</string>
+    <string name="bpjs_hint_no_bpjs">Masukkan nomor kepesertaan BPJS</string>
+    <string name="bpjskes_msg_intro">Masukkan nomor kepesertaan\nBPJS Kesehatan lalu enter atau tap</string>
+    <string name="bpjskerja_msg_intro">Masukkan nomor kepesertaan\nBPJS Ketenagakerjaan lalu enter atau tap</string>
+    <string name="bpjs_btn_tab_kesehatan">Kesehatan</string>
+    <string name="bpjs_btn_tab_ketenagakerjaan">Ketenagakerjaan</string>
+    <string name="bpjs_btn_buy">Bayar Sekarang</string>
+
+    <!-- Telkom Air Listrik Activity -->
+    <string name="title_activity_telkom_listrik_air">Telkom, Listrik dan Air</string>
+    <string name="telkom_air_listrik_hint_id_pelanggan">Masukkan ID / Nomor Pelanggan...</string>
+    <string name="telkom_air_listrik_label_company">Pihak Penagih</string>
+    <string name="telkom_air_listrik_label_customer_id">ID Pelanggan / Nama Pelanggan</string>
+    <string name="telkom_air_listrik_msg_intro">Masukkan ID / Nomor Pelanggan Telkom, PLN atau
+        tahgihan Air anda pada form di atas, lalu enter</string>
+    <string name="telkom_air_listrik_btn_buy">Bayar Sekarang</string>
+
+    <!-- TV Activity -->
+    <string name="title_activity_tv">TV Langganan</string>
+    <string name="tv_hint_id_pelanggan">Masukkan ID / Nomor Pelanggan...</string>
+    <string name="tv_label_company">Pihak Penagih</string>
+    <string name="tv_label_customer_id">ID Pelanggan / Nama Pelanggan</string>
+    <string name="tv_msg_intro">Masukkan ID / Nomor Pelanggan TV langganan Anda pada form di atas, lalu enter</string>
+    <string name="tv_btn_buy">Bayar Sekarang</string>
+
+    <!-- Transfer To Friend Activity -->
+    <string name="title_activity_transfer_to_friend">Transfer Uang</string>
+    <string name="transfer_friend_btn_tab_friend">Pilihan Transfer</string>
+    <string name="transfer_friend_btn_tab_history">Riwayat Transfer</string>
+    <string name="transfer_friend_label_empty">Kontak tidak tersedia</string>
+    <string name="transfer_friend_msg_intro">Masukkan nomor ponsel tujuan,
+        lalu enter atau cari nomor dari kontak pribadi anda dengan tap button:</string>
+    <string name="transfer_friend_btn_next">Lanjutkan</string>
+
+    <!-- Transfer To Friend Send Activity -->
+    <string name="title_activity_transfer_to_friend_send">Kirim Uang</string>
+    <string name="transfer_friend_send_label_nominal">Nominal Transfer</string>
+    <string name="transfer_friend_send_hint_nominal">Masukkan Nominal</string>
+    <string name="transfer_friend_send_label_example">*contoh ketik: Rp. 50.000</string>
+    <string name="transfer_friend_send_btn_submit">Transfer Sekarang</string>
+
+    <!-- Split Payment Activity -->
+    <string name="title_activity_split_payment">Patungan Bayar</string>
+    <string name="split_payment_btn_tab_1">Patungan Baru</string>
+    <string name="split_payment_btn_Tab_2">Patungan Lalu</string>
+    <string name="split_payment_hint_amount">Masukkan nominal patungan</string>
+    <string name="split_payment_msg_amount_is_required">Nominal patungan harus diisi!</string>
+    <string name="split_payment_msg_intro">Masukkan nominal patunga baru yang akan dibagi
+        tagihannya ke kontak Pede Anda lalu tap</string>
+
+    <!-- Add Split Payment Activity -->
+    <string name="title_activity_add_split_payment">Patungan Baru</string>
+    <string name="add_split_paymnet_label_total_amount">Total Patungan</string>
+    <string name="add_split_paymnet_label_total_member">Dibagi ke %1$d kontak Pede</string>
+    <string name="add_split_paymnet_hint_payment_name">Nama patungan...</string>
+    <string name="add_split_paymnet_hint_search_friend">Tambah nama kontak yang akan ditagih</string>
+    <string name="add_split_paymnet_btn_submit">Tagih Sekarang</string>
+
+    <!-- Split Payment Detail Activity -->
+    <string name="title_activity_split_payment_detail">Patungan Lalu</string>
+    <string name="split_payment_detail_your_bill">Tagihan Kamu</string>
+    <string name="split_payment_detail_label_owner_group">Tagihan dibuat oleh</string>
+    <string name="split_payment_detail_label_total_amount">Total Patungan</string>
+    <string name="split_payment_detail_label_your_bill">Tagihan Kamu</string>
+    <string name="split_payment_detail_label_pending_status">Anda belum membayar</string>
+    <string name="split_payment_detail_label_payment_progress">%1$s telah dibayar lunas</string>
+    <string name="split_payment_detail_label_date">Tagihan dibuat : %1$s</string>
+    <string name="split_payment_detail_btn_submit">Bayar %1$s</string>
+
+    <!-- Favorite Payment Activity -->
+    <string name="title_activity_favorite_payment">Favorit Kamu</string>
+
+    <!-- Travel Ticket Activity -->
+    <string name="title_activity_travel_ticket">Tiket Perjalanan</string>
+    <string name="travel_ticket_hint_payment_code">Masukkan kode bayar</string>
+    <string name="travel_ticket_btn_submit">Cek Pembayaran</string>
+
+    <!-- Gift Activity -->
+    <string name="title_activity_gift">Kirim Hadiah</string>
+    <string name="gift_btn_tab_1">Pilihan Hadiah</string>
+    <string name="gift_btn_tab_2">Hadiah Saya</string>
+    <string name="gift_btn_select">Pilih Hadiah</string>
+
+    <!-- Gift Send Activity -->
+    <string name="title_activity_gift_send">Kirim Hadiah</string>
+    <string name="gift_send_label_receiver">Penerima Hadiah</string>
+    <string name="gift_send_hint_search_contact">Sebutkan nama penerima...</string>
+    <string name="gift_send_hint_message">Ketik pesan...</string>
+    <string name="gift_send_hint_amount">Nominal Hadiah</string>
+    <string name="gift_send_btn_delete">Hapus</string>
+    <string name="gift_send_btn_submit">Kirim Hadiah</string>
+
+    <!-- Gift Detail Activity -->
+    <string name="title_activity_gift_detail">Hadiah Saya</string>
+    <string name="gift_detail_label_date">Hadiah Dikirim : %1$s</string>
+    <string name="gift_detail_label_sender">Hadiah Dikirim oleh</string>
+    <string name="gift_detail_label_receiver">Penerima Hadiah</string>
+    <string name="gift_detail_msg_send_gift_success">Kirim hadiah berhasil</string>
+    <string name="gift_detail_msg_accept_gift_success">Terima hadiah berhasil</string>
+    <string name="gift_detail_msg_reject_gift_success">Hadiah berhasil ditolak</string>
+    <string name="gift_detail_btn_accept">Terima Hadiah</string>
+    <string name="gift_detail_btn_reject">Tolak Hadiah</string>
+    <string name="gift_detail_btn_cancel">Batalkan Hadiah</string>
+
+    <!-- Donation Activity -->
+    <string name="title_activity_donation">Layanan Donasi</string>
+    <string name="donation_btn_payment">Salurkan Donasi</string>
+    <string name="donation_btn_detail">Selengkapnya</string>
+
+    <!-- Donation Payment Activity -->
+    <string name="title_activity_donation_payment">Layanan Donasi</string>
+    <string name="donation_paymnet_btn_detail">Selengkapnya</string>
+    <string name="donation_paymnet_btn_submit">Donasi Sekarang</string>
+
+    <!-- Payment Activity -->
+    <string name="title_activity_payment">Pembayaran</string>
+    <string name="payment_activity_cb_favorite">Tambahkan ke favorit</string>
+    <string name="payment_activity_label_pembulatan_investasi_receh">Investasi Uang Receh (Ubah)</string>
+    <string name="payment_activity_label_admin_fee">Biaya Layanan</string>
+    <string name="payment_activity_label_ppn">PPn 10%</string>
+    <string name="payment_activity_btn_next">Lanjut Transaksi</string>
+    <string name="payment_activity_btn_bayar">Bayar</string>
+    <string name="payment_activity_label_kode_promo">Kode Promo</string>
+    <string name="payment_activity_hint_input_promo_code">Input promo code...</string>
+    <string name="payment_activity_label_potongan_promo">Potongan Promo</string>
+    <string name="payment_activity_label_countdown">Countdown</string>
+    <string name="payment_activity_label_pembayaran_BPJS">Pembayaran BPJS Kesehatan</string>
+    <string name="payment_activity_label_top_up_pede">Top Up Pede Hasil Lebih</string>
+    <string name="payment_activity_label_cairkan_pede">Pencairan Pede Hasil Lebih</string>
+    <string name="payment_activity_label_pencairan_dana_pedecash">Pencairan Dana ke Saldo PedeCash</string>
+    <string name="payment_activity_label_gratis">Gratis</string>
+
+    <!-- Pin Verification Activity -->
+    <string name="title_activity_pin_verification">Masukkan Pin</string>
+    <string name="pin_verification_activity_masukkan_pin_pedecash_kamu">Masukkan PIN Pedecash Kamu</string>
+    <string name="pin_verification_activity_label_6_digit_pedecash">Silahkan masukkan 6 digit Pedecash kamu untuk membayar transaksi ini menggunakan PedeCash</string>
+    <string name="pin_verification_activity_label_masukkan_pin_pedecash_kamu">Masukkan PIN Pedecash Kamu</string>
+    <string name="pin_verification_activity_label_cancel">Cancel</string>
+    <string name="pin_verification_activity_label_delete">Del</string>
+    <string name="pin_verification_activity_msg_pin_not_match">Pin anda salah</string>
+
+    <!-- Payment Receipt Activity -->
+    <string name="title_activity_payment_receipt">Bukti Transaksi</string>
+
+    <!-- Asuransi Activity -->
+    <string name="title_activity_asuransi">Ikut Asuransi</string>
+
+    <!-- My Insurance Detail Activity -->
+    <string name="title_activity_my_insurance_detail">Asuransi Saya</string>
+    <string name="my_insurance_detail_tab_1">Detail dan Manfaat</string>
+    <string name="my_insurance_detail_tab_2">Dokumen Polis</string>
+    <string name="my_insurance_detail_btn_contact">Hubungi Allianz</string>
+    <string name="my_insurance_detail_btn_claim">Hubungi / Klaim</string>
+    <string name="my_insurance_detail_label_phone">Telepon %1$s </string>
+    <string name="my_insurance_detail_label_email">Email %1$s </string>
+    <string name="my_insurance_detail_label_address">Peta Alamat</string>
+    <string name="my_insurance_detail_label_website">Official Website</string>
+    <string name="my_insurance_detail_btn_close">Tutup</string>
+
+    <!-- Insurance Product List Activity -->
+    <string name="title_activity_insurance_product_list">Insurance Product List</string>
+    <string name="insurance_product_list_btn_buy">Beli Asuransi</string>
+    <string name="insurance_product_list_btn_detail">Detail Produk</string>
+
+    <!-- Insurance Product Detail Activity -->
+    <string name="title_activity_insurance_product_detail">Insurance Product Detail</string>
+    <string name="insurance_product_detail_tab_1">Detail dan Manfaat</string>
+    <string name="insurance_product_detail_tab_2">Rincian Premi</string>
+    <string name="insurance_product_detail_btn_buy">Beli Asuransi</string>
+    <string name="insurance_product_error_notfound">Maaf, Produk tidak ditemukan</string>
+
+
+    <!-- Insurance Payment Activity -->
+    <string name="title_activity_insurance_payment">Pembayaran</string>
+    <string name="insurance_payment_label_payment_detail">Detail Pembayaran</string>
+    <string name="insurance_payment_label_premi_bulan_ke">Premi Bulan %1$d</string>
+    <string name="insurance_payment_label_pembulatan_investasi_receh">Pembulatan Investasi Uang Receh</string>
+    <string name="insurance_payment_label_total_payment">Total Pembayaran</string>
+    <string name="insurance_payment_label_tac_for_next_payment">Ketentuan Pembayaran selanjutnya</string>
+    <string name="insurance_payment_label_auto_payment">Otomatis mengurangi saldo</string>
+    <string name="insurance_payment_label_enable_reminder">Ingatkan tagihan saja</string>
+    <string name="insurance_payment_btn_next">Lanjut Transaksi</string>
+
+    <!-- Insurance Personal Data - Activity -->
+    <string name="title_activity_insurance_personal_data">Data Asuransi</string>
+    <string name="insurance_personal_data_label_polis_title">Polis Asuransi Sekoci</string>
+    <string name="insurance_personal_data_label_premi_option">Pilihan Paket</string>
+    <string name="insurance_personal_data_label_polis_asuransi_sekoci">Polis Asuransi Sekoci</string>
+    <string name="insurance_personal_data_label_calon_peserta">Detail Calon Peserta</string>
+    <string name="insurance_personal_data_label_kepemilikan_polis">Kepemilikan Polis</string>
+    <string name="insurance_personal_data_label_nik">NIK</string>
+    <string name="insurance_personal_data_label_nama_lengkap">Nama Lengkap</string>
+    <string name="insurance_personal_data_label_tempat_lahir">Tempat Lahir</string>
+    <string name="insurance_personal_data_label_tanggal_lahir">Tanggal Lahir</string>
+    <string name="insurance_personal_data_label_jenis_kelamin">Jenis Kelamin</string>
+    <string name="insurance_personal_data_label_email">Email</string>
+    <string name="insurance_personal_data_label_nomor_handphone">Nomor Handphone</string>
+    <string name="insurance_personal_data_label_alamat">Alamat Lengkap</string>
+    <string name="insurance_personal_data_label_kode_pos">Kode Pos</string>
+    <string name="insurance_personal_data_label_provinsi">Provinsi</string>
+    <string name="insurance_personal_data_label_ahli_waris">Nama Ahli Waris Polis</string>
+    <string name="insurance_personal_data_label_relasi_ahli_waris">Relasi Pemegang Polis dengan Ahli Waris</string>
+    <string name="insurance_personal_data_label_usia_ahli_waris">Usia Ahli Waris</string>
+    <string name="insurance_personal_data_label_tac"><![CDATA[ Kamu setuju dengan syarat dan ketentuan yang berlaku dan pihak
+        Pede akan meneruskan data kamu kepada mitra Asuransi yang kamu pilih <font color="#56CCF2">(Baca disini)</font> ]]></string>
+    <string name="insurance_personal_data_msg_polis_owner_is_required">Kepemilikan polis harus dipilih.</string>
+    <string name="insurance_personal_data_msg_nik_is_required">NIK harus diisi.</string>
+    <string name="insurance_personal_data_msg_nik_invalid">NIK harus 16 digit.</string>
+    <string name="insurance_personal_data_msg_nik_tertanggung_invalid">NIK tertanggung harus 16 digit.</string>
+    <string name="insurance_personal_data_msg_sumatera_utara_dan_aceh_invalid">Kami belum dapat menerima pengajuan kamu untuk membeli produk ini</string>
+    <string name="insurance_personal_data_msg_name_is_required">Nama harus diisi.</string>
+    <string name="insurance_personal_data_msg_pob_is_required">Tempat lahir harus diisi.</string>
+    <string name="insurance_personal_data_msg_dob_is_required">Tanggal lahir harus diisi.</string>
+    <string name="insurance_personal_data_msg_invalid_dob">Ketentuan usia masuk harus diantara 17 sampai 60 tahun.</string>
+    <string name="insurance_personal_data_msg_invalid_dob_peserta">Umur minimal calon peserta 21 tahun.</string>
+    <string name="insurance_personal_data_msg_invalid_dob_tertanggung">Umur calon tertanggung diantara 18 sampai 65 tahun.</string>
+    <string name="insurance_personal_data_msg_sex_is_required">Jenis kelamin harus diisi.</string>
+    <string name="insurance_personal_data_msg_email_is_required">Email harus diisi.</string>
+    <string name="insurance_personal_data_msg_email_invalid">Email tidak valid.</string>
+    <string name="insurance_personal_data_msg_phone_is_required">No Handphone harus diisi.</string>
+    <string name="insurance_personal_data_msg_phone_invalid">No Handphone tidak valid.</string>
+    <string name="insurance_personal_data_msg_address_is_required">Alamat harus diisi.</string>
+    <string name="insurance_personal_data_msg_poscode_is_required">Kode Pos harus diisi.</string>
+    <string name="insurance_personal_data_msg_pemegang_polis_invalid">Pemegang Polis harus dipilih</string>
+    <string name="insurance_personal_data_msg_nama_lengkap_tertanggung_required">Nama Tertanggung harus diisi.</string>
+    <string name="insurance_personal_data_msg_hubungan_tertanggung_invalid">Hubungan Tertanggung harus dipilih.</string>
+    <string name="insurance_personal_data_msg_nik_tertanggung_required">NIK Tertanggung harus diisi.</string>
+    <string name="insurance_personal_data_msg_email_tertanggung_required">Email Tertanggung harus diisi.</string>
+    <string name="insurance_personal_data_msg_merek_kendaraan_required">Merek Kendaraan harus diisi.</string>
+    <string name="insurance_personal_data_msg_tipe_kendaraan_required">Tipe Kendaraan harus diisi.</string>
+    <string name="insurance_personal_data_msg_tahun_kendaraan_required">Tahun Kendaraan harus diisi.</string>
+    <string name="insurance_personal_data_msg_nomor_rangka_required">Nomor Rangka harus diisi.</string>
+    <string name="insurance_personal_data_msg_nomor_mesin_required">Nomor Mesin harus diisi.</string>
+    <string name="insurance_personal_data_msg_kode_awal_required">Kode Awal harus diisi.</string>
+    <string name="insurance_personal_data_msg_kode_akhir_required">Kode Akhir harus diisi.</string>
+    <string name="insurance_personal_data_msg_nama_stnk_di_ktp_invalid">Nama STNK di KTP harus dipilih.</string>
+    <string name="insurance_personal_data_msg_nama_stnk_required">Nama STNK harus diisi.</string>
+    <string name="insurance_personal_data_msg_nomor_polisi_required">Nomor Polisi harus diisi.</string>
+    <string name="insurance_personal_data_msg_poscode_invalid">Kode Pos tidak valid.</string>
+    <string name="insurance_personal_data_msg_province_is_required">Provinsi harus diisi.</string>
+    <string name="insurance_personal_data_msg_kota_is_required">Kota harus diisi.</string>
+    <string name="insurance_personal_data_msg_field_is_required">Anda harus mengisi semua data.</string>
+    <string name="insurance_personal_data_msg_tac_is_required">Anda harus menyetujui syarat dan ketentuan berlaku.</string>
+    <string name="insurance_personal_data_btn_submit">Lanjut</string>
+    <string name="insurance_personal_data_label_pemegang_polis">Apakah Pemegang Polis adalah Tertanggung Utama?</string>
+    <string name="insurance_personal_data_label_kota">Kota</string>
+    <string name="insurance_personal_data_label_detail_sepeda_motor">Detail Sepeda Motor</string>
+    <string name="insurance_personal_data_label_detail_tertanggung_utama">Detail Tertanggung Utama</string>
+    <string name="insurance_personal_data_label_hubungan_dengan_pemegang_polis">Hubungan dengan Pemegang Polis</string>
+    <string name="insurance_personal_data_label_merek_kendaraan">Merek Kendaraan</string>
+    <string name="insurance_personal_data_label_tipe_kendaraan">Tipe Kendaraan</string>
+    <string name="insurance_personal_data_label_tahun_kendaraan">Tahun Kendaraan</string>
+    <string name="insurance_personal_data_label_nomor_rangka_kendaraan">Nomor Rangka Kendaraan</string>
+    <string name="insurance_personal_data_label_nomor_mesin_kendaraan">Nomor Mesin Kendaraan</string>
+    <string name="insurance_personal_data_label_kode_awal_wilayah_kendaraan">Kode Awal Wilayah Kendaraan</string>
+    <string name="insurance_personal_data_label_kode_akhir_wilayah_kendaraan">Kode Akhir Wilayah Kendaraan</string>
+    <string name="insurance_personal_data_label_nomor_polis_kendaraan">Nomor Polisi Kendaraan</string>
+    <string name="insurance_personal_data_label_nama_stnk_sama_dengan_ktp_kendaraan">Nama di STNK sama dengan KTP</string>
+    <string name="insurance_personal_data_label_nama_stnk">Nama di STNK</string>
+    <string name="insurance_personal_data_label_hint_ketik">Ketik disini...</string>
+    <string name="insurance_personal_data_label_hint_pilih">Pilih</string>
+    <string name="insurance_personal_data_label_tac_jaga_motor"><![CDATA[ Saya sudah membaca, memahami menyetujui dengan syarat dan ketentuan yang berlaku dan Ringkasan Informasi Produk Asuransi Jaga Motorku <font color="#56CCF2">(Baca disini)</font> ]]></string>
+
+
+    <string name="insurance_personal_data_label_mudik_l1">Kepemilikan Polis</string>
+    <string name="insurance_personal_data_label_mudik_l2">Nomor KTP</string>
+    <string name="insurance_personal_data_label_mudik_l3">Nama Sesuai KTP</string>
+    <string name="insurance_personal_data_label_mudik_l4">Tempat Lahir</string>
+    <string name="insurance_personal_data_label_mudik_l5">Tanggal Lahir</string>
+    <string name="insurance_personal_data_label_mudik_l6">Kota Keberangkatan</string>
+    <string name="insurance_personal_data_label_mudik_l7">Tanggal Keberangkatan</string>
+    <string name="insurance_personal_data_label_mudik_l8">Kota Tujuan</string>
+    <string name="insurance_personal_data_label_mudik_l9">Plat Nomor Kendaraan</string>
+    <string name="insurance_personal_data_label_mudik_l10">Nomor Handphone</string>
+    <string name="insurance_personal_data_label_mudik_l11">Alamat Email</string>
+
+    <string name="insurance_personal_data_label_mudik_Hint1">Pilih kepemilikan</string>
+    <string name="insurance_personal_data_label_mudik_Hint2">Masukkan NIK anda</string>
+    <string name="insurance_personal_data_label_mudik_Hint3">Masukan Nama anda</string>
+    <string name="insurance_personal_data_label_mudik_Hint4">Masukan Tanggal Lahir anda</string>
+    <string name="insurance_personal_data_label_mudik_Hint5">Masukan Tempat Lahir anda</string>
+    <string name="insurance_personal_data_label_mudik_Hint6">Pilih Kota Keberangkatan anda</string>
+    <string name="insurance_personal_data_label_mudik_Hint7">Pilih Tanggal Keberangkatan anda</string>
+    <string name="insurance_personal_data_label_mudik_Hint8">Pilih Kota Tujuan anda</string>
+    <string name="insurance_personal_data_label_mudik_Hint9">Masukan Plat Nomor Kendaraan anda</string>
+    <string name="insurance_personal_data_label_mudik_Hint10">Masukan Nomor Ponsel anda</string>
+    <string name="insurance_personal_data_label_mudik_Hint11">Masukan Alamat Email anda</string>
+    <string name="insurance_personal_data_label_mudik_Hint12">Masukan Jenis Kelamin anda</string>
+    <string name="insurance_personal_data_label_mudik_Hint13">Masukan Alamat Lengkap anda</string>
+    <string name="insurance_personal_data_label_mudik_Hint14">Masukan Kode Pos anda</string>
+    <string name="insurance_personal_data_label_mudik_Hint15">Masukan Provinsi anda </string>
+
+    <string name="insurance_personal_data_err_mudik_l6">Kota Keberangkatan harus diisi</string>
+    <string name="insurance_personal_data_err_mudik_l7">Tanggal Keberangkatan harus diisi</string>
+    <string name="insurance_personal_data_err_mudik_l8">Kota Tujuan harus diisi</string>
+    <string name="insurance_personal_data_err_mudik_l9">Kota Keberangkatan belum tersedia</string>
+    <string name="insurance_personal_data_err_mudik_l10">Kota Tujuan belum tersedia</string>
+
+
+    <string name="insurance_personal_data_label_mudik_tac"><![CDATA[ Dengan ini saya menyatakan data yang saya isi adalah benar dan saya telah memahami serta menyetujui segala<font color="#56CCF2"> syarat dan ketentuan</font> layanan Asuransi Mudik yang berlaku. ]]></string>
+
+    <!-- Insurance Payment Receipt Activity -->
+    <string name="title_activity_insurance_payment_receipt">Bukti Transaksi</string>
+    <string name="insurance_payment_receipt_label_premi_bulan_ke">Premi Bulan %1$d</string>
+    <string name="insurance_payment_receipt_label_pembulatan_investasi_receh">Pembulatan Investasi Uang Receh</string>
+    <string name="insurance_payment_receipt_label_total_payment">Total Pembayaran</string>
+    <string name="insurance_payment_receipt_label_tac_for_next_payment">Ketentuan Pembayaran selanjutnya</string>
+    <string name="insurance_payment_receipt_label_auto_payment">Otomatis mengurangi saldo</string>
+    <string name="insurance_payment_receipt_label_next_payment">Tanggal tagihan selanjutnya</string>
+    <string name="insurance_payment_receipt_label_note">Pencairan Saldo Pede Hasil Lebih akan secara
+        otomatis masuk ke dalam Saldo PedeCash milik kamu</string>
+
+    <!-- Chat Activity -->
+    <string name="title_activity_chat">Sasha Chat</string>
+
+    <!-- Upload ID Card Activity -->
+    <string name="title_activity_upload_idcard">Upgrade Pede Plus</string>
+    <string name="upload_idcard_msg_id_card_invalid">Gagal mengenali KTP, kami akan coba lagi</string>
+    <string name="upload_idcard_label_nik">NIK</string>
+    <string name="upload_idcard_label_name">Nama</string>
+    <string name="upload_idcard_label_pob">Tempat Lahir</string>
+    <string name="upload_idcard_label_dob">Tanggal Lahir</string>
+    <string name="upload_idcard_label_sex">Jenis Kelamin</string>
+    <string name="upload_idcard_label_address">Alamat</string>
+    <string name="upload_idcard_label_rt">RT</string>
+    <string name="upload_idcard_label_rw">RW</string>
+    <string name="upload_idcard_label_kelurahan">Kelurahan</string>
+    <string name="upload_idcard_label_kecamatan">Kecamatan</string>
+    <string name="upload_idcard_label_city">Kab/Kota</string>
+    <string name="upload_idcard_label_provinsi">Provinsi</string>
+    <string name="upload_idcard_label_religion">Agama</string>
+    <string name="upload_idcard_label_marital_status">Status Perkawinan</string>
+    <string name="upload_idcard_label_job">Perkerjaan</string>
+    <string name="upload_idcard_label_citizenship">Kewarganegaraan</string>
+    <string name="upload_idcard_label_blood_type">Golongan Darah</string>
+    <string name="upload_idcard_label_pendidikan">Pendidikan Terakhir</string>
+    <string name="upload_idcard_hint_pendidikan">Pilih pendidikan terakhir Anda</string>
+    <string name="upload_idcard_label_total_pendapatan">Total Pendapatan per tahun</string>
+    <string name="upload_idcard_hint_total_pendapatan">Pilih total pendapatan per tahun</string>
+    <string name="upload_idcard_label_sumber_dana">Sumber Dana</string>
+    <string name="upload_idcard_hint_sumber_dana">Pilih sumber dana Anda</string>
+    <string name="upload_idcard_label_reksa_dana">Pernah memiliki Reksa Dana</string>
+    <string name="upload_idcard_hint_reksa_dana">Pilih jawaban</string>
+    <string name="upload_idcard_msg_uploading_data">Mengupload data...</string>
+    <string name="upload_idcard_msg_uploading_success">Upload berhasil!</string>
+    <string name="upload_idcard_btn_try">Scan Ulang</string>
+    <string name="upload_idcard_btn_submit">Upload KTP</string>
+    <string name="upload_idcard_label_scan">discan</string>
+    <string name="upload_idcard_label_upload">diupload</string>
+    <string name="upload_idcard_bot_message_upload_ktp_success">Selamat, KTP kamu sudah berhasil %1$s</string>
+    <string name="upload_idcard_bot_message_continue_to_edit_form">Berikut data kamu yang kami peroleh</string>
+
+    <!-- Upgrade Pede Plus After Reject Activity -->
+    <string name="upgrade_pede_plus_after_reject_title">Data Tidak Valid</string>
+    <string name="upgrade_pede_plus_after_reject_data_kamu_tidak_dapat_diverifikasi">Data kamu tidak dapat diverifkasi</string>
+    <string name="upgrade_pede_plus_after_reject_foto_ktp_dan_foto_diri_tidak_dapat">Foto KTP dan foto diri dengan KTP tidak dapat kami verifikasi silahkan foto ulang KTP dan diri kamu</string>
+    <string name="upgrade_pede_plus_after_reject_foto_ktp">Foto KTP</string>
+    <string name="upgrade_pede_plus_after_reject_foto_diri_dengan_ktp">Foto KTP dengan KTP</string>
+    <string name="upgrade_pede_plus_after_reject_ambil_foto">Ambil Foto</string>
+    <string name="upgrade_pede_plus_after_reject_ajukan">Ajukan</string>
+
+    <!-- Upgrade Pede Plus After Reject Verification Process Activity -->
+    <string name="upgrade_pede_plus_after_reject_verification_process_sedang_diverifikasi_title">Sedang Diverifikasi</string>
+    <string name="upgrade_pede_plus_after_reject_verification_process_sedang_diverifikasi">SEDANG DIVERIFIKASI</string>
+    <string name="upgrade_pede_plus_after_reject_verification_process_mengerti">Mengerti</string>
+    <string name="upgrade_pede_plus_after_reject_verification_process_foto_ktp_dan">Foto KTP dan foto diri dengan KTP kamu sedang diverifikasi oleh team kami maksimal 3 x 24 jam hari kerja. Harap bersabar sebelum Anda dapat kembali menggunakan fitur Pede</string>
+
+    <!-- Scan ID Card Activity -->
+    <string name="title_activity_scan_idcard">Scan KTP</string>
+    <string name="scan_idcard_msg_place_your_phone">Posisikan keseluruhan KTP di dalam kotak</string>
+    <string name="scan_idcard_msg_detection_success">Pertahankan posisi handphone, scanning sedang diproses</string>
+    <string name="scan_idcard_msg_detection_fail">Kamera tidak fokus. Coba pindai di bawah cahaya yang lebih baik.</string>
+    <string name="scan_idcard_msg_detection_camera_too_high">Jarak kamera dengan KTP terlalu jauh</string>
+    <string name="scan_idcard_msg_detection_camera_partial_object">Ada objek lain yang menggangu proses scanning</string>
+    <string name="scan_idcard_msg_detection_camera_at_angle">Perbaiki angle kamera, usahakan sejajar dengan KTP</string>
+    <string name="scan_idcard_msg_detection_too_near">Kamera terlalu dekat dengan KTP</string>
+
+    <!-- Scan ID Card With Image Activity -->
+    <string name="title_activity_scan_idcard_with_image">Scan ID Card With Image</string>
+
+    <!-- Signature Activity -->
+    <string name="title_activity_signature">Tanda Tangan</string>
+    <string name="signature_btn_clear">Hapus Tanda Tangan</string>
+    <string name="signature_btn_submit">Submit Tanda Tangan</string>
+
+    <!-- Investment Intro Activity -->
+    <string name="title_activity_investment_intro">Investment Intro</string>
+    <string name="investment_intro_btn_skip">Skip</string>
+    <string name="investment_intro_btn_next">Next</string>
+
+    <!-- Investment Form Data Activity -->
+    <string name="title_activity_investment_form_data">Form Data</string>
+    <string name="investment_form_data_label_education">Pendidikan Terakhir</string>
+    <string name="investment_form_data_label_job">Pekerjaan</string>
+    <string name="investment_form_data_label_salary">Rata-rata Pendapatan per Bulan</string>
+    <string name="investment_form_data_label_reksa_dana">Pernah memiliki Reksa Dana</string>
+    <string name="investment_form_data_label_tac_link"><![CDATA[ Saya telah setuju dengan syarat dan
+        ketentuan yang berlaku <font color="#56CCF2">(Baca disini)</font> ]]></string>
+    <string name="investment_form_data_label_tac">Saya telah setuju dengan syarat dan
+        ketentuan yang berlaku</string>
+    <string name="investment_form_data_btn_submit">Masukkan Data</string>
+    <string name="investment_form_data_label_tac_agree"><![CDATA[ Dengan melanjutkan transaksi ini, Anda telah setuju dengan <u><font color="#3AD4DE">syarat dan ketentuan</font></u> yang berlaku ]]></string>
+    <string name="investment_form_data_label_tac_tnc">Dengan melanjutkan transaksi ini, Anda telah setuju dengan syarat dan ketentuan yang berlaku</string>
+
+    <!-- Investment TAC Activity -->
+    <string name="title_activity_investment_tac">Syarat dan Ketentuan</string>
+    <string name="title_activity_investment_privacy">Kebijakan Privasi</string>
+    <string name="title_activity_investment_tentang_pede_app">Tentang Pede App</string>
+
+    <!-- Investment Uang Receh Setup Activity -->
+    <string name="title_activity_investment_uang_receh_setup">Investasi Uang Receh</string>
+    <string name="investment_uang_receh_setup_label_amount">Dengan usia sekarang, jika rata-rata anda berinvestasi sebesar</string>
+    <string name="investment_uang_receh_setup_label_age">maka ketika nanti Anda berusia</string>
+    <string name="investment_uang_receh_setup_label_year">%1$d TAHUN</string>
+    <string name="investment_uang_receh_setup_label_final_amount">Anda akan memiliki investasi senilai</string>
+    <string name="investment_uang_receh_setup_label_disclaimer">Angka di atas merupakan simulasi keuntungan saja (Disclaimer)</string>
+    <string name="investment_uang_receh_setup_btn_submit">Mulai Investasi Sekarang</string>
+
+    <!-- Investment Emas Instant-->
+    <string name="title_activity_investment_emas_instant_setup">Pede siManis\nInvestasi Emas Instant</string>
+
+    <!-- Investment Rutin Berkala Setup Activity -->
+    <string name="title_activity_investment_rutin_berkala_setup">Investasi Rutin Berkala</string>
+    <string name="investment_rutin_berkala_setup_title">Simulasi Investasi\nRutin Berkala</string>
+    <string name="investment_rutin_berkala_setup_label_name">Tentukan Nama target\nInvestasi Anda</string>
+    <string name="investment_rutin_berkala_setup_label_name_sample">*contoh: membeli kamera</string>
+    <string name="investment_rutin_berkala_setup_label_target">Tentukan Jumlah target\nKeuntungan Anda</string>
+    <string name="investment_rutin_berkala_setup_label_target_sample">*contoh: Rp. 5.000.000</string>
+    <string name="investment_rutin_berkala_setup_btn_submit">Lanjut Simulasi</string>
+
+    <!-- Investment Rutin Berkala Simulation Activity -->
+    <string name="title_activity_investment_rutin_berkala_simulation">Investasi Rutin Berkala</string>
+    <string name="investment_rutin_berkala_simulation_label_target">Tentukan Target Waktu\nInvestasi Anda</string>
+    <string name="investment_rutin_berkala_simulation_label_year">%1$d Tahun</string>
+    <string name="investment_rutin_berkala_simulation_label_frequency">Anda perlu berinvestasi setiap</string>
+    <string name="investment_rutin_berkala_simulation_label_tab_1">Hari</string>
+    <string name="investment_rutin_berkala_simulation_label_tab_2">Minggu</string>
+    <string name="investment_rutin_berkala_simulation_label_tab_3">Bulan</string>
+    <string name="investment_rutin_berkala_simulation_label_disclaimer">Angka di atas merupakan simulasi keuntungan saja (Disclaimer)</string>
+    <string name="investment_rutin_berkala_simulation_btn_submit">Mulai Investasi Sekarang</string>
+
+    <!-- Investment Rutin Berkala Target Activity -->
+    <string name="title_activity_investment_rutin_berkala_target">Target Investasi Baru</string>
+    <string name="investment_rutin_berkala_target_label_duration">Lama Target Investasi</string>
+    <string name="investment_rutin_berkala_target_label_year">%1$d tahun</string>
+    <string name="investment_rutin_berkala_target_label_frequency">Jadwal Investasi</string>
+    <string name="investment_rutin_berkala_target_label_nominal">Nominal Investasi</string>
+    <string name="investment_rutin_berkala_target_btn_submit">Investasi Sekarang</string>
+
+    <!-- Investment Determination Activity -->
+    <string name="title_activity_investment_determination">Penetapan Investasi</string>
+    <string name="title_activity_investment_determination_topup_phl">Top Up PHL</string>
+    <string name="title_activity_investment_determination_phl">Penetapan Pede Hasil Lebih</string>
+    <string name="investment_determination_title_phl">Pede Hasil Lebih\nDebet dari PedeCash</string>
+    <string name="investment_determination_title_phl_withdraw">Pencairan Nominal\n %1$s</string>
+    <string name="investment_determination_title_uang_receh">Investasi Uang Receh Min. Rp. 2.500 - Max. Rp. 10.000</string>
+    <string name="investment_determination_title_rutin_berkala">Investasi Rutin Berkala Deposit %1$s</string>
+    <string name="investment_determination_label_tabungan_detail">Detail Tabungan</string>
+    <string name="investment_determination_label_withdraw_detail">Detail Penarikan PHL</string>
+    <string name="investment_determination_label_investment_detail">Detail Investasi</string>
+    <string name="investment_determination_label_pindah_saldo">Pindah Saldo</string>
+    <string name="investment_determination_label_tabung_pedecash">Tabung ke Pede Cash</string>
+    <string name="investment_determination_label_withdraw_amount">Pengurangan PHL</string>
+    <string name="investment_determination_label_administration_fee">Biaya administrasi</string>
+    <string name="investment_determination_label_transaction_total">Total Transaksi</string>
+    <string name="investment_determination_label_next_payment">Ketentuan deposit selanjutnya</string>
+    <string name="investment_determination_btn_submit">Lanjut Transaksi</string>
+    <string name="investment_determination_title_tabung_phl">Tabung ke Pede hasil Lebih</string>
+
+    <!-- Investment Quit Activity -->
+    <string name="title_activity_investment_quit">Berhenti Investasi</string>
+    <string name="investment_quit_label_tac">Saya telah setuju dengan syarat dan ketentuan yang berlaku (Baca disini)</string>
+    <string name="investment_quit_btn_submit">Berhenti Sekarang</string>
+
+    <!-- Processing Activity -->
+    <string name="title_activity_processing">Processing</string>
+    <string name="processing_msg_transaction_on_transaksi">Memproses transaksi...</string>
+    <string name="processing_msg_transaction_success">Transaksi berhasil!</string>
+    <string name="processing_btn_back">Kembali</string>
+    <string name="processing_btn_batalkan">Batalkan</string>
+    <string name="processing_msg_transaction_failed">Gagal memproses tagihan</string>
+    <string name="processing_msg_transaction_cancel">Batal memproses tagihan</string>
+    <string name="processing_msg_transaction_on_pembayaran">Memproses pembayaran...</string>
+    <string name="processing_msg_transaction_total_pembayaran">TOTAL PEMBAYARAN</string>
+    <string name="processing_msg_transaction_konfirmasi_penjualan_dana">Konfirmasi Penjualan Dana</string>
+    <string name="processing_msg_transaction_lihat_bukti_penjualan_dana">LIHAT BUKTI PENJUALAN DANA</string>
+    <string name="processing_msg_transaction_bukti_penjualan">Bukti Penjualan</string>
+    <string name="processing_msg_transaction_total_pencairan">TOTAL PENCAIRAN</string>
+    <string name="processing_msg_transaction_total_penjualan">TOTAL PENJUALAN</string>
+    <string name="processing_msg_transaction_total_biaya">TOTAL BIAYA</string>
+    <string name="processing_msg_transaction_pencairan_berhasil">PENCAIRAN BERHASIL</string>
+
+    <!-- Process Complete Activity -->
+    <string name="title_activity_process_complete">Process Complete</string>
+    <string name="process_complete_msg_investment_pede_hasil_lebih">Sukses ikut\nPede Hasil Lebih</string>
+    <string name="process_complete_msg_investment_pede_hasil_lebih_top_up">Sukses Top Up\nPede Hasil Lebih</string>
+    <string name="process_complete_msg_investment_pede_hasil_lebih_withdraw">Sukses Withdraw\nPede Hasil Lebih</string>
+    <string name="process_complete_btn_primary_investment_pede_hasil_lebih">Lanjut Tingkatkan Kondisi Keuangan</string>
+    <string name="process_complete_btn_secondary_investment_pede_hasil_lebih">Lihat Pede Hasil Lebih Kamu</string>
+    <string name="process_complete_msg_investment_uang_receh">Sukses ikut\nInvestasi Receh</string>
+    <string name="process_complete_btn_primary_investment_uang_receh">Lanjut Tingkatkan Kondisi Keuangan</string>
+    <string name="process_complete_btn_secondary_investment_uang_receh">Lihat Investasi Kamu</string>
+    <string name="process_complete_msg_investment_rutin_berkala">Sukses ikut\nPede Hasil Lebih</string>
+    <string name="process_complete_btn_primary_investment_rutin_berkala">Lanjut Tingkatkan Kondisi Keuangan</string>
+    <string name="process_complete_btn_secondary_investment_rutin_berkala">Lihat Pede Hasil Lebih Kamu</string>
+    <string name="process_complete_msg_investment_quit">Penjualan Pede Hasil Lebih Berhasil</string>
+    <string name="process_complete_msg_investment_quit_desc">Dana hasil penjualan akan otomatis masuk ke PedeCash</string>
+    <string name="process_complete_btn_primary_investment_quit">Kembali ke halaman utama</string>
+    <string name="process_complete_msg_upgrade_pede_plus">Pengajuan Pede Plus\ntelah berhasil!</string>
+    <string name="process_complete_desc_upgrade_pede_plus">Kami akan verifikasi dalam 3x24 Jam.</string>
+    <string name="process_complete_btn_primary_upgrade_pede_plus">Lanjut Tingkatkan Kondisi Keuangan</string>
+    <string name="process_complete_btn_secondary_upgrade_pede_plus">Lihat Profil Kamu</string>
+
+    <!-- Investment History Activity -->
+    <string name="title_activity_investment_history">Riwayat Investasi</string>
+    <string name="title_activity_investment_phl_history">Riwayat Pede Hasil Lebih</string>
+    <string name="investment_history_label_total_saldo">Total Setoran</string>
+    <string name="investment_history_label_saldo_dicairkan">Saldo Dicairkan</string>
+    <string name="investment_history_label_empty">Belum ada transaksi</string>
+    <string name="investment_history_label_deposit">Deposit</string>
+    <string name="investment_history_label_pencairan">Pencairan</string>
+
+    <!-- Investment Sell Activity -->
+    <string name="title_activity_investment_sell">Jual</string>
+    <string name="investment_sell_label_total_saldo">Total Saldo : %1$s</string>
+    <string name="investment_sell_label_nominal_jual">Nominal Penjualan</string>
+    <string name="investment_sell_hint_nominal_jual">Masukkan Nominal</string>
+    <string name="investment_sell_label_nominal_jual_sample">*contoh ketik: Rp. 50.000</string>
+    <string name="investment_sell_label_setara_dengan">Setara dengan</string>
+    <string name="investment_sell_label_unit">%1$d Unit</string>
+    <string name="investment_sell_label_nab_per_unit">NAB per Unit %1$d</string>
+    <string name="investment_sell_label_tac">Saya telah setuju dengan syarat dan ketentuan yang berlaku (Baca disini)</string>
+    <string name="investment_sell_btn_submit">Jual Sekarang</string>
+
+    <!-- Investment Sell Transfer Activity -->
+    <string name="title_activity_investment_sell_transfer">Transfer</string>
+    <string name="investment_sell_transfer_label_detail_transfer">Detail Transfer</string>
+    <string name="investment_sell_transfer_label_nominal">Transfer Nominal\n %1$s</string>
+    <string name="investment_sell_transfer_label_biaya_admin">Biaya Admin</string>
+    <string name="investment_sell_transfer_label_pengurangan_tabungan">Pengurangan Tabungan</string>
+    <string name="investment_sell_transfer_label_total_transaksi">Total Transaksi</string>
+    <string name="investment_sell_transfer_label_tujuan_transfer">Tujuan Transfer</string>
+    <string name="investment_sell_transfer_label_no_rekening">No Rekening : %1$s</string>
+    <string name="investment_sell_transfer_label_atas_nama">Atas Nama : %1$s</string>
+    <string name="investment_sell_transfer_btn_submit">Lanjut Transaksi</string>
+
+    <!-- Investment Top Up Activity -->
+    <string name="title_activity_investment_top_up">Deposit Investasi</string>
+    <string name="investment_top_up_label_nominal_jual">Nominal Deposit</string>
+    <string name="investment_top_up_hint_nominal_jual">Masukkan Nominal</string>
+    <string name="investment_top_up_label_nominal_jual_sample">*contoh ketik: Rp. 50.000</string>
+    <string name="investment_top_up_btn_submit">Deposit</string>
+
+    <!-- Investment Uang Receh Detail Activity -->
+    <string name="title_activity_investment_uang_receh_detail">Detail Investasi Uang Receh</string>
+    <string name="investment_uang_receh_detail_label_total_your_investment">Total  Investasi Receh Anda</string>
+    <string name="investment_uang_receh_detail_label_pembulatan">%1$s (Menunggu untuk diinvestasikan)</string>
+    <string name="investment_uang_receh_detail_label_since">Sejak %1$s</string>
+    <string name="investment_uang_receh_detail_label_max_investment">Investasi kamu maksimal!</string>
+    <string name="investment_uang_receh_detail_label_deposit_terakhir">Deposit terakhir: %1$s</string>
+    <string name="investment_uang_receh_detail_label_total_receh_diinvestasi">Alokasi keseluruhan IUR</string>
+    <string name="investment_uang_receh_detail_label_keuntungan_investasi">Keuntungan Sejak Awal</string>
+    <string name="investment_uang_receh_detail_label_total_investasi_receh_anda">Total Investasi Receh Kamu</string>
+    <string name="investment_uang_receh_detail_label_information">Informasi</string>
+    <string name="investment_uang_receh_detail_label_rata_rata_receh_anda">Rata-rata recehan</string>
+    <string name="investment_uang_receh_detail_label_indikasi_keuntungan">Indikasi Keuntungan Harian</string>
+    <string name="investment_uang_receh_detail_label_jumlah_unit">Jumlah Unit</string>
+    <string name="investment_uang_receh_detail_label_nab_per_unit">NAB per Unit Terkini</string>
+    <string name="investment_uang_receh_detail_label_keuntungan_per_tahun">Keuntungan per Tahun</string>
+    <string name="investment_uang_receh_detail_dialog_title">Pembulatan Investasi Uang Receh</string>
+    <string name="investment_uang_receh_detail_dialog_message">Penyisihan uang kamu akan dimasukkan ke dalam Investasi Uang Receh jika sudah berjumlah min. %1$s</string>
+    <string name="investment_uang_receh_detail_dialog_btn_close">Tutup</string>
+
+    <!-- Investment Rutin Berkala Detail Activity -->
+    <string name="title_activity_investment_rutin_berkala_detail">Status Investasi Rutin Berkala</string>
+    <string name="investment_rutin_berkala_detail_label_target">Target : %1$s</string>
+    <string name="investment_rutin_berkala_detail_label_setoran_terakhir">Setoran terakhir: %1$s</string>
+    <string name="investment_rutin_berkala_detail_label_setoran_keseluruhan">Setoran Keseluruhan</string>
+    <string name="investment_rutin_berkala_detail_label_keuntungan_sejak_awal">Keuntungan Sejak Awal</string>
+    <string name="investment_rutin_berkala_detail_label_total_investasi">Total Investasi</string>
+    <string name="investment_rutin_berkala_detail_label_informasi">Informasi</string>
+    <string name="investment_rutin_berkala_detail_label_indikasi_keuntunga_harian">Indikasi Keuntungan Harian</string>
+    <string name="investment_rutin_berkala_detail_label_jumlah_unit">Jumlah Unit</string>
+    <string name="investment_rutin_berkala_detail_label_nab_per_unit">NAB per Unit saat ini</string>
+    <string name="investment_rutin_berkala_detail_label_keuntungan_per_tahun">Keuntungan per Tahun</string>
+    <string name="investment_rutin_berkala_detail_label_ketentuan_investasi">Ketentuan Investasi</string>
+    <string name="investment_rutin_berkala_detail_label_lama_target_investasi">Lama Target Investasi</string>
+    <string name="investment_rutin_berkala_detail_label_jadwal_investasi">Jadwal Investasi</string>
+    <string name="investment_rutin_berkala_detail_label_setoran_rutin_harian">Setoran Rutin Harian</string>
+    <string name="investment_rutin_berkala_detail_btn_add">Setoran Tambahan</string>
+
+    <!-- Setup Alokasi Budget Activity -->
+    <string name="title_activity_setup_alokasi">Alokasi Budget %1$s</string>
+    <string name="setup_alokasi_label_jumlah_alokasi">Jumlah alokasi pengeluaran</string>
+    <string name="setup_alokasi_label_rp">Rp.</string>
+    <string name="setup_alokasi_btn_submit">Simpan Alokasi</string>
+
+    <!-- Aktual Budget Activity -->
+    <string name="title_activity_aktual_budget">Aktual Budget</string>
+    <string name="aktual_budget_label_last_transaction">Transaksi terakhir tanggal %1$s</string>
+    <string name="aktual_budget_btn_add">Tambah Pengeluaran Manual</string>
+
+    <!-- Tambah Pengeluaran Manual Activity -->
+    <string name="title_activity_tambah_pengeluaran_manual">Tambah Pengeluaran Manual</string>
+    <string name="tambah_pengeluaran_manual_label_name">Nama pengeluaran...</string>
+    <string name="tambah_pengeluaran_manual_label_rp">Rp.</string>
+    <string name="tambah_pengeluaran_manual_label_jumlah_pengeluaran">Jumlah pengeluaran</string>
+    <string name="tambah_pengeluaran_manual_btn_submit">Simpan Pengeluaran</string>
+
+    <!-- Pede Score Activity -->
+    <string name="title_activity_header">Skor Finansial Anda</string>
+    <string name="title_activity_pede_score">SKOR KESEHATAN FINANSIAL</string>
+    <string name="pede_score_title_expense">Pengeluaran</string>
+    <string name="pede_score_title_installment">Cicilan</string>
+    <string name="pede_score_title_saving">Tabungan</string>
+    <string name="pede_score_title_investment">Investasi</string>
+    <string name="pede_score_title_insurance">Asuransi</string>
+    <string name="pede_score_title_emergency">Dana Darurat</string>
+    <string name="pede_score_btn_close">Tutup</string>
+
+    <!-- Upgrade Pede Plus Activity -->
+    <string name="title_activity_upgrade_pede_plus">Upgrade Pede Plus</string>
+    <string name="upgrade_pede_plus_intro_title">Upgrade Pede Plus</string>
+    <string name="upgrade_pede_plus_bot_message_ask_to_upgrade_pede">Hai, kamu akan upgrade ke Pede Plus. Berikut
+        keuntungan yang akan kamu dapatkan dengan upgrade ke Pede Plus</string>
+    <string name="upgrade_pede_plus_user_answer_lanjut_upgrade">Scan KTP Sekarang</string>
+    <string name="upgrade_pede_plus_bot_message_upgrade_intro">Untuk upgrade Pede Plus, kamu perlu scan KTP kamu,
+        Foto Selfie dengan KTP kamu dan memberikan Tanda Tangan Kamu.</string>
+    <string name="upgrade_pede_plus_bot_message_cara_upgrade_pede">Cara upgrade Pede Plus sangat mudah,
+        pertama kamu cukup foto KTP kamu, tanda tangan dan melakukan motion-selfie dengan handphone-mu</string>
+    <string name="upgrade_pede_plus_bot_message_ktp_verification_success">Selamat, KTP kamu sudah berhasil di-scan</string>
+    <string name="upgrade_pede_plus_bot_message_ktp_verification_data">Berikut data kamu yang kami peroleh</string>
+    <string name="upgrade_pede_plus_bot_message_ask_signature">Jika data tersebut sudah sesuai, anda bisa lanjut untuk tanda tangan</string>
+    <string name="upgrade_pede_plus_bot_message_ask_selfie_with_ktp">Jika data tersebut sudah sesuai, anda bisa lanjut untuk foto selfie dengan KTP anda</string>
+    <string name="upgrade_pede_plus_user_answer_lanjut_tanda_tangan">Sudah benar, lanjut tanda tangan</string>
+    <string name="upgrade_pede_plus_bot_message_lanjut_tutorial_tanda_tangan">Silahkan tanda tangan pada kotak tanpa melewati garis biru,
+        atau foto tanda tangan anda di atas kertas putih</string>
+    <string name="upgrade_pede_plus_bot_message_upload_ktp_dan_signature_success">Kamu sudah berhasil mengupload foto KTP kamu dan tanda
+        tangan kesesuaian data</string>
+    <string name="upgrade_pede_plus_bot_message_ask_to_motion_selfie">Sekarang kamu perlu melakukan motion-selfie dengan handphone-mu
+        sebagai perbandingan</string>
+    <string name="upgrade_pede_plus_bot_message_motion_selfie_tutorial">Hadapkan wajah ke kamera dan gerakan kepala anda ke kiri dan ke kanan,
+        serta ke atas dan ke bawah</string>
+    <string name="upgrade_pede_plus_bot_message_motion_selfie_success">Selamat, data kamu sudah berhasil diverifikasi</string>
+    <string name="upgrade_pede_plus_bot_message_congratulation_pede_plus">Selamat, kamu sudah berhasil upgrade ke Pede Plus, nikmati fitur Pede Plus sekarang juga!</string>
+    <string name="upgrade_pede_plus_btn_continue_upgrade">Scan KTP Sekarang</string>
+    <string name="upgrade_pede_plus_btn_upgrade_later">Lain kali saja</string>
+    <string name="upgrade_pede_plus_btn_foto_ktp">Scan KTP Sekarang</string>
+    <string name="upgrade_pede_plus_btn_lanjut_tanda_tangan">Sudah Benar, lanjut tanda tangan</string>
+    <string name="upgrade_pede_plus_btn_lanjut_selfie_with_ktp">Sudah benar, lanjut selfie dengan KTP</string>
+    <string name="upgrade_pede_plus_btn_ulangi_selfie_ktp">Ulangi Selfie dengan KTP</string>
+    <string name="upgrade_pede_plus_btn_ulangi_foto_ktp">Data belum sesuai, ulangi scan KTP</string>
+    <string name="upgrade_pede_plus_btn_batalkan">Batalkan dan kembali ke menu utama</string>
+    <string name="upgrade_pede_plus_btn_continue_to_signature">Tanda Tangan Sekarang</string>
+    <string name="upgrade_pede_plus_btn_continue_to_motion_selfie">Lanjutkan sekarang</string>
+    <string name="upgrade_pede_plus_btn_back_to_home">Kembali ke halaman utama</string>
+    <string name="upgrade_pede_plus_title">"Tarik tunai dari Saldo PedeCash"</string>
+    <string name="upgrade_pede_plus_kirim_ke_sesama">"Kirim uang sesama pengguna Pede"</string>
+    <string name="upgrade_pede_plus_transfer_uang">"Transfer uang dengan mudah dan cepat ke sesama pengguna Pede"</string>
+
+    <!-- Capture KTP - Activity -->
+    <string name="title_activity_capture_ktp">Foto KTP</string>
+    <string name="capture_ktp_msg_upload_success">Upload Berhasil</string>
+    <string name="capture_ktp_btn_next">Lanjutkan</string>
+    <string name="toast_cannot_retrieve_selected_image">Cannot retrieve selected image</string>
+
+    <!-- Motion Selfie Activity -->
+    <string name="title_activity_motion_selfie">Motion Selfie</string>
+
+    <!-- Motion Selfie Result - Activity -->
+    <string name="title_activity_motion_selfie_result">Motion Selfie Result</string>
+    <string name="motion_selfie_result_msg_verifikasi_data">Verifikasi data...</string>
+    <string name="motion_selfie_result_msg_verifikasi_success">Data valid!</string>
+    <string name="motion_selfie_result_msg_verifikasi_failed">Verifikasi Gagal</string>
+
+    <!-- PFM Chat - Activity -->
+    <string name="title_activity_pfmchat">Sasha Chat</string>
+    <string name="pfmchat_intro_title">Salam Kenal...</string>
+    <string name="pfmchat_bot_message_ask_to_interview">Hai, aku Sasha. Aku akan membantu manajemen keuangan kamu.
+        Apa kamu bersedia  diwawancara sedikit saja?</string>
+    <string name="pfmchat_bot_message_berapa_pendapatan_perbulan">Berapa penghasilan kamu per bulan?</string>
+    <string name="pfmchat_bot_message_berapa_pengeluaran_perbulan">Berapa estimasi pengeluaran kamu dari pendapatan perbulan?</string>
+    <string name="pfmchat_bot_message_pengeluaran_kecil_dari_40_persen_title">Pengeluaran normal</string>
+    <string name="pfmchat_bot_message_pengeluaran_kecil_dari_40_persen">Pengeluaran kamu masih dalam batas normal</string>
+    <string name="pfmchat_bot_message_pengeluaran_besar_dari_40_persen_title">Pengeluaran kamu sudah berlebih</string>
+    <string name="pfmchat_bot_message_pengeluaran_besar_dari_40_persen">Maksimal pengeluaran kamu adalah sebesar Rp%1$s</string>
+    <string name="pfmchat_bot_message_pengeluaran_besar_dari_75_persen_title">Pengeluaran kamu sudah sangat berlebih</string>
+    <string name="pfmchat_bot_message_pengeluaran_besar_dari_75_persen">Sebaiknya dikurangi sebesar Rp%1$s untuk disimpan</string>
+    <string name="pfmchat_bot_message_berapa_cicilan_perbulan">Berapa estimasi Cicilan kamu dari pendapatan perbulan? Beri nilai 0 jika kamu tidak memiliki cicilan</string>
+    <string name="pfmchat_bot_message_cicilan_kecil_dari_30_persen_title">Cicilan normal</string>
+    <string name="pfmchat_bot_message_cicilan_kecil_dari_30_persen">Cicilan kamu masih dalam batas normal</string>
+    <string name="pfmchat_bot_message_cicilan_besar_dari_30_persen_title">Cicilan kamu sudah berlebih</string>
+    <string name="pfmchat_bot_message_cicilan_besar_dari_30_persen">Maksimal cicilan kamu adalah sebesar Rp%1$s</string>
+    <string name="pfmchat_bot_message_cicilan_besar_dari_75_persen_title">Cicilan kamu sudah sangat berlebih</string>
+    <string name="pfmchat_bot_message_cicilan_besar_dari_75_persen">Sebaiknya mulai kurangi cicilan kamu sebesar Rp%1$s untuk disimpan</string>
+    <string name="pfmchat_bot_message_berapa_tabungan_atau_deposito_di_bank">Apakah kamu mengalokasikan pendapatan kamu untuk Tabungan/Deposito di Bank?</string>
+    <string name="pfmchat_bot_message_tidak_punya_tabungan_title">Kamu harus sudah mulai menabung</string>
+    <string name="pfmchat_bot_message_tidak_punya_tabungan">Kurangi pengeluaran kamu untuk mulai dialokasikan minimal Rp%1$s/bulan</string>
+    <string name="pfmchat_bot_message_tidak_punya_tabungan_sudah_beli_phl">Hai %1$s, Terima kasih telah membeli produk Pede Hasil Lebih. Pastikan kamu terus menabung setiap
+        bulannya minimal sebesar Rp%2$s di Pede Hasil Lebih agar kondisi finansialmu terjaga.</string>
+    <string name="pfmchat_bot_message_tabungan_kecil_dari_10_persen_title">Alokasi tabungan kamu belum maksimal</string>
+    <string name="pfmchat_bot_message_tabungan_kecil_dari_10_persen">Kurangi pengeluaran kamu untuk mulai dialokasikan minimal Rp%1$s/bulan</string>
+    <string name="pfmchat_bot_message_tabungan_kecil_dari_10_persen_sudah_beli_phl">Hai %1$s, Terima kasih telah membeli produk Pede Hasil Lebih. Pastikan kamu terus menabung
+        setiap bulannya minimal sebesar Rp%2$s di Pede Hasil Lebih agar kondisi finansialmu terjaga.</string>
+    <string name="pfmchat_bot_message_tabungan_besar_dari_10_persen_title">Alokasi tabungan kamu sudah cukup baik</string>
+    <string name="pfmchat_bot_message_tabungan_besar_dari_10_persen">Otimalkan tabunganmu di produk \"Pede Hasil Lebih\" untuk mendapatkan hasil
+        6%-7% nett/tahun yang bisa ditarik kapanpun.</string>
+    <string name="pfmchat_bot_message_tabungan_besar_dari_10_persen_sudah_beli_phl">Hai %1$s, Terima kasih telah membeli produk \"Pede Hasil Lebih\". Pastikan kamu terus
+        menabung setiap bulannya sebesar Rp%2$s di Pede Hasil Lebih agar mendapat hasil optimal.</string>
+    <string name="pfmchat_bot_message_berapa_investasi_di_reksa_dana">Apakah kamu mengalokasikan pendapatan kamu untuk berinvestasi di Reksa Dana?</string>
+    <string name="pfmchat_bot_message_investasi_tidak_ada_title">Kamu harus sudah mulai berinvestasi</string>
+    <string name="pfmchat_bot_message_investasi_tidak_ada">Kurangi pengeluaran kamu untuk mulai dialokasikan minimal Rp%1$s/bulan.</string>
+    <string name="pfmchat_bot_message_investasi_tidak_ada_sudah_beli_IUR">Hai %1$s, Terima kasih telah membeli produk Investasi Uang Receh. Pastikan kamu terus berinvestasi
+        setiap bulannya minimal sebesar Rp%2$s di Investasi Uang Receh agar kondisi finansialmu terjaga.</string>
+    <string name="pfmchat_bot_message_investasi_kecil_dari_10_persen_title">Alokasi Investasi kamu belum maksimal</string>
+    <string name="pfmchat_bot_message_investasi_kecil_dari_10_persen">Kurangi pengeluaran kamu untuk mulai dialokasikan minimal Rp%1$s/bulan</string>
+    <string name="pfmchat_bot_message_investasi_kecil_dari_10_persen_sudah_beli_IRB">Hai %1$s, Terima kasih telah membeli produk Investasi Rutin Berkala. Pastikan
+        kamu terus menabung setiap bulannya sebesar Rp%2$s di Investasi Rutin Berkala agar kondisi finansialmu terjaga.</string>
+    <string name="pfmchat_bot_message_investasi_besar_dari_10_persen_title">Investasi kamu sudah cukup baik</string>
+    <string name="pfmchat_bot_message_investasi_besar_dari_10_persen">Temukan cara baru berinvestasi dengan Ikut
+        Investasi Uang Receh dimana berinvestasi semudah bertransaksi.</string>
+    <string name="pfmchat_bot_message_investasi_besar_dari_10_persen_sudah_beli_IUR">Hai %1$s, Terima kasih sudah membeli produk Investasi Uang
+        Receh, terus bertransaksi dan nikmati kemudahan berinvestasi.</string>
+    <string name="pfmchat_bot_message_apakah_anda_sudah_memiliki_asuransi">Apakah kamu sudah memiliki produk perlindungan asuransi?</string>
+    <string name="pfmchat_bot_message_asuransi_hanya_ikut_bpjs_title">Proteksi kamu masih minim</string>
+    <string name="pfmchat_bot_message_asuransi_hanya_ikut_bpjs">Lengkapi dengan asuransi Jiwa dan kesehatan dari Pede</string>
+    <string name="pfmchat_bot_message_asuransi_ikut_bpjs_dan_asuransi_kesehatan_title">Proteksi kamu belum maksimal</string>
+    <string name="pfmchat_bot_message_asuransi_ikut_bpjs_dan_asuransi_kesehatan">Lengkapi dengan asuransi Jiwa dari Pede</string>
+    <string name="pfmchat_bot_message_asuransi_ikut_3_program_title">Terima Kasih telah membeli Asuransi Kesehatan dan Asuransi Jiwa di Pede</string>
+    <string name="pfmchat_bot_message_asuransi_ikut_3_program">Pastikan kamu terus terproteksi.</string>
+    <string name="pfmchat_bot_message_asuransi_tidak_ada_title">Kamu belum terproteksi</string>
+    <string name="pfmchat_bot_message_asuransi_tidak_ada">Kamu harus memiliki Asuransi Kesehatan dan Asuransi Jiwa.</string>
+    <string name="pfmchat_bot_message_apakah_anda_memiliki_dana_darurat">Apakah kamu memiliki dana darurat yang diletakkan ditabungan?</string>
+    <string name="pfmchat_bot_message_thank_you">Terima kasih atas jawaban kamu, berikut hasil penilaian Pede Score kamu</string>
+    <string name="pfmchat_score_desc_besar_dari_75_persen">Score kesehatan keuanganmu sudah baik, perlu dioptimalkan</string>
+    <string name="pfmchat_score_desc_besar_dari_50_persen">Score kesehatan keuanganmu sudah cukup baik, perlu ditingkatkan</string>
+    <string name="pfmchat_score_desc_besar_dari_0_persen">Score kesehatan keuanganmu masih rendah, perlu diperbaiki</string>
+
+    <string name="pfmchat_bot_message_dana_darurat_besar_dari_3_kali_title">Dana Darurat kamu sudah baik.</string>
+    <string name="pfmchat_bot_message_dana_darurat_besar_dari_3_kali"></string>
+    <string name="pfmchat_bot_message_dana_darurat_1_sampai_3_kali_title">Dana darurat kamu masih kurang</string>
+    <string name="pfmchat_bot_message_dana_darurat_1_sampai_3_kali">Kamu harus memiliki minimal Rp%1$s sebagai Dana Darurat.</string>
+    <string name="pfmchat_bot_message_dana_darurat_kurang_dari_1_kali_title">Dana darurat kamu sangat kurang</string>
+    <string name="pfmchat_bot_message_dana_darurat_kurang_dari_1_kali">Kamu harus memiliki minimal Rp%1$s sebagai Dana Darurat.</string>
+    <string name="pfmchat_bot_message_dana_darurat_tidak_ada_title">Kamu tidak memiliki Dana Darurat</string>
+    <string name="pfmchat_bot_message_dana_darurat_tidak_ada">Kamu harus memiliki minimal Rp%1$s sebagai Dana Darurat</string>
+
+    <string name="pfmchat_hint_input">Ketik jawaban kamu di sini</string>
+    <string name="pfmchat_label_rp">Rp %1$s</string>
+    <string name="pfmchat_msg_answer_is_required">Ketik jawaban kamu!</string>
+    <string name="pfmchat_btn_continue_interview">Aku bersedia</string>
+    <string name="pfmchat_btn_interview_not_now">Nanti Saja</string>
+    <string name="pfmchat_btn_tabungan_besar_dari_10_persen">Ya, alokasi \u003E10% dari pendapatan per bulan</string>
+    <string name="pfmchat_btn_tabungan_kecil_dari_10_persen">Ya, alokasi \u003C10% dari pendapatan per bulan</string>
+    <string name="pfmchat_btn_tabungan_tidak_ada">Tidak Punya</string>
+    <string name="pfmchat_btn_investasi_besar_dari_10_persen">Ya, alokasi \u003E10% dari pendapatan per bulan</string>
+    <string name="pfmchat_btn_investasi_kecil_dari_10_persen">Ya, alokasi \u003C10% dari pendapatan per bulan</string>
+    <string name="pfmchat_btn_investasi_tidak_ada">Tidak Punya</string>
+    <string name="pfmchat_btn_asuransi_a">Ya, aku memiliki Asuransi Jiwa dan Asuransi Kesehatan</string>
+    <string name="pfmchat_btn_asuransi_b">Ya, aku hanya memiliki Asuransi Jiwa saja</string>
+    <string name="pfmchat_btn_asuransi_c">Ya, aku memiliki Asuransi Kesehatan dari BPJS</string>
+    <string name="pfmchat_btn_asuransi_d">Ya, aku memiliki Asuransi Kesehatan dari Non BPJS</string>
+    <string name="pfmchat_btn_asuransi_e">Ya, aku memiliki Asuransi Kesehatan dari BPJS dan NON BPJS</string>
+    <string name="pfmchat_btn_asuransi_f">Tidak Punya</string>
+    <string name="pfmchat_btn_dana_darurat_a">Tidak Ada Sama Sekali</string>
+    <string name="pfmchat_btn_dana_darurat_b">Ada, Totalnya \u003C1x Gaji</string>
+    <string name="pfmchat_btn_dana_darurat_c">Ada, Totalnya 1-3x Gaji</string>
+    <string name="pfmchat_btn_dana_darurat_d">Ada, Totalnya >3x Gaji</string>
+    <string name="pfmchat_btn_produk_rekomendasi">Lihat Produk Rekomendasi</string>
+    <string name="pfmchat_tag_tidak_punya_tabungan">tidak_punya_tabungan</string>
+    <string name="pfmchat_tag_tidak_punya_investasi">tidak_punya_investasi</string>
+    <string name="pfmchat_tag_tidak_punya_asuransi">tidak_punya_asuransi</string>
+
+    <!-- PFM Produk Rekomendasi Activity -->
+    <string name="title_activity_pfmproduk_rekomendasi">Sasha Chat</string>
+    <string name="pfmproduk_rekomendasi_intro_title">Tingkatkan Kondisi Keuangan kamu</string>
+    <string name="pfmproduk_rekomendasi_bot_message_pilihan_untuk_meningkatkan_keuangan">Berikut pilihan untuk meningkatkan kondisi keuangan kamu</string>
+    <string name="pfmproduk_rekomendasi_btn_later">Nanti Saja</string>
+
+    <!-- Withdraw Activity -->
+    <string name="title_activity_withdraw">Withdraw</string>
+    <string name="withdraw_label_nominal_jual">Nominal Withdraw</string>
+    <string name="withdraw_hint_nominal_jual">Masukkan Nominal</string>
+    <string name="withdraw_label_nominal_jual_sample">*contoh ketik: Rp. 50.000</string>
+    <string name="withdraw_btn_submit">Submit</string>
+
+    <!-- Edit Profile Activity -->
+    <string name="title_activity_edit_profile">Edit Data</string>
+    <string name="edit_profile_label_name">Nama Anda</string>
+    <string name="edit_profile_label_user_id">User ID/Tag</string>
+    <string name="edit_profile_btn_submit">Simpan</string>
+
+    <!-- Share Activity -->
+    <string name="title_activity_share">Bagikan</string>
+    <string name="title_activity_title">Pede - Referral Code</string>
+
+    <!-- Scan ID Card Activity -->
+    <string name="title_activity_scan_idcard_detector">Scan ID Card</string>
+
+    <!-- Referral Code Activity -->
+    <string name="title_activity_referral">Ajak Teman</string>
+    <string name="referral_label_code">Kode Referral Anda</string>
+    <string name="referral_message">Dapatkan saldo hingga Rp500.000* dengan membagikan nametag-mu sebanyak-banyaknya.</string>
+    <string name="referral_message_share">Unduh aplikasi Pede sekarang dan gunakan nametag \"\" %1$s \"\" untuk mendapatkan saldo gratis.
+        Dapatkan juga bonus saldo hingga Rp500.000 dengan membagikan nametag-mu sebanyak-banyaknya. http://onelink.to/2v7p7p</string>
+    <string name="referral_btn_share">Bagikan</string>
+    <string name="referral_btn_close">Tutup</string>
+
+    <!-- Term and Condition Activity -->
+    <string name="title_activity_term_and_condition">Syarat dan Ketentuan</string>
+
+    <!-- Add Bank Account Activity -->
+    <string name="title_activity_add_bank_account">Tambah Rekening</string>
+    <string name="add_bank_account_label_nomor_rekening">Nomor Rekening</string>
+    <string name="add_bank_account_label_atas_nama">Atas Nama</string>
+    <string name="add_bank_account_btn_submit">Simpan</string>
+
+    <!-- Investment Pede Hasil Lebih Activity -->
+    <string name="title_activity_investment_pede_hasil_lebih">Pede Hasil Lebih</string>
+    <string name="investment_pede_hasil_lebih_label_total_saldo_ottocash">Total Saldo PedeCash : %1$s</string>
+    <string name="investment_pede_hasil_lebih_label_total_saldo">%1$s</string>
+    <string name="investment_pede_hasil_lebih_title">Siap ikut Pede Hasil Lebih?</string>
+    <string name="investment_pede_hasil_lebih_label_input_ottocash">Input nominal dari saldo PedeCash kamu untuk ditabung</string>
+    <string name="investment_pede_hasil_lebih_hint_input_ottocash">Masukkan Nominal</string>
+    <string name="investment_pede_hasil_lebih_label_input_ottocash_sample">*contoh ketik: Rp.50.000</string>
+    <string name="investment_pede_hasil_lebih_label_powered_by">Agen penjual oleh</string>
+    <string name="investment_pede_hasil_lebih_label_phl_min_nominal">Nominal minimum Rp1.000</string>
+    <string name="investment_pede_hasil_lebih_btn_submit">Pindahkan Saldo</string>
+
+    <!-- Investment Pede Hasil Lebih Activity -->
+    <string name="title_activity_investment_pede_hasil_lebih_detail">Detail Pede Hasil Lebih</string>
+    <string name="investment_pede_hasil_lebih_detail_label_saldo">Saldo Pede Hasil Lebih</string>
+    <string name="investment_pede_hasil_lebih_detail_deposit_terakhir">Penempatan terakhir: %1$s</string>
+    <string name="investment_pede_hasil_lebih_detail_label_metode">Metode Pede Hasil Lebih Saya</string>
+    <string name="investment_pede_hasil_lebih_detail_label_metode_otomatis">Otomatis</string>
+    <string name="investment_pede_hasil_lebih_detail_label_metode_manual">Manual</string>
+    <string name="investment_pede_hasil_lebih_detail_label_deposite_keseluruhan">Alokasi Keseluruhan</string>
+    <string name="investment_pede_hasil_lebih_detail_label_keuntungan_dari_awal">Keuntungan Sejak Awal</string>
+    <string name="investment_pede_hasil_lebih_detail_label_informasi">Informasi</string>
+    <string name="investment_pede_hasil_lebih_detail_label_indikasi_keuntungan_harian">Indikasi Keuntungan Harian</string>
+    <string name="investment_pede_hasil_lebih_detail_label_jumlah_unit">Jumlah Unit</string>
+    <string name="investment_pede_hasil_lebih_detail_label_nab_per_unit">NAB per unit terakhir</string>
+    <string name="investment_pede_hasil_lebih_detail_label_keuntunga_per_tahun">Indikasi keuntungan per tahun</string>
+    <string name="investment_pede_hasil_lebih_detail_label_indikasi_keuntungan_by_nab">Indikasi Keuntungan berdasarkan NAB per\n %1$s</string>
+    <string name="investment_pede_hasil_info_metode">Cara alokasi saldo PedeCash kamu dengan memasukkan nominal sesuai yang kamu inginkan</string>
+    <string name="investment_pede_hasil_info_alokasi_keseluruhan">Jumlah Akumulasi saldo yang pernah dimasukkan ke Pede Hasil Lebih kamu</string>
+    <string name="investment_pede_hasil_info_keuntungan_sejak_awal">Keuntungan yang kamu miliki dari Alokasi Keseluruhan sejak awal bergabung dengan Pede Hasil Lebih</string>
+    <string name="investment_pede_hasil_info_indikasi_keuntungan_harian">Indikasi keuntungan per hari yang bisa kamu dapatkan dengan jumlah unit kamu saat ini.</string>
+    <string name="investment_pede_hasil_info_jumlah_unit">Satuan yang menunjukan kepemilikan investasi Reksa Dana</string>
+    <string name="investment_pede_hasil_info_nab_per_unit">Nilai yang menunjukan total kekayaan Reksa Dana setiap harinya setelah dikurangi biaya yang terkait</string>
+    <string name="investment_pede_hasil_info_indikasi_keuntungan_per_tahun">Estimasi keuntungan yang diperoleh kamu dari selisih NAB/unit hari ini dan 1 tahun lalu</string>
+    <string name="investment_pede_hasil_lebih_detail_btn_top_up">Top Up Pede Hasil Lebih</string>
+    <string name="investment_pede_hasil_lebih_detail_youtube"><![CDATA[ <u><font color="#EB3323">Klik disini untuk</font></u> melihat video penjelasan lebih lanjut ]]></string>
+
+
+    <!-- Investment PHL Deposit Setting Activity -->
+    <string name="title_activity_investment_phldeposit_setting">Pengaturan Deposit</string>
+    <string name="investment_phldeposit_settinglabel_sumber_deposit">Sumber Deposit</string>
+    <string name="investment_phldeposit_setting_label_otomatis">Otomatis</string>
+    <string name="investment_phldeposit_setting_label_batas_otomatis">Tentukan Batas Otomatis</string>
+    <string name="investment_phldeposit_setting_hint_nominal">Masukkan Nominal</string>
+    <string name="investment_phldeposit_setting_label_nominal_sample">*contoh ketik: Rp.50.000</string>
+    <string name="investment_phldeposit_setting_label_note">Jika saldo Pede Anda telah melewati batas nominal yang ditentukan,
+        saldo akan otomatis berpindah ke Tabungan Hasil Lebih</string>
+    <string name="investment_phldeposit_setting_btn_submit">Simpan</string>
+
+    <!-- Investment PHL Top Up Activity -->
+    <string name="title_activity_investment_phltop_up">Setoran</string>
+    <string name="investment_phltop_up_label_nominal_setoran">Nominal Setoran</string>
+    <string name="investment_phltop_up_hint_nominal_setoran">Masukkan Nominal</string>
+    <string name="investment_phltop_up_label_nominal_sample">*contoh ketik: Rp.50.000</string>
+    <string name="investment_phltop_up_label_note">Dengan mengklik tombol pindahkan, saldo
+        PedeCash kamu akan dialokasikan untuk pembelian Pede Hasil Lebih</string>
+    <string name="investment_phltop_up_btn_submit">Lanjutkan</string>
+    <string name="investment_phldeposit_setting_label_input_nominal">Input Nominal yang ingin ditabung</string>
+    <string name="investment_phltop_up_label_tabungan_note">Pede Hasil Lebih (PHL) memiliki fitur pencairan instant. Jika saldo PedeCash kamu tidak mencukupi untuk melakukan pembayaran maka sistem akan otomatis mencairkan Saldo PHL ke Saldo PedeCash kamu, tanpa bikin kamu repot.</string>
+
+    <!-- Investment Activity -->
+    <string name="title_activity_investment_withdraw">Pencairan Dana</string>
+    <string name="investment_withdraw_label_total_saldo">Total Saldo : %1$s</string>
+    <string name="investment_withdraw_label_nominal">Input Nominal yang ingin dicairkan</string>
+    <string name="investment_withdraw_hint_nominal">Masukkan Nominal</string>
+    <string name="investment_withdraw_label_nominal_sample">*contoh ketik: Rp.50.000</string>
+    <string name="investment_withdraw_label_note">Saldo Pede Hasil Lebih kamu akan dicairkan ke Saldo PedeCash</string>
+    <string name="investment_withdraw_btn_submit">Cairkan</string>
+    <string name="investment_withdraw_btn_lanjut">Lanjutkan</string>
+    <string name="investment_withdraw_label_cairkan_saldo">Cairkan Saldo</string>
+
+    <!-- Selfie With KTP Activity -->
+    <string name="title_activity_selfie_with_ktp">Selfie dengan KTP</string>
+    <string name="selfie_with_ktp_btn_camera">Foto Ulang</string>
+    <string name="selfie_with_ktp_btn_upload">Upload Foto</string>
+    <string name="selfie_with_ktp_toast">Silakan foto ktp kamu</string>
+
+    <!-- Telkom Listrik Air Product Activity -->
+    <string name="title_activity_telkom_listrik_air_product">Telkom, Listrik dan Air</string>
+
+    <!-- Telkom Listrik Air Kode Pelanggan Activity -->
+    <string name="title_activity_telkom_listrik_air_kode_pelanggan">Telkom, Listrik dan Air</string>
+    <string name="telkom_listrik_air_kode_pelanggan_label_kode_pelanggan">Masukkan kode pelanggan</string>
+    <string name="telkom_listrik_air_kode_pelanggan_btn_cek_pembayaran">Cek Pembayaran</string>
+
+    <!-- PLN Prepaid Activity -->
+    <string name="title_activity_plnprepaid">Token PLN</string>
+    <string name="plnprepaid_msg_intro">Masukkan nomor meter atau ID Pelanggan PLN Anda</string>
+    <string name="plnprepaid_hint_id_pelanggan">Masukkan ID Pelanggan</string>
+    <string name="plnprepaid_btn_buy">Beli Sekarang</string>
+
+    <!-- QR Payment Activity -->
+    <string name="title_activity_qrpayment">Bayar dengan QR</string>
+    <string name="qrpayment_label_amount">Nominal Bayar</string>
+    <string name="qrpayment_btn_next">Lanjut Bayar</string>
+
+    <!-- Banner Detail Activity -->
+    <string name="title_activity_banner_detail">Ketentuan</string>
+    <string name="banner_detail_msg_page_not_found">Halaman tidak ditemukan</string>
+
+    <!-- Additional Chat - Acticity -->
+    <string name="title_activity_additional_chat">Upgrade Pede Plus</string>
+    <string name="additional_chat_bot_message_upgrade_success">Kamu sudah selesai mengisi data untuk Upgrade
+     Pede Plus. Silahkan menunggu waktu maksimal 3x24 jam</string>
+    <string name="additional_chat_bot_message_selfie_ktp_intro">Sekarang kamu perlu foto selfie sambil
+        memegang KTP yang kamu scan sebelumnya</string>
+    <string name="additional_chat_bot_message_selfie_ktp_sample">Contohnya seperti ini</string>
+    <string name="additional_chat_bot_message_signature_intro">Langkah terakhir adalah memberikan tanda
+        tangan kamu sebagai verifikasi</string>
+    <string name="additional_chat_btn_upload">Upload</string>
+    <string name="additional_chat_btn_done">Selesai</string>
+    <string name="additional_chat_btn_goto_signature">Lanjut tanda tangan</string>
+    <string name="additional_chat_btn_selfie_sekarang">Selfie sekarang</string>
+
+    <!-- Premi Options - Acticity -->
+    <string name="title_activity_insurance_premi_option">Pilihan</string>
+
+    <!-- Near By Merchant - Acticity -->
+    <string name="title_activity_nearby_merchant">Merchant Ottopay Terdekat</string>
+    <string name="nearby_merchant_hint_search">Ketik nama merchant atau nama daerah...</string>
+    <string name="nearby_merchant_label_powered_by">Powered by Ottopay</string>
+    <string name="nearby_merchant_label_promo">PROMO</string>
+    <string name="nearby_merchant_btn_location">Lihat Lokasi</string>
+    <string name="nearby_merchant_btn_detail">Detail</string>
+    <string name="nearby_merchant_msg_merchant_not_found">Merchant tidak tersedia</string>
+
+    <!-- Near By Merchant Detail - Acticity -->
+    <string name="title_activity_nearby_merchant_detail">Nearby Merchant Detail</string>
+    <string name="nearby_merchant_detail_label_location">Lokasi</string>
+    <string name="nearby_merchant_detail_label_term">Ketentuan</string>
+
+
+    <!-- My QR Code - Activity-->
+    <string name="title_activity_my_qrcode">QR Saya</string>
+    <string name="my_qrcode_label_qr_desc">Gunakan kode QR ini untuk menerima transfer saldo</string>
+
+    <!-- Selfie With KTP CameraKit - Activity-->
+    <string name="title_activity_selfie_with_ktp_camera_kit">Selfie dengan KTP</string>
+
+    <!-- Capture KTP CameraKit - Activity-->
+    <string name="title_activity_capture_ktp_camera_kit">Silakan Foto KTP Anda</string>
+
+    <!-- Split Payment CameraKit - Activity-->
+    <string name="title_activity_split_payment_camera_kit">Silakan Foto Nota Pembayaran</string>
+
+    <!-- Change Profile Picture CameraKit - Activity-->
+    <string name="title_activity_change_profile_picture_camera_kit">Silakan Foto Profile</string>
+
+    <!-- Loan Activity -->
+    <string name="loan_activity_title">Pinjaman</string>
+    <string name="loan_activity_longitude_latitude_tidak_ditemukan">Longitude/Latitude tidak ditemukan.</string>
+    <string name="loan_activity_permission_read_imei_denied">Permission Read IMEI Denied.</string>
+
+    <!-- Pede Smart Loan - Activity-->
+    <string name="title_activity_pede_smart_loan">Pede Smart Loan</string>
+
+    <!-- Voucher Game Activity -->
+    <string name="title_activity_voucher_game">Voucher Game</string>
+
+    <!-- Home Fragment -->
+    <string name="home_fragment_label_point">POIN</string>
+    <string name="home_fragment_label_friend">TEMAN</string>
+    <string name="home_fragment_label_saldo_total">Saldo Total</string>
+    <string name="home_fragment_label_saldo_emoney">PedeCash</string>
+    <string name="home_fragment_label_hasil_lebih">Pede Hasil Lebih</string>
+    <string name="home_fragment_label_score_desc">Score Anda Cukup Baik\nPerlu peningkatan</string>
+    <string name="home_fragment_label_score_intro_title">Tingkatkan Kondisi keuanganmu</string>
+    <string name="home_fragment_label_score_intro_desc">Ayo ikut interview dengan Sasha dan kenali segala kebutuhan finansial kamu</string>
+    <string name="home_fragment_tab_my_score">Skor Pede</string>
+    <string name="home_fragment_tab_my_budgeting">Budget Saya</string>
+    <string name="home_fragment_tab_alokasi">Alokasi</string>
+    <string name="home_fragment_tab_komparasi">Komparasi</string>
+    <string name="home_fragment_btn_score_detail">Lihat Detail</string>
+    <string name="home_fragment_label_alokasi">Alokasi</string>
+    <string name="home_fragment_label_aktual">Aktual</string>
+    <string name="home_fragment_msg_pfm_required">Harus assessment terlebih dahulu</string>
+    <string name="home_fragment_btn_show_more">Selengkapnya</string>
+    <string name="home_fragment_label_saldo_pede">SALDO PEDE</string>
+    <string name="home_fragment_label_pede_hasil_lebih">Pede Hasil Lebih</string>
+    <string name="home_fragment_label_bayar">Bayar</string>
+    <string name="home_fragment_label_merchant">Merchant\nTerdekat</string>
+    <string name="home_fragment_label_top_up">Top Up</string>
+    <string name="home_fragment_label_lainnya">Lainnya</string>
+    <string name="home_fragment_label_rekomendasi_produk">Rekomendasi Produk</string>
+    <string name="home_fragment_label_pede_cash">PedeCash</string>
+
+    <!-- Need Upgrade, Verification Process, Approved Fragment -->
+    <string name="home_fragment_label_premium">PREMIUM</string>
+    <string name="home_fragment_label_ugpgrade_premium_gratis">Upgrade ke Pede Premium  GRATISS</string>
+    <string name="home_fragment_label_cukup_dengan_ktp">Cukup dengan KTP dan nikmati berbagai keuntungannya</string>
+    <string name="home_fragment_label_verification_process">Data diri sedang dalam proses verifikasi max 3x24 jam hari kerja</string>
+    <string name="home_fragment_label_learn_more">Learn More</string>
+    <string name="home_fragment_label_ketahui_kondisi_finansial_kamu">Ketahui Kondisi Finansial Kamu</string>
+    <string name="home_fragment_label_interview">Interview dengan Sasha</string>
+    <string name="home_fragment_label_budgetin_pengeluaran_kamu">Budgetin Pengeluaran Kamu</string>
+    <string name="home_fragment_label_upcoming_feature">Upcoming Feature</string>
+    <string name="home_fragment_label_skor_finansial_kamu">Skor Finansial Kamu</string>
+
+    <!-- Transfer To Friend List Fragment -->
+    <string name="transfer_friend_list_fragment_hint_search">Cari kontak...</string>
+    <string name="transfer_friend_list_fragment_btn_send">Kirim</string>
+
+    <!-- My Gift Fragment -->
+    <string name="my_gift_fragment_tab_1">Hadiah Masuk</string>
+    <string name="my_gift_fragment_tab_2">Dikirim</string>
+
+    <!-- QR Code Fragment -->
+    <string name="qr_code_fragment_title">QR Scan</string>
+    <string name="qr_code_fragment_tab_1">Scan QR</string>
+    <string name="qr_code_fragment_tab_2">Tampilkan QR</string>
+
+    <!-- Scan QR Code Fragment -->
+    <string name="scan_qr_code_fragment_total_balance">Saldo yang dapat digunakan : </string>
+
+    <!-- Insurance Activity -->
+    <string name="insurance_activity_title">Ikut Asuransi</string>
+    <string name="insurance_activity_tab_1">Pilihan Asuransi</string>
+    <string name="insurance_activity_tab_2">Asuransi Saya</string>
+
+    <!-- Insurance List Fragment -->
+    <string name="insurance_list_fragment_header_title">Cari kebutuhan\nAsuransimu</string>
+    <string name="insurance_list_fragment_header_desc">Ajak teman bergabung di Pede dengan invite pakai Kode Referal-mu</string>
+
+    <!-- My Insurance Fragment -->
+    <string name="my_insurance_fragment_header_title">Perlindungan Asuransi</string>
+    <string name="my_insurance_fragment_header_desc">Kamu sudah ikut %1$d asuransi</string>
+
+    <!--  My Insurance Detail Fragment -->
+    <string name="my_investment_detail_fragment_label_owner">Penyedia</string>
+
+    <!--  My Insurance Polis Fragment -->
+    <string name="my_insurance_polis_fragment_label_pdf">PDF</string>
+    <string name="my_insurance_polis_fragment_label_png">PNG</string>
+
+    <!-- Investment Activity -->
+    <string name="investment_activity_title">Ikut Investasi</string>
+    <string name="investment_activity_tab_1">Produk Investasi</string>
+    <string name="investment_activity_tab_2">Investasi Saya</string>
+
+    <!--  My Investment Fragment -->
+    <string name="my_investment_fragment_label_header_title">Total Investasi kamu</string>
+    <string name="my_investment_fragment_label_header_desc">Dari %1$d investasi</string>
+    <string name="my_investment_fragment_msg_empty">Anda belum memiliki asuransi</string>
+    <string name="my_investment_fragment_msg_insurance_detail_empty">Detail asuransi tidak ditemukan</string>
+    <string name="my_investment_fragment_btn_add">Tambah Investasi Rutin Berkala</string>
+    <string name="my_investment_fragment_btn_add_desc">Buat target baru investasi anda</string>
+
+    <!-- Investment Intro Fragment -->
+    <string name="investment_intro_fragment_btn_tnc">Pelajari selengkapnya </string>
+    <string name="investment_intro_fragment_btn_tnc_di_sini">di sini</string>
+
+
+    <!-- Side Menu -->
+    <string name="side_menu_notification">Notifikasi</string>
+    <string name="side_menu_history">Riwayat</string>
+    <string name="side_menu_settings">Pengaturan</string>
+    <string name="side_menu_referral_code">Ajak Teman</string>
+    <string name="side_menu_tac">Syarat &amp; Ketentuan</string>
+    <string name="side_menu_help">Bantuan</string>
+    <string name="side_menu_contact">Hubungi Pede</string>
+    <string name="side_menu_sign_out">Keluar</string>
+    <string name="side_menu_hai_sahabat">Hai Sahabat Pede</string>
+    <string name="side_menu_telepon">Telepon Pede</string>
+    <string name="side_menu_email">"Email Pede</string>
+    <string name="side_menu_bantuan">""[Bantuan] Pede"</string>
+    <string name="side_menu_untuk_pertanyaan">Untuk pertanyaan dan bantuan seputar aplikasi Pede, kamu bisa hubungi kontak dibawah ini.\nTim kami akan segera mengirim tanggapan atas pesan kamu</string>
+
+    <!-- Motion Selfie - FaceID -->
+    <string name="meglive_title">Liveness Demo</string>
+    <string name="meglive_version">version：</string>
+    <string name="meglive_livenessBtn">Start</string>
+    <string name="meglive_auth_progress">Authorizing...</string>
+    <string name="meglive_auth_again">Retry authorizing</string>
+    <string name="meglive_auth_failed">Authorize Failed! Please check your network connection.</string>
+    <string name="meglive_returnbtn">Home Page</string>
+    <string name="meglive_liveness_again">Restart Liveness</string>
+    <string name="meglive_liveness_failed">Motion Selfie Gagal</string>
+
+    <!-- General -->
+    <string name="loading">Loading</string>
+    <string name="cancel">Cancel</string>
+    <string name="send">Send</string>
+    <string name="submit">Submit</string>
+    <string name="close">Tutup</string>
+    <string name="delete">Delete</string>
+    <string name="set_primary">Set Primary</string>
+    <string name="primary">Primary</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="process">Process</string>
+    <string name="continues">Continue</string>
+    <string name="password">Password</string>
+    <string name="save">Save</string>
+    <string name="information">Pemberitahuan</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="ok">OK</string>
+    <string name="update">Update</string>
+    <string name="refresh">Refresh</string>
+    <string name="no_internet_connection">Silahkan cek koneksi internet anda!</string>
+    <string name="currency_symbol">Rp</string>x
+    <string name="version">Versi %1$s</string>
+
+    <!-- Dialog -->
+    <string name="dialog_title_coming_soon">Fitur akan segera hadir!</string>
+    <string name="dialog_msg_coming_soon">Nantikan fitur menarik lainnya dari Pede sebentar lagi</string>
+    <string name="dialog_title_upgrade_pede_plus">Upgrade ke Pede Plus!</string>
+    <string name="dialog_msg_upgrade_pede_plus">Silakan upgrade ke Pede Plus untuk menggunakan fitur ini</string>
+    <string name="dialog_title_upgrade_pede_plus_pending">SEDANG DIVERIFIKASI</string>
+    <string name="dialog_msg_upgrade_pede_plus_pending">Data kamu sedang diverifikasi, max 3x24 Jam. Kamu dapat
+menggunakan fitur ini setelah data berhasil di verifikasi</string>
+    <string name="dialog_title_pfm_assessment">Tingkatkan kondisi keuangan Anda!</string>
+    <string name="dialog_msg_pfm_assessment_phl">Lakukan wawancara dengan Sasha untuk mengetahui kondisi
+        keuangan Anda dan dapatkan akses ke fitur Pede Hasil Lebih</string>
+    <string name="dialog_msg_pfm_assessment">Lakukan wawancara dengan Sasha untuk mengetahui kondisi
+        keuangan Anda dan dapatkan akses ke fitur ini</string>
+    <string name="dialog_btn_close">Tutup</string>
+    <string name="dialog_btn_mengerti">Mengerti</string>
+    <string name="dialog_msg_update_app">Silakan update aplikasi Pede Anda</string>
+    <string name="dialog_btn_ok">OK</string>
+    <string name="dialog_btn_primary_upgrade_pede">Reset dan Ulangi</string>
+    <string name="dialog_btn_secondary_upgrade_pede">Batal dan Keluar</string>
+    <string name="dialog_msg_title_empty_balance">Balance PedeCash kamu Kosong</string>
+    <string name="dialog_msg_subtitle_empty_balance">Silahkan top up PedeCash kamu untuk dapat mulai menabung di Pede Hasil Lebih</string>
+    <string name="dialog_btn_empty_balance">Top Up Sekarang</string>
+    <string name="dialog_msg_apa_itu_saldo_pede">Apa itu Saldo Pede ?</string>
+    <string name="dialog_msg_saldo_pede_adalah">Saldo Pede dapat kamu pakai untuk pembayaran di aplikasi pede yang merupakan total dari:</string>
+    <string name="dialog_msg_saldo_pede_hasil_lebih">SALDO PEDE HASIL LEBIH</string>
+    <string name="dialog_msg_plus">+</string>
+    <string name="dialog_msg_saldo_pede_cash">SALDO PEDE CASH</string>
+
+
+    <!-- Permission -->
+    <string name="camera_permission_was_granted">Camera permission was granted.</string>
+    <string name="camera_permission_request_was_denied">Camera permission request was denied.</string>
+    <string name="Camera_access_is_required_msg">Camera access is required to display the camera preview.</string>
+    <string name="camera_permission_not_available_msg">Permission is not available. Requesting camera permission.</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Error MyMessage -->
+    <string name="server_error">Tidak dapat terhubung ke server. Silahkan Coba lagi</string>
+    <string name="token_expired_error">Sesi habis, silahkan login kembali</string>
+
+    <!-- Error load webview-->
+    <string name="error_webview_header">Gagal Memuat</string>
+    <string name="error_webview_message">Halaman Web tidak tersedia, Silahkan coba ulang kembali</string>
+
+    <!-- BPJS -->
+    <string name="title_payment_bpjskes">Tagihan BPJS Kesehatab</string>
+    <string name="bpjs_no_ref">No. Ref : %1$s</string>
+    <string name="billing_detail_payment_bpjskes">Nomor VA : %1$s\nNama : %2$s\nJumlah Bulan : %3$s\nTotal Peserta : %4$s</string>
+    <string name="bpjskes_min_character">Nomor peserta minimal 11 karakter</string>
+    <string name="bpjskerja_min_character">Nomor peserta minimal 16 karakter</string>
+    <string name="bpjs_payment_period">Silahkan isi periode pembayaran</string>
+
+    <!--Investasi Uang Receh Intro Activity-->
+    <string name="iur_intro_desc">Sisihkan uang dari transaksi kamu ke Investasi Receh. Dengan cuma minimum penyisihan Rp. 1000, lama-lama jadi bukit!!</string>
+
+    <!--Investasi Uang Receh Register Activity-->
+    <string name="syarat_ketentuan_iur_1">Sebelum mengikuti program IUR (Investasi Uang Receh), kamu diwajibkan untuk membaca dan memahami isi Prospektus, Deskiripsi produk dan Syarat &amp; Ketentuan serta telah memahami karakteristik dan risiko sehubungan dengan investasi saya pada reksa dana yang bersangkutan</string>
+    <string name="syarat_ketentuan_iur_2">Produk IUR (Investasi Uang Receh) memberikan cara memulai berinvestasi yang mudah, aman dan fleksibel.</string>
+    <string name="syarat_ketentuan_iur_3">Produk IUR (Investasi Uang Receh) ini merupakan kerjasama PT. IndoAlliz Perkasa Sukses (\"IndoAlliz\") selaku pemilik platform \"Pede\" dengan PT. XDana Investa Utama (Xdana) selaku Agen Penjual Efek dan Maybank Asset Management selaku Manajer Investasi yang terdaftar di OJK.</string>
+    <string name="syarat_ketentuan_iur_4">Platform \"Pede\" merupakan gerai penjualan dari Xdana, dimana produk reksa dana pendukung (underlying) dari IUR (Investasi Uang Receh) adalah Maybank Dana Pasar Uang (MDPU)</string>
+    <string name="syarat_ketentuan_iur_5">IUR (Investasi Uang Receh) memiliki penempatan minimum untuk diinvestasikan Rp 10 ribu, jika jumlah Recehan yang dialokasikan belum mencapai Rp10 ribu maka dana tersebut akan ditampung terlebih dahulu oleh Pede. Dalam hal ini Pengguna tidak dapat mencairkan dana yang sedang ditampung sebelum dialokasikan ke IUR (Investasi Uang Receh)</string>
+    <string name="syarat_ketentuan_iur_6">Jika dalam kurun waktu 90 hari kalender dana tampungan belum mencapai Rp 10 ribu maka secara otomatis akan dicairkan ke Pedecash</string>
+    <string name="syarat_ketentuan_iur_7">Semua aktivitas transaksi yang terkait dengan Reksa Dana melalui aplikasi Pede akan mengikuti syarat dan ketentuan yang berlaku untuk investasi di Reksa Dana secara keseluruhan, termasuk namun tidak terbatas pada batasan transaksi untuk suatu periode tertentu dan saldo pada Pedecash.</string>
+    <string name="syarat_ketentuan_iur_8">IndoAlliz berhak menerapkan limit minimum kepada Produk IUR (Investasi Uang Receh) untuk menjaga keamanan likuiditas nasabah.</string>
+    <string name="syarat_ketentuan_iur_9">Nasabah akan dikirimkan notifikasi terkait dengan transaksi yang dilakukan.</string>
+    <string name="syarat_ketentuan_iur_10">Nasabah dapat terus mengetahui saldo IUR (Investasi Uang Receh) dan perkembangannya dengan mengakses aplikasi \"Pede\" pada menu \"IUR (Investasi Uang Receh)\".</string>
+    <string name="syarat_ketentuan_iur_11">Unit Penyertaan Reksa Dana yang diperoleh melalui produk IUR (Investasi Uang Receh) ini hanya dapat dijual kembali melalui aplikasi \"Pede\". Nasabah tidak dapat mengajukan permohonan penjualan kembali Unit Penyertaan melalui media ataupun pihak lain selain melalui aplikasi ini.</string>
+    <string name="syarat_ketentuan_iur_12">Berdasarkan peraturan yang berlaku terkait dengan penerbitan uang elektronik, Batas maksimum total transaksi menggunakan uang elektronik Pedecash, termasuk transaksi pembelian dan penjualan unit reksadana adalah Rp 20.000.000,-(dua puluh juta Rupiah) per bulan. Apabila total transaksi nasabah telah mencapai batas maksimum, maka permohonan transaksi pembelian dan penjualan unit penyertaan reksadana tidak dapat diproses.</string>
+    <string name="syarat_ketentuan_iur_13">Saldo maksimum akun Pedecash Nasabah adalah Rp10.000.000,-(sepuluh juta Rupiah) Nilai penjualan kembali yang dapat diterima di akun Pedecash Nasabah hanya sebesar sisa limit akun Pedecash Nasabah. Dalam hal terdapat hasil penjualan kembali unit penyertaan yang melebihi limit akun Pedecash Nasabah, maka Nasabah perlu mengosongkan/mengurangi saldo akun Pedecash Nasabah agar hasil penjualan kembali dapat diterima di akun Pedecash Nasabah.</string>
+    <string name="syarat_ketentuan_iur_14">Kinerja reksa dana merupakan tanggung jawab dari pihak manajer investasi sebagai pengelola investasi</string>
+    <string name="syarat_ketentuan_iur_15">Manajer Investasi adalah institusi yang tunduk kepada peraturan perundangan undangan serta ketentuan lain yang berlaku terkait dengan prinsip mengenal nasabah, anti tindak pidana pencucian uang, serta program sanksi keuangan internasional. Dalam penerapan peraturan dan/atau ketentuan di atas ataupun dalam hal terdapat kegagalan Nasabah untuk memperbaharui data Nasabah yang diperlukan, maka terdapat kemungkinan pengajuan transaksi pembelian unit penyertaan selanjutnya tidak dapat dilakukan.</string>
+    <string name="syarat_ketentuan_iur_16">Apabila diperlukan Nasabah dapat diminta untuk memperbaharui dan/atau melengkapi data Nasabah.</string>
+    <string name="syarat_ketentuan_iur_17">Saya telah membaca dan memahami isi Prospektus, Pernyataan, dan Syarat &amp; Ketentuan, serta telah memahami karakteristik dan risiko sehubungan dengan investasi saya pada reksa dana yang bersangkutan.</string>
+
+    <string name="call_center_iur_register">Dalam hal terdapat pernyataan ataupun masukkan, Nasabah dapat menghubungi Pede Call Centre di :\n\nEmail: halo@pede.id\nTelp: (021) 5060 9500\nSenin–Jumat : 08.00 – 20.00\nSabtu : 08.00 – 18.00\n\nwww.pede.id</string>
+    <string name="iur_register_checkbox">Dengan ini saya setuju untuk mengikuti Investasi Uang Receh beserta ketentuan yang berlaku.</string>
+
+    <string name="title_activity_investment_uang_register">Investasi\nUang Receh</string>
+
+    <string name="upgrade_pede_plus_first">Kamu harus upgrade Pede Plus dulu</string>
+    <string name="pfm_belum_selesai">Financial Assessment belum selesai</string>
+
+    <!--Investasi Uang Receh Change Activity-->
+    <string name="alokasi_iur">Alokasi Investasi Uang Receh</string>
+    <string name="penawaran_iur">Penawaran Investasi Uang Receh</string>
+    <string name="nominal_alokasi">Nominal Alokasi</string>
+    <string name="change_iur">Ubah Investasi Uang Receh</string>
+    <string name="masukan_nominal">Masukkan Nominal</string>
+    <string name="min_max_iur">Min. nominal 1.000 - Max. nominal %1$s</string>
+    <string name="min_iur">Minimal Nominal Rp. 1000</string>
+    <string name="min_sell_iur">Minimal Nominal Rp. 10.000</string>
+    <string name="max_iur">Maksimal Nominal %1$s</string>
+    <string name="iur_multiple_warning">Nominal harus kelipatan Rp. 100</string>
+
+    <!--Investasi Uang Receh Sell-->
+    <string name="max_penjualan_sebagian">Min. nominal %1$s - Max. nominal %2$s</string>
+    <string name="saldo_investasi">Saldo Investasi: %1$s</string>
+    <string name="title_activity_investment_uang_receh_sell">Penjualan Investasi Uang Receh</string>
+    <string name="title_activity_investment_uang_receh_konfirmasi_penjualan_dana">Konfirmasi Penjualan Dana</string>
+    <string name="investment_sell_label_nominal_total_jual">Total Penjualan</string>
+    <string name="tawarkan_tiap_transaksi">Tawarkan di tiap transaksi</string>
+    <string name="penjualan_nominal">Penjualan Nominal\n%1$s</string>
+    <string name="penjualan_nominal2">Penjualan Nominal</string>
+    <string name="penjualan_seluruhnya">Penjualan Seluruhnya\n%1$s</string>
+    <string name="penjualan_seluruhnya2">Penjualan Seluruhnya</string>
+    <string name="investment_uang_receh_label_note">Penjualan Investasi Uang Receh akan masuk ke dalam Saldo PedeCash kamu dalam 2 hari kerja.</string>
+    <string name="penjualan_investasi_berhasil">Penjualan Investasi berhasil</string>
+    <string name="back_to_iur">Kembali ke halaman Investasi Uang Receh</string>
+    <string name="see_pedecash_balance">Lihat Saldo PedeCash</string>
+
+    <!--Investasi Emas -->
+    <string name="pembelian_emas">Pembelian Emas</string>
+    <string name="penjualan_emas">Penjualan Emas</string>
+    <string name="jual_emas">Pembelian Emas %1$s %2$s pada harga %3$s %4$s</string>
+    <string name="pembelian_toolbar_emas">Beli Emas</string>
+    <string name="penjualan_toolbar_emas">Jual Emas</string>
+
+    <!--Voucher Game -->
+    <string name="pembelian_vouvher_game">Voucher Game</string>
+
+
+    <!--Investasi Uang Receh History-->
+    <string name="riwayat_iur">Riwayat Investasi Uang Receh</string>
+    <string name="penjualan_iur">Penjualan Investasi Uang Receh</string>
+    <string name="jual_iur">Jual Investasi Uang Receh</string>
+    <string name="refund_iur">Pengembalian dari Penampungan Uang Receh</string>
+    <string name="pembelian_dari_penampungan_uang_receh">Pembelian Investasi dari Penampungan Uang Receh</string>
+    <string name="penampungan_uang_receh">Penampungan Uang Receh</string>
+    <string name="reversal_penjualan_uang_receh">Reversal Penjualan Investasi Uang Receh</string>
+    <string name="iur_actived">Investasi Uang Receh telah aktif kembali</string>
+    <string name="iur_deactived">Investasi Uang Receh telah di non-aktifkan</string>
+    <string name="total_investasi">Total Investasi Uang Receh</string>
+    <string name="investasi_dijual">Investasi Dicairkan</string>
+
+    <!--Investasi Saya-->
+    <string name="total_value">Total: %1$s</string>
+    <string name="penjual_sebagian">Jual Sebagian</string>
+    <string name="penjual_seluruhnya">Jual Seluruhnya</string>
+    <string name="saldo_terbatas_iur">Saldo terbatas untuk Investasi Uang Receh</string>
+    <string name="saldo_kurang_iur">Saldo kurang untuk Investasi Uang Receh</string>
+
+    <!-- Receipt Fragment -->
+    <string name="receipt_fragment_label_bukti_bayar_dan_detail">BUKTI BAYAR DAN DETIL TRANSAKSI</string>
+    <string name="receipt_fragment_label_payment_receipt">Payment Receipt</string>
+    <string name="receipt_fragment_label_id_transaksi">ID Transaksi</string>
+    <string name="receipt_fragment_label_jumlah_pemabayaran">Jumlah Pembayaran</string>
+    <string name="receipt_fragment_label_download">Download</string>
+    <string name="receipt_fragment_label_share">Share</string>
+    <string name="receipt_fragment_label_item">Item</string>
+    <string name="receipt_fragment_label_biaya_layanan">Biaya Layanan</string>
+    <string name="receipt_fragment_label_investasi_uang_receh">Investasi Uang Receh</string>
+    <string name="receipt_fragment_label_biaya_tertagih">Biaya Tertagih</string>
+    <string name="receipt_fragment_label_total_pembayaran">Total Pembayaran</string>
+    <string name="receipt_fragment_label_metode_pembayaran">Metode Pembayaran</string>
+    <string name="receipt_fragment_label_pede_cash">PedeCash</string>
+    <string name="receipt_fragment_label_jumlah_pencairan">Jumlah Pencairan</string>
+    <string name="receipt_fragment_label_lihat_bukti_pencairan_dana">LIHAT BUKTI PENCAIRAN DANA</string>
+    <string name="receipt_fragment_label_lihat_bukti_pencairan">Bukti Pencairan</string>
+    <string name="receipt_fragment_label_jumlah_penjualan">Jumlah Penjualan</string>
+
+    <!-- Kereta Api -->
+    <string name="tiket_kereta">Bayar tagihan tiket kereta api indonesia apa saja dan di mana saja dengan saldo Pede kamu.</string>
+
+    <!-- Bank Account List -->
+    <string name="powered">Pede Cash powered by Ottocash</string>
+
+    <!--Cross Pede Name -->
+    <string name="app_simple_name_firebase">PeDe</string>
+    <string name="app_simple_name">Pede</string>
+    <string name="app_simple_name_uppercase">PEDE</string>
+    <string name="app_email">halo@pede.id</string>
+    <string name="app_telphone_normal">02150609500</string>
+    <string name="app_telphone_kurung">(021) 5060 9500</string>
+    <string name="app_website_www">www.pede.id</string>
+    <string name="app_website_https">https://www.pede.id</string>
+    <string name="app_title_emoney_reguler">PedeCash</string>
+    <string name="app_title_emoney_plus">PedeCash</string>
+
 </resources>

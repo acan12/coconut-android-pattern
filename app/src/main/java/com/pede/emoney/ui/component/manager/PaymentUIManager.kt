@@ -2,9 +2,9 @@ package com.pede.emoney.ui.component.manager
 
 import android.content.Context
 import android.widget.Toast
-import com.pede.emoney.ui.component.impl.IPaymentLogic
+import com.pede.emoney.ui.component.impl.IPaymentUI
 
-class PaymentLogicManager : IPaymentLogic {
+class PaymentUIManager : IPaymentUI {
 
     override fun setupPayment(context: Context) {
         Toast.makeText(context, "Show Payment logic", Toast.LENGTH_SHORT).show()

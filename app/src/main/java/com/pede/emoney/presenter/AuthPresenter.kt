@@ -8,14 +8,14 @@ import com.pede.emoney.model.api.request.SignInRequestModel
 import com.pede.emoney.model.api.request.SignUpRequesModel
 import com.pede.emoney.model.api.response.CheckVersionResponseModel
 import com.pede.emoney.model.dao.AuthDao
-import com.pede.emoney.ui.IAuthView
+import com.pede.emoney.ui.impl.ISplashView
 
 class AuthPresenter() : BasePresenter(), AuthDao.IAuthDao {
 
-    lateinit var iAuthView : IAuthView
+    lateinit var iSplashView: ISplashView
 
-    constructor(iview : IView) : this() {
-        this.iAuthView = iview as IAuthView
+    constructor(iview: IView) : this() {
+        this.iSplashView = iview as ISplashView
     }
 
     override fun signUp(request: SignUpRequesModel) {
@@ -28,26 +28,13 @@ class AuthPresenter() : BasePresenter(), AuthDao.IAuthDao {
 
     override fun getCheckVersion() {
         AuthDao.instance.checkVersion()
-            .subscribe(object : RxObserver<CheckVersionResponseModel>(iAuthView, "Check Version...", 10000) {
+            .subscribe(object :
+                RxObserver<CheckVersionResponseModel>(iSplashView, "Check Version...", 10000) {
                 override fun onNext(o: Any) {
                     super.onNext(o)
-                    iAuthView.handleCheckVersion(o as CheckVersionResponseModel)
+                    iSplashView.handleCheckVersion(o as CheckVersionResponseModel)
                 }
             })
-//        AuthDao.instance.checkVersion()
-//            .subscribe(object -> RxObserver<CheckVersionResponseModel>(iAuthView, "Ambil Data Summary...", 10000) {
-//                @Override
-//                public void onSubscribe(Disposable d) {
-//                    super.onSubscribe(d);
-//
-//                }
-//
-//                @Override
-//                public void onNext(Object o) {
-//                    super.onNext(o);
-//                    ifv.handleDataSummary((SummaryResponse) o);
-//                }
-//            });
     }
 
 

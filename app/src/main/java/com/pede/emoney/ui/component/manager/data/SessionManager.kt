@@ -1,4 +1,4 @@
-package com.pede.emoney.ui.component.manager
+package com.pede.emoney.ui.component.manager.data
 
 import android.content.Context
 import com.pede.emoney.IConfig

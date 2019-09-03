@@ -1,19 +1,19 @@
 package com.pede.emoney
 
 import android.content.Context
-import android.util.Log
 import app.beelabs.com.codebase.base.BaseApp
 import app.beelabs.com.codebase.di.component.AppComponent
 import app.beelabs.com.codebase.di.component.DaggerAppComponent
+import com.google.firebase.FirebaseApp
 import com.pede.emoney.ui.component.*
 import com.pede.emoney.ui.component.impl.INavigation
-import com.pede.emoney.ui.component.manager.AnimationLogicManager
-import com.pede.emoney.ui.component.manager.EventManager
-import com.pede.emoney.ui.component.manager.NavigationManager
-import com.pede.emoney.ui.component.manager.PaymentLogicManager
+import com.pede.emoney.ui.component.manager.ActionManager
+import com.pede.emoney.ui.component.manager.AnimationUIManager
+import com.pede.emoney.ui.component.manager.PaymentUIManager
+import com.pede.emoney.ui.component.manager.nav.NavigationManager
 import com.pede.emoney.ui.component.module.NavModule
 
-class App : BaseApp() {
+class Pede : BaseApp() {
 
     init {
         instance = this
@@ -23,7 +23,7 @@ class App : BaseApp() {
 
         var uiComponent: UIComponent? = null
         var supportSubComponent: SupportSubComponent? = null
-        private var instance: App? = null
+        private var instance: Pede? = null
 
         fun applicationContext(): Context {
             return instance!!.applicationContext
@@ -38,24 +38,19 @@ class App : BaseApp() {
             return uiComponent?.inject(NavigationManager())!!
         }
 
-//        fun getHomeNavigationComponent(): IHomeNavigation {
-//            return uiComponent?.inject(HomeNavigation())!!
-//        }
-
-
-        // Module LogicUI
-        fun getPaymentLogic(): ILogic {
-            return supportSubComponent?.inject(PaymentLogicManager())!!
+        // Module UI Preview
+        fun getPaymentUI(): IUi {
+            return supportSubComponent?.inject(PaymentUIManager())!!
         }
 
-        fun getAnimationLogic(): ILogic {
-            return supportSubComponent?.inject(AnimationLogicManager())!!
+        fun getAnimationUI(): IUi {
+            return supportSubComponent?.inject(AnimationUIManager())!!
         }
 
 
         // Module Event
-        fun getEvent(): IEvent {
-            return supportSubComponent?.inject(EventManager())!!
+        fun getAction(): IAction {
+            return supportSubComponent?.inject(ActionManager())!!
         }
 
     }
@@ -63,6 +58,7 @@ class App : BaseApp() {
     @Suppress("DEPRECATION")
     override fun onCreate() {
         super.onCreate()
+        FirebaseApp.initializeApp(SplashActivity@ this) //Setup Firebase
 
         setupBuilder(DaggerAppComponent.builder(), this)
         setupDefaultFont("font/Avenir-Medium.ttf")
@@ -72,9 +68,6 @@ class App : BaseApp() {
 
         supportSubComponent = DaggerUIComponent.builder().appComponent(getAppComponent()).build()
             .newSupportSubcomponent()
-
-
-        Log.d("", "")
 
     }
 

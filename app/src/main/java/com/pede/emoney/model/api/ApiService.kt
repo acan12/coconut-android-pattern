@@ -27,7 +27,7 @@ interface ApiService {
     /**
      * CMS
      */
-    //CMS Check App Version
+    //CMS Check Pede Version
     @GET("check/version")
     fun checkAppVersion(@HeaderMap headers: Map<String, String>): Observable<CheckVersionResponseModel>
 
@@ -205,7 +205,7 @@ interface ApiService {
 //     * CMS
 //     */
 //
-//    //CMS Check App Version
+//    //CMS Check Pede Version
 //    @Headers("Content-Type:" + ApiConfigs.CONTENT_TYPE, "partnerCode:" + ApiConfigs.PARTNER_CODE)
 //    @GET(ApiKeys.CMS_CHECK_APP_VERSION)
 //    abstract fun checkAppVersion(): Call<CheckVersionResponse>

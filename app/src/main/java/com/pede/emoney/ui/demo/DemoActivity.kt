@@ -13,12 +13,12 @@ import app.beelabs.com.codebase.support.rx.RxTimer
 import com.google.android.play.core.splitinstall.SplitInstallManager
 import com.google.android.play.core.splitinstall.SplitInstallManagerFactory
 import com.google.android.play.core.splitinstall.SplitInstallRequest
-import com.pede.emoney.App
+import com.pede.emoney.Pede
 import com.pede.emoney.BuildConfig
 import com.pede.emoney.IConfig.Companion.MODULE_INSURANCE_CLASSNAME
 import com.pede.emoney.R
-import com.pede.emoney.ui.component.impl.IAnimationLogic
-import com.pede.emoney.ui.component.impl.IPaymentLogic
+import com.pede.emoney.ui.component.impl.IAnimationUI
+import com.pede.emoney.ui.component.impl.IPaymentUI
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -35,9 +35,8 @@ class DemoActivity : BaseActivity() {
         setContentView(R.layout.activity_demo)
 
         manager = SplitInstallManagerFactory.create(this)
-        val event = App.getEvent()
-        val navigation = App.getNavigationComponent()
-
+        val event = Pede.getAction()
+        val navigation = Pede.getNavigationComponent()
 
         RxTimer.doTimer(10000, false, object : RxTimer() {
             override fun onCallback(along: Long?) {
@@ -51,22 +50,22 @@ class DemoActivity : BaseActivity() {
 
         RxTimer.doTimer(1000, false, object : RxTimer() {
             override fun onCallback(along: Long?) {
-                val supportPayment = App.getPaymentLogic() as IPaymentLogic
+                val supportPayment = Pede.getPaymentUI() as IPaymentUI
                 supportPayment.setupPayment(this@DemoActivity)
             }
         })
 
         RxTimer.doTimer(1000, false, object : RxTimer() {
             override fun onCallback(along: Long?) {
-                val supportAnimation = App.getAnimationLogic() as IAnimationLogic
+                val supportAnimation = Pede.getAnimationUI() as IAnimationUI
                 supportAnimation.setupAnimation(this@DemoActivity)
             }
         })
 
         RxTimer.doTimer(1000, false, object : RxTimer() {
             override fun onCallback(along: Long?) {
-                val supportEvent = App.getEvent()
-                supportEvent.setupEvent(this@DemoActivity)
+                val supportEvent = Pede.getAction()
+                supportEvent.setupAction(this@DemoActivity)
             }
         })
 
@@ -118,7 +117,7 @@ class DemoActivity : BaseActivity() {
                 showResult(it)
                 if (it.toLowerCase().contains("done")) {
                     loadInsuranceModule()
-                    App.getNavigationComponent().homeNavigation(intent).goSecondPage(it, this)
+                    Pede.getNavigationComponent().homeNavigation(intent).goSecondPage(it, this)
                 }
             }
 

@@ -1,0 +1,215 @@
+{
+  "project_info": {
+    "project_number": "113270987592",
+    "firebase_url": "https://pedemobile-e8bfd.firebaseio.com",
+    "project_id": "pedemobile-e8bfd",
+    "storage_bucket": "pedemobile-e8bfd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113270987592:android:248b28e5e81c2a88",
+        "android_client_info": {
+          "package_name": "com.emoney.pede.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113270987592-39111jm105gjdl09tnbe04ihg5vo3hms.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emoney.pede.dev",
+            "certificate_hash": "05d4c03ba0935a2a3fb04479e878f94da092fe72"
+          }
+        },
+        {
+          "client_id": "113270987592-iho1ionm56ot062rmqql7otg0abe3t5a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEL04p4vh2FTpYNlZ5nlO5IqTQ2FoRjeU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113270987592-iho1ionm56ot062rmqql7otg0abe3t5a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "113270987592-jkml26769olo8vf37nrelot5b7d12bnk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "id.pede"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113270987592:android:ceeee4b7bb93a04d",
+        "android_client_info": {
+          "package_name": "com.ottocash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113270987592-1mv9e56non9ne2m3bptm197cdjjdnvj8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ottocash",
+            "certificate_hash": "1b7c64e84020989ad3ccc45f964a94a037926e1a"
+          }
+        },
+        {
+          "client_id": "113270987592-iho1ionm56ot062rmqql7otg0abe3t5a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEL04p4vh2FTpYNlZ5nlO5IqTQ2FoRjeU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113270987592-iho1ionm56ot062rmqql7otg0abe3t5a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "113270987592-jkml26769olo8vf37nrelot5b7d12bnk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "id.pede"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113270987592:android:0c392ba41ce023b1",
+        "android_client_info": {
+          "package_name": "com.ottocash.development"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113270987592-sutb2r06tvbbt5h77nn0c8s71mbor1gf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ottocash.development",
+            "certificate_hash": "1b7c64e84020989ad3ccc45f964a94a037926e1a"
+          }
+        },
+        {
+          "client_id": "113270987592-iho1ionm56ot062rmqql7otg0abe3t5a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEL04p4vh2FTpYNlZ5nlO5IqTQ2FoRjeU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113270987592-iho1ionm56ot062rmqql7otg0abe3t5a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "113270987592-jkml26769olo8vf37nrelot5b7d12bnk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "id.pede"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113270987592:android:aacd5031740458ec",
+        "android_client_info": {
+          "package_name": "com.pede.emoney"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113270987592-3b1ftoqid17e2b1qe21ela08e83is11v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pede.emoney",
+            "certificate_hash": "05d4c03ba0935a2a3fb04479e878f94da092fe72"
+          }
+        },
+        {
+          "client_id": "113270987592-iho1ionm56ot062rmqql7otg0abe3t5a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEL04p4vh2FTpYNlZ5nlO5IqTQ2FoRjeU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113270987592-iho1ionm56ot062rmqql7otg0abe3t5a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "113270987592-jkml26769olo8vf37nrelot5b7d12bnk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "id.pede"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

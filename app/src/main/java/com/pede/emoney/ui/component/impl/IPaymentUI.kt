@@ -1,9 +1,9 @@
 package com.pede.emoney.ui.component.impl
 
 import android.content.Context
-import com.pede.emoney.ui.component.ILogic
+import com.pede.emoney.ui.component.IUi
 
-interface IPaymentLogic : ILogic {
+interface IPaymentUI : IUi {
 
     fun setupPayment(context: Context)
 }
