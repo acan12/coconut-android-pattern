@@ -7,6 +7,7 @@ import app.beelabs.com.codebase.base.BaseActivity
 import app.beelabs.com.codebase.base.BasePresenter
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.iid.FirebaseInstanceId
+import com.pede.emoney.Pede
 import com.pede.emoney.R
 import com.pede.emoney.model.api.response.CheckVersionResponseModel
 import com.pede.emoney.presenter.AuthPresenter
@@ -18,20 +19,9 @@ class SplashActivity : BaseActivity(), ISplashView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        (BasePresenter.getInstance(
-            this,
-            AuthPresenter::class.java
-        ) as AuthPresenter).getCheckVersion()
+        (BasePresenter.getInstance(this, AuthPresenter::class.java) as AuthPresenter).getCheckVersion()
 
-        FirebaseInstanceId.getInstance().instanceId
-            .addOnCompleteListener(OnCompleteListener { task ->
-                if (!task.isSuccessful) {
-                    Log.w("", "getInstanceId failed", task.exception)
-                    return@OnCompleteListener
-                }
-                val token = task.result?.token
-                Toast.makeText(SplashActivity@ this, token, Toast.LENGTH_SHORT).show()
-            })
+        Pede.getAction().getFirebaseToken(this)
     }
 
     override fun handleCheckVersion(model: CheckVersionResponseModel) {

@@ -1,6 +1,7 @@
 package com.pede.emoney.ui.component.manager
 
 import android.content.Context
+import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
 import com.google.android.gms.tasks.OnCompleteListener
@@ -15,7 +16,15 @@ class ActionManager : IAction {
 
         var token: String? = ""
 
-
+        FirebaseInstanceId.getInstance().instanceId
+            .addOnCompleteListener(OnCompleteListener { task ->
+                if (!task.isSuccessful) {
+                    Log.w("", "getInstanceId failed", task.exception)
+                    return@OnCompleteListener
+                }
+                val token = task.result?.token
+                Toast.makeText(context, token, Toast.LENGTH_SHORT).show()
+            })
 
         return token.toString()
     }
