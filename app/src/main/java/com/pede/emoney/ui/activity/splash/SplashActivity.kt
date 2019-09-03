@@ -35,7 +35,7 @@ class SplashActivity : BaseActivity(), ISplashView {
     }
 
     override fun handleCheckVersion(model: CheckVersionResponseModel) {
-//        Toast.makeText(this, "version: " + model.data!!.androidMinVersion, Toast.LENGTH_SHORT)
-//            .show()
+        Toast.makeText(this, "version: " + model.data!!.androidMinVersion, Toast.LENGTH_SHORT)
+            .show()
     }
 }
