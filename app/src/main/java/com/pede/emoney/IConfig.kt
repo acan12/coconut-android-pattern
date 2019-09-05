@@ -11,5 +11,7 @@ interface IConfig {
         private const val PACKAGE_NAME_INSURANCE_FEATURE = "com.pede.insurance_feature.ui.activity"
 
         const val MODULE_INSURANCE_CLASSNAME = "$PACKAGE_NAME_INSURANCE_FEATURE.InsuranceHomeActivity"
+
+        val MOBILE_PHONE_NUMBER = "MOBILE_PHONE_NUMBER"
     }
 }

@@ -9,4 +9,6 @@ interface IAction {
     fun showLabelManager(label: String, labelTextView: TextView, context: Context)
 
     fun getFirebaseToken(context: Context): String
+
+    fun isLatestVersion(currentVersion: String, latestVersion: String): Boolean
 }

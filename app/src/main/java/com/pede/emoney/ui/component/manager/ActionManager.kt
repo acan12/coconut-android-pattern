@@ -29,6 +29,21 @@ class ActionManager : IAction {
         return token.toString()
     }
 
+    override fun isLatestVersion(currentVersion: String, latestVersion: String): Boolean {
+        val currentVersionSplit =
+            currentVersion.split("[\\.]".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+        val latestVersionSplit =
+            latestVersion.split("[\\.]".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+
+        for (i in currentVersionSplit.indices) {
+            if (Integer.valueOf(currentVersionSplit[i]) < Integer.valueOf(latestVersionSplit[i])) {
+                return false
+            }
+        }
+
+        return true
+    }
+
     override fun showLabelManager(label: String, labelTextView: TextView, context: Context) {
         labelTextView.text = label
     }

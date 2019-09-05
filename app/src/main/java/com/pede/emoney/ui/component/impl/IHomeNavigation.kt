@@ -6,5 +6,13 @@ import android.widget.TextView
 
 interface IHomeNavigation : IBaseNavigation {
 
+    fun goHomePage(context: Context)
+
+    fun goFirstTimeInstallPage(context: Context)
+
+    fun goSignIn(context: Context)
+
     fun goSecondPage(txt: String, context: Context)
+
+
 }
