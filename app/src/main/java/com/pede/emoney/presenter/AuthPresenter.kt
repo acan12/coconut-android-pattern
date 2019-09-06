@@ -29,7 +29,7 @@ class AuthPresenter() : BasePresenter(), AuthDao.IAuthDao {
     override fun getCheckVersion() {
         AuthDao.instance.checkVersion()
             .subscribe(object :
-                RxObserver<CheckVersionResponseModel>(iSplashView, "Check Version...", 10000) {
+                RxObserver<CheckVersionResponseModel>(iSplashView, null, 10000) {
                 override fun onNext(o: Any) {
                     super.onNext(o)
                     iSplashView.handleCheckVersion(o as CheckVersionResponseModel)

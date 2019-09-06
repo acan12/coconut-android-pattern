@@ -12,8 +12,6 @@ import com.pede.emoney.ui.component.IAction
 
 class ActionManager : IAction {
     override fun getFirebaseToken(context : Context): String {
-
-
         var token: String? = ""
 
         FirebaseInstanceId.getInstance().instanceId
@@ -22,7 +20,7 @@ class ActionManager : IAction {
                     Log.w("", "getInstanceId failed", task.exception)
                     return@OnCompleteListener
                 }
-                val token = task.result?.token
+                token = task.result?.token
                 Toast.makeText(context, token, Toast.LENGTH_SHORT).show()
             })
 
