@@ -13,5 +13,8 @@ interface IConfig {
         const val MODULE_INSURANCE_CLASSNAME = "$PACKAGE_NAME_INSURANCE_FEATURE.InsuranceHomeActivity"
 
         val MOBILE_PHONE_NUMBER = "MOBILE_PHONE_NUMBER"
+
+        // SESSION
+        val SESSION_FIREBASE_TOKEN = "firebase_token"
     }
 }

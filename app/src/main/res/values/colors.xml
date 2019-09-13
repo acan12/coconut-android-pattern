@@ -148,6 +148,8 @@
     <color name="shadow_center">#0D000000</color>
 
 
+    <!--  Dialog -->
+    <color name="colorCoconut_background_dialog">#66000000</color>
 
     <!-- END Bootstrap Brand Colors (Universal) -->
 

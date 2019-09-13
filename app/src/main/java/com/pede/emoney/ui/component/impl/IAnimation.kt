@@ -1,9 +1,8 @@
 package com.pede.emoney.ui.component.impl
 
 import android.content.Context
-import com.pede.emoney.ui.component.IUi
 
-interface IAnimationUI : IUi {
+interface IAnimation {
 
     fun setupAnimation(context: Context)
 }

@@ -12,6 +12,8 @@ interface IHomeNavigation : IBaseNavigation {
 
     fun goSignIn(context: Context)
 
+    fun goSignUp(context: Context)
+
     fun goSecondPage(txt: String, context: Context)
 
 

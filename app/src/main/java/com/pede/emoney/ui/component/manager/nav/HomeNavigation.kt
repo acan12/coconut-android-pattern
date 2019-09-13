@@ -6,10 +6,12 @@ import com.pede.emoney.IConfig
 import com.pede.emoney.ui.activity.MainActivity
 import com.pede.emoney.ui.activity.SecondActivity
 import com.pede.emoney.ui.activity.SigninActivity
+import com.pede.emoney.ui.activity.SignupActivity
 import com.pede.emoney.ui.activity.splash.FirstTimeInstallActivity
 import com.pede.emoney.ui.component.impl.IHomeNavigation
 
 class HomeNavigation : IHomeNavigation {
+
     override fun goFirstTimeInstallPage(context: Context) {
         val intent = Intent(context, FirstTimeInstallActivity::class.java)
         context.startActivity(intent)
@@ -17,6 +19,11 @@ class HomeNavigation : IHomeNavigation {
 
     override fun goSignIn(context: Context) {
         val intent = Intent(context, SigninActivity::class.java)
+        context.startActivity(intent)
+    }
+
+    override fun goSignUp(context: Context) {
+        val intent = Intent(context, SignupActivity::class.java)
         context.startActivity(intent)
     }
 

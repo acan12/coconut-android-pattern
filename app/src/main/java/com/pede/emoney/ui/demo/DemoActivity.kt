@@ -13,12 +13,11 @@ import app.beelabs.com.codebase.support.rx.RxTimer
 import com.google.android.play.core.splitinstall.SplitInstallManager
 import com.google.android.play.core.splitinstall.SplitInstallManagerFactory
 import com.google.android.play.core.splitinstall.SplitInstallRequest
-import com.pede.emoney.Pede
 import com.pede.emoney.BuildConfig
 import com.pede.emoney.IConfig.Companion.MODULE_INSURANCE_CLASSNAME
+import com.pede.emoney.Pede
 import com.pede.emoney.R
-import com.pede.emoney.ui.component.impl.IAnimationUI
-import com.pede.emoney.ui.component.impl.IPaymentUI
+import com.pede.emoney.ui.component.impl.IAnimation
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -36,7 +35,7 @@ class DemoActivity : BaseActivity() {
 
         manager = SplitInstallManagerFactory.create(this)
         val event = Pede.getAction()
-        val navigation = Pede.getNavigationComponent()
+//        val navigation = Pede.getNavigationComponent()
 
         RxTimer.doTimer(10000, false, object : RxTimer() {
             override fun onCallback(along: Long?) {
@@ -48,16 +47,16 @@ class DemoActivity : BaseActivity() {
             }
         })
 
-        RxTimer.doTimer(1000, false, object : RxTimer() {
-            override fun onCallback(along: Long?) {
-                val supportPayment = Pede.getPaymentUI() as IPaymentUI
-                supportPayment.setupPayment(this@DemoActivity)
-            }
-        })
+//        RxTimer.doTimer(1000, false, object : RxTimer() {
+//            override fun onCallback(along: Long?) {
+//                val supportPayment = Pede.getPaymentUI() as IPaymentSupport
+//                supportPayment.setupPayment(this@DemoActivity)
+//            }
+//        })
 
         RxTimer.doTimer(1000, false, object : RxTimer() {
             override fun onCallback(along: Long?) {
-                val supportAnimation = Pede.getAnimationUI() as IAnimationUI
+                val supportAnimation = Pede.getAnimationUI()
                 supportAnimation.setupAnimation(this@DemoActivity)
             }
         })

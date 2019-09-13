@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:tools="http://schemas.android.com/tools"
         android:background="@mipmap/background_firsttime_install"
         tools:ignore="MissingPrefix">
 
@@ -26,44 +26,44 @@
             <View
                     android:layout_width="12dp"
                     android:layout_height="12dp"
-                    android:rotation="180"
                     android:layout_marginEnd="10dp"
-                    android:background="@drawable/trio_bar_red"/>
+                    android:background="@drawable/trio_bar_red"
+                    android:rotation="180" />
 
             <View
                     android:layout_width="12dp"
                     android:layout_height="12dp"
-                    android:rotation="180"
                     android:layout_marginEnd="10dp"
-                    android:background="@drawable/trio_bar_orange"/>
+                    android:background="@drawable/trio_bar_orange"
+                    android:rotation="180" />
 
             <View
                     android:layout_width="12dp"
                     android:layout_height="12dp"
-                    android:rotation="180"
-                    android:background="@drawable/trio_bar_blue"/>
+                    android:background="@drawable/trio_bar_blue"
+                    android:rotation="180" />
 
         </LinearLayout>
 
         <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/logo"
-                android:layout_above="@id/tv_version"
-                android:layout_centerHorizontal="true"/>
+                android:layout_above="@id/tvVersion"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/logo" />
 
         <TextView
-                android:id="@+id/tv_version"
+                android:id="@+id/tvVersion"
+                fontPath="fonts/Regular.otf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:layout_centerHorizontal="true"
                 android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
-                fontPath="fonts/Regular.otf"
-                android:textSize="12sp"
                 android:layout_marginBottom="20dp"
-                tools:text="Ver X.0.0"/>
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:text="Ver X.0.0" />
     </RelativeLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -88,31 +88,32 @@
                 android:paddingStart="25dp"
                 android:paddingEnd="25dp"
                 android:paddingBottom="30dp">
+
             <Button
-                    android:id="@+id/btn_sign_in"
+                    android:id="@+id/btnSignin"
                     fontPath="fonts/SemiBold.otf"
                     android:layout_width="wrap_content"
                     android:layout_height="60dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="5"
                     android:background="@drawable/white_rounded_bg"
                     android:text="@string/sign_up_tab_title_sign_in"
                     android:textAllCaps="false"
                     android:textColor="@color/text_signin"
-                    android:textSize="13sp"
-                    android:layout_weight="5"
-                    android:layout_marginEnd="6dp" />
+                    android:textSize="13sp" />
 
             <Button
-                    android:id="@+id/btn_sign_up"
+                    android:id="@+id/btnSignup"
                     fontPath="fonts/SemiBold.otf"
                     android:layout_width="wrap_content"
                     android:layout_height="60dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="5"
                     android:background="@drawable/aqua_rounded_bg"
                     android:text="@string/sign_up_tab_title_register"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
-                    android:textSize="13sp"
-                    android:layout_weight="5"
-                    android:layout_marginStart="6dp"/>
+                    android:textSize="13sp" />
         </LinearLayout>
     </RelativeLayout>
 

@@ -5,12 +5,17 @@ import app.beelabs.com.codebase.base.BaseApp
 import app.beelabs.com.codebase.di.component.AppComponent
 import app.beelabs.com.codebase.di.component.DaggerAppComponent
 import com.google.firebase.FirebaseApp
-import com.pede.emoney.ui.component.*
+import com.pede.emoney.ui.component.DaggerUIComponent
+import com.pede.emoney.ui.component.IAction
+import com.pede.emoney.ui.component.SupportSubComponent
+import com.pede.emoney.ui.component.UIComponent
+import com.pede.emoney.ui.component.impl.IAnimation
+import com.pede.emoney.ui.component.impl.IListener
 import com.pede.emoney.ui.component.impl.INavigation
 import com.pede.emoney.ui.component.manager.ActionManager
-import com.pede.emoney.ui.component.manager.AnimationUIManager
-import com.pede.emoney.ui.component.manager.PaymentUIManager
-import com.pede.emoney.ui.component.manager.nav.NavigationManager
+import com.pede.emoney.ui.component.manager.AnimationManager
+import com.pede.emoney.ui.component.manager.ListenerManager
+import com.pede.emoney.ui.component.manager.NavigationManager
 import com.pede.emoney.ui.component.module.NavModule
 
 class Pede : BaseApp() {
@@ -39,12 +44,8 @@ class Pede : BaseApp() {
         }
 
         // Module UI Preview
-        fun getPaymentUI(): IUi {
-            return supportSubComponent?.inject(PaymentUIManager())!!
-        }
-
-        fun getAnimationUI(): IUi {
-            return supportSubComponent?.inject(AnimationUIManager())!!
+        fun getAnimationUI(): IAnimation {
+            return supportSubComponent?.inject(AnimationManager())!!
         }
 
 
@@ -53,15 +54,21 @@ class Pede : BaseApp() {
             return supportSubComponent?.inject(ActionManager())!!
         }
 
+        // Module Listener
+        fun getListener(): IListener {
+            return supportSubComponent?.inject(ListenerManager())!!
+        }
+
     }
 
     @Suppress("DEPRECATION")
     override fun onCreate() {
         super.onCreate()
-        FirebaseApp.initializeApp(SplashActivity@ this) //Setup Firebase
+        FirebaseApp.initializeApp(this) //Setup Firebase
 
         setupBuilder(DaggerAppComponent.builder(), this)
-        setupDefaultFont("font/Avenir-Medium.ttf")
+
+        setupDefaultFont("fonts/Regular.otf")
 
         uiComponent = DaggerUIComponent.builder().appComponent(getAppComponent())
             .navModule(NavModule()).build()

@@ -37,11 +37,22 @@ android {
 
     dynamicFeatures = [":insurance_feature"]
 
-
+    bundle {
+        language {
+            enableSplit = false
+        }
+        density {
+            enableSplit = true
+        }
+        abi {
+            enableSplit = true
+        }
+    }
 }
 
 dependencies {
     ext {
+        google_version = '1.0.0'
         dagger2_version = '2.24'
         android_support_version = '28.0.0'
         coconut_version = '2.0.13'
@@ -51,13 +62,14 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     //noinspection GradleCompatible
-    implementation 'androidx.appcompat:appcompat:1.0.0'
-    implementation 'com.google.android.material:material:1.0.0'
-    implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation "androidx.appcompat:appcompat:$google_version"
+    implementation "com.google.android.material:material:$google_version"
+    implementation "androidx.cardview:cardview:$google_version"
+    implementation "androidx.recyclerview:recyclerview:$google_version"
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation "androidx.cardview:cardview:$google_version"
     implementation 'com.google.android.gms:play-services-maps:16.0.0'
-    implementation 'androidx.multidex:multidex:2.0.0' // multidex
+//    implementation 'androidx.multidex:multidex:2.0.0' // multidex
 
     //Google Location
     implementation 'com.google.android.gms:play-services-location:17.0.0'
