@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.text.Html.fromHtml
 import android.text.SpannableString
 import android.text.style.UnderlineSpan
-import android.widget.Toast
 import com.pede.emoney.Pede
 import com.pede.emoney.R
 import com.pede.emoney.ui.impl.ISigninView
@@ -34,11 +33,21 @@ class SigninActivity : AppActivity(), ISigninView {
     }
 
     override fun handlePhoneWatcher() {
-        Toast.makeText(this, "Phone", Toast.LENGTH_LONG).show()
+        Pede.getAction().validateSignInForm(
+            etNoHandphone.text.toString(),
+            etPin.text.toString(),
+            btnSigninAction,
+            this
+        )
     }
 
     override fun handlePinWatcher() {
-        Toast.makeText(this, "PIN", Toast.LENGTH_LONG).show()
+        Pede.getAction().validateSignInForm(
+            etNoHandphone.text.toString(),
+            etPin.text.toString(),
+            btnSigninAction,
+            this
+        )
     }
 
 

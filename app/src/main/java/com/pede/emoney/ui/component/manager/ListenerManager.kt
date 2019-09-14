@@ -46,7 +46,7 @@ class ListenerManager : IListener {
     }
 
 
-    override fun onAuthActionListener(
+    override fun onSigninActionListener(
         buttons: Array<Button>,
         request: SignInRequestModel,
         context: Context
@@ -60,7 +60,7 @@ class ListenerManager : IListener {
         }
     }
 
-    override fun onAuthListener(
+    override fun onSigninNavigationListener(
         buttons: Array<Button>,
         context: Context
     ) {

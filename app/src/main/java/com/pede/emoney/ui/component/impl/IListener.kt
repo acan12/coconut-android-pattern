@@ -8,13 +8,13 @@ import com.pede.emoney.ui.impl.ISigninView
 
 interface IListener {
 
-    fun onAuthListener(
+    fun onSigninNavigationListener(
         buttons: Array<Button>,
         context: Context
     )
 
 
-    fun onAuthActionListener(
+    fun onSigninActionListener(
         buttons: Array<Button>,
         request: SignInRequestModel,
         context: Context

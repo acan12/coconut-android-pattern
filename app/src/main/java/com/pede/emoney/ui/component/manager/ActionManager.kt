@@ -1,8 +1,11 @@
 package com.pede.emoney.ui.component.manager
 
+import android.app.Activity
 import android.content.Context
 import android.util.Log
+import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
@@ -18,100 +21,108 @@ import com.pede.emoney.ui.component.IAction
 import support.FormValidation
 
 class ActionManager : IAction {
-    override fun validateSignInForm(phone: String, pin: String, target: Button, context: Context): Boolean {
-//        val phone = etPhone.getText().toString()
-//        val pin = etPin.getText().toString()
+    override fun validateSignInForm(
+        phone: String,
+        pin: String,
+        target: Button,
+        activity: Activity
+    ): Boolean {
 
-//        if (FormValidation.required(phone) && FormValidation.validPhone(phone)
-//            && FormValidation.required(pin) && FormValidation.validPin(pin)
-//        ) {
+        if (FormValidation.required(phone) && FormValidation.validPhone(phone)
+            && FormValidation.required(pin) && FormValidation.validPin(pin)
+        ) {
 //            isFormValidationSuccess = true
-//            target.setBackground(
-//                ContextCompat.getDrawable(
-//                    context,
-//                    R.drawable.button_primary_selector
-//                )
-//            )
-//        } else {
+            target.setBackground(
+                ContextCompat.getDrawable(
+                    activity,
+                    R.drawable.button_primary_selector
+                )
+            )
+        } else {
 //            isFormValidationSuccess = false
-//            target.setBackground(
-//                ContextCompat.getDrawable(
-//                    context,
-//                    R.drawable.button_primary_selected_bg
-//                )
-//            )
-//        }
-//
-//        if (FormValidation.required(phone) && FormValidation.validPhone(phone)) {
-//            linePhoneSignInStatus.setBackgroundColor(
-//                ContextCompat.getColor(
-//                    context,
-//                    R.color.cross_bottom_line
-//                )
-//            )
-//            imgPhoneSignInStatus.setImageDrawable(
-//                ContextCompat.getDrawable(
-//                    context,
-//                    R.mipmap.ic_phone_valid
-//                )
-//            )
-//            imgPhoneSignInStatus.setColorFilter(
-//                ContextCompat.getColor(
-//                    context,
-//                    R.color.cross_bottom_line
-//                ), android.graphics.PorterDuff.Mode.SRC_IN
-//            )
-//        } else {
-//            linePhoneSignInStatus.setBackgroundColor(
-//                ContextCompat.getColor(
-//                    this,
-//                    R.color.medium_grey
-//                )
-//            )
-//            imgPhoneSignInStatus.setImageDrawable(
-//                ContextCompat.getDrawable(
-//                    this,
-//                    R.drawable.ic_phone_invalid
-//                )
-//            )
-//            imgPhoneSignInStatus.setColorFilter(
-//                ContextCompat.getColor(this, R.color.medium_grey),
-//                android.graphics.PorterDuff.Mode.SRC_IN
-//            )
-//        }
-//
-//        if (FormValidation.required(pin) && FormValidation.validPin(pin)) {
-//            linePinStatus.setBackgroundColor(
-//                ContextCompat.getColor(
-//                    this,
-//                    R.color.cross_bottom_line
-//                )
-//            )
-//            imgPinSignInStatus.setImageDrawable(
-//                ContextCompat.getDrawable(
-//                    this,
-//                    R.drawable.ic_pin_valid
-//                )
-//            )
-//            imgPinSignInStatus.setColorFilter(
-//                ContextCompat.getColor(
-//                    this,
-//                    R.color.cross_bottom_line
-//                ), android.graphics.PorterDuff.Mode.SRC_IN
-//            )
-//        } else {
-//            linePinStatus.setBackgroundColor(ContextCompat.getColor(this, R.color.medium_grey))
-//            imgPinSignInStatus.setImageDrawable(
-//                ContextCompat.getDrawable(
-//                    this,
-//                    R.drawable.ic_pin_invalid
-//                )
-//            )
-//            imgPinSignInStatus.setColorFilter(
-//                ContextCompat.getColor(this, R.color.medium_grey),
-//                android.graphics.PorterDuff.Mode.SRC_IN
-//            )
-//        }
+            target.setBackground(
+                ContextCompat.getDrawable(
+                    activity,
+                    R.drawable.button_primary_selected_bg
+                )
+            )
+        }
+
+        val imagePhoneStatus = (activity.findViewById(R.id.img_phone_sign_in_status) as ImageView)
+        val linePhoneStatus = (activity.findViewById(R.id.line_phone_sign_in_status) as View)
+
+        if (FormValidation.required(phone) && FormValidation.validPhone(phone)) {
+            linePhoneStatus.setBackgroundColor(
+                ContextCompat.getColor(
+                    activity,
+                    R.color.cross_bottom_line
+                )
+            )
+            imagePhoneStatus.setImageDrawable(
+                ContextCompat.getDrawable(
+                    activity,
+                    R.mipmap.ic_phone_valid
+                )
+            )
+            imagePhoneStatus.setColorFilter(
+                ContextCompat.getColor(
+                    activity,
+                    R.color.cross_bottom_line
+                ), android.graphics.PorterDuff.Mode.SRC_IN
+            )
+        } else {
+            linePhoneStatus.setBackgroundColor(
+                ContextCompat.getColor(
+                    activity,
+                    R.color.medium_grey
+                )
+            )
+            imagePhoneStatus.setImageDrawable(
+                ContextCompat.getDrawable(
+                    activity,
+                    R.mipmap.ic_phone_invalid
+                )
+            )
+            imagePhoneStatus.setColorFilter(
+                ContextCompat.getColor(activity, R.color.medium_grey),
+                android.graphics.PorterDuff.Mode.SRC_IN
+            )
+        }
+
+        val imagePinStatus = (activity.findViewById(R.id.img_pin_sign_in_status) as ImageView)
+        val linePinStatus = (activity.findViewById(R.id.line_pin_status) as View)
+        if (FormValidation.required(pin) && FormValidation.validPin(pin)) {
+            linePinStatus.setBackgroundColor(
+                ContextCompat.getColor(
+                    activity,
+                    R.color.cross_bottom_line
+                )
+            )
+            imagePinStatus.setImageDrawable(
+                ContextCompat.getDrawable(
+                    activity,
+                    R.mipmap.ic_pin_valid
+                )
+            )
+            imagePinStatus.setColorFilter(
+                ContextCompat.getColor(
+                    activity,
+                    R.color.cross_bottom_line
+                ), android.graphics.PorterDuff.Mode.SRC_IN
+            )
+        } else {
+            linePinStatus.setBackgroundColor(ContextCompat.getColor(activity, R.color.medium_grey))
+            imagePinStatus.setImageDrawable(
+                ContextCompat.getDrawable(
+                    activity,
+                    R.mipmap.ic_pin_invalid
+                )
+            )
+            imagePinStatus.setColorFilter(
+                ContextCompat.getColor(activity, R.color.medium_grey),
+                android.graphics.PorterDuff.Mode.SRC_IN
+            )
+        }
 
         return true
     }

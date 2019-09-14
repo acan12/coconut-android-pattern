@@ -1,12 +1,13 @@
 package com.pede.emoney.ui.component
 
+import android.app.Activity
 import android.content.Context
 import android.widget.Button
 import android.widget.TextView
 import com.pede.emoney.model.api.request.SignInRequestModel
 
 interface IAction {
-    fun validateSignInForm(phone: String, pin: String, target: Button, context: Context): Boolean
+    fun validateSignInForm(phone: String, pin: String, target: Button, activity: Activity): Boolean
 
     fun signinAction(request: SignInRequestModel, context: Context)
 

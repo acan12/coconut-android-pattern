@@ -23,6 +23,6 @@ class FirstTimeInstallActivity : AppActivity() {
         val buttons = arrayOf(btnSignin, btnSignup)
         val homeNav = Pede.getNavigationComponent().homeNavigation(Intent())
 
-        Pede.getListener().onAuthListener(buttons, this)
+        Pede.getListener().onSigninNavigationListener(buttons, this)
     }
 }
