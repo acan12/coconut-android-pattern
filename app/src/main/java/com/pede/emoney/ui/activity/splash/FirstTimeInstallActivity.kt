@@ -1,6 +1,5 @@
 package com.pede.emoney.ui.activity.splash
 
-import android.content.Intent
 import android.os.Bundle
 import com.pede.emoney.Pede
 import com.pede.emoney.R
@@ -21,7 +20,6 @@ class FirstTimeInstallActivity : AppActivity() {
         tvVersion.setText(appVersionLabel(this))
 
         val buttons = arrayOf(btnSignin, btnSignup)
-        val homeNav = Pede.getNavigationComponent().homeNavigation(Intent())
 
         Pede.getListener().onSigninNavigationListener(buttons, this)
     }

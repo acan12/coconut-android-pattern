@@ -7,11 +7,15 @@ import android.widget.TextView
 import com.pede.emoney.model.api.request.SignInRequestModel
 
 interface IAction {
+    fun setupAction(context: Context)
+
+
+
     fun validateSignInForm(phone: String, pin: String, target: Button, activity: Activity): Boolean
 
     fun signinAction(request: SignInRequestModel, context: Context)
 
-    fun setupAction(context: Context)
+    fun setupGeoLocation(activity: Activity)
 
     fun showLabelManager(label: String, labelTextView: TextView, context: Context)
 
@@ -19,4 +23,8 @@ interface IAction {
 
     fun isLatestVersion(currentVersion: String, latestVersion: String): Boolean
 
+
+    interface IGeoLocation {
+        fun handleLocationManager(lat: Double, lng: Double)
+    }
 }

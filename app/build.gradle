@@ -73,6 +73,8 @@ dependencies {
 
     //Google Location
     implementation 'com.google.android.gms:play-services-location:17.0.0'
+    //Dexter
+    implementation 'com.karumi:dexter:4.2.0'
 
     // Pede
     implementation "com.github.acan12:coconut:$coconut_version"

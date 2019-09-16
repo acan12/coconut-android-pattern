@@ -5,14 +5,20 @@ import android.text.Html.fromHtml
 import android.text.SpannableString
 import android.text.style.UnderlineSpan
 import android.widget.Toast
+import app.beelabs.com.codebase.support.util.CacheUtil
+import app.beelabs.com.codebase.support.util.DeviceUtil
+import com.pede.emoney.IConfig
 import com.pede.emoney.Pede
 import com.pede.emoney.R
+import com.pede.emoney.model.api.request.SignInRequestModel
 import com.pede.emoney.model.api.response.SignInResponseModel
+import com.pede.emoney.ui.component.IAction
+import com.pede.emoney.ui.component.manager.ListenerManager
 import com.pede.emoney.ui.impl.ISigninView
 import kotlinx.android.synthetic.main.content_sign_in.*
+import support.PhoneUtil
 
-@Suppress("DEPRECATION")
-class SigninActivity : AppActivity(), ISigninView {
+class SigninActivity : AppActivity(), ISigninView, IAction.IGeoLocation {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,9 +37,10 @@ class SigninActivity : AppActivity(), ISigninView {
         content.setSpan(UnderlineSpan(), 0, forgotLabel.length, 0)
         btnForgotPin.text = content
 
+        Pede.getAction().setupGeoLocation(this)
         Pede.getListener()
             .onSigninWatcherListener(arrayOf(etNoHandphone, etPin), this)
-            .onSigninActionListener(btnSigninAction, null, this)
+
     }
 
     override fun handlePhoneWatcher() {
@@ -54,29 +61,46 @@ class SigninActivity : AppActivity(), ISigninView {
         )
     }
 
+    override fun handleLocationManager(lat: Double, lng: Double) {
+
+
+        Pede.getListener()
+            .onSigninActionListener(btnSigninAction, object: ListenerManager.Helper() {
+                override fun callback(): Object? {
+                    var request = buildSigninRequest(
+                        etNoHandphone.getText().toString(),
+                        etPin.getText().toString(),
+                        CacheUtil.getPreferenceString(IConfig.SESSION_FIREBASE_TOKEN, this@SigninActivity),
+                        lat, lng
+                    )
+
+                    return request as Object
+                }
+            }, this)
+    }
+
     override fun handleApiSignin(response: SignInResponseModel) {
         Toast.makeText(this, "ApiSignin", Toast.LENGTH_SHORT).show()
     }
 
-    //    private fun buildSigninRequest() : SignInRequestModel {
-//        val phone = PhoneUtil.countryCodeReplaceWithZero(etNoHandphone.getText().toString())
-//        val pin = etPin.getText().toString()
-//        val deviceID = DeviceUtil.getUUID()
-//        val firebaseToken = CacheUtil.getPreferenceString(IConfig.SESSION_FIREBASE_TOKEN, this)
-//        return SignInRequestModel(
-//            phone,
-//            pin,
-//            deviceID,
-//            firebaseToken,
-//            null,
-//            null,
-//            null,
-//            null
-//        )
-//
-////        if (hasMyLocation() != null) {
-////            signInRequest.setLatitude(String.valueOf(getMyLastLocation().getLatitude()))
-////            signInRequest.setLongitude(String.valueOf(getMyLastLocation().getLongitude()))
-////        }
-//    }
+
+    private fun buildSigninRequest(
+        phone: String,
+        pin: String,
+        token: String, lat: Double, lng: Double
+    ): SignInRequestModel {
+        val validPhone = PhoneUtil.countryCodeReplaceWithZero(phone)
+        val deviceID = DeviceUtil.getUUID()
+        val firebaseToken = token
+        return SignInRequestModel(
+            validPhone,
+            pin,
+            deviceID,
+            firebaseToken,
+            null,
+            null,
+            lat.toString(),
+            lng.toString()
+        )
+    }
 }

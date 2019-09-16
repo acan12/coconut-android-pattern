@@ -1,7 +1,11 @@
 package com.pede.emoney.ui.component.manager
 
+import android.Manifest
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
+import android.location.Location
+import android.location.LocationManager
 import android.util.Log
 import android.view.View
 import android.widget.Button
@@ -13,6 +17,10 @@ import app.beelabs.com.codebase.base.BasePresenter
 import app.beelabs.com.codebase.base.IView
 import app.beelabs.com.codebase.support.util.CacheUtil
 import com.google.firebase.iid.FirebaseInstanceId
+import com.karumi.dexter.Dexter
+import com.karumi.dexter.MultiplePermissionsReport
+import com.karumi.dexter.PermissionToken
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.pede.emoney.IConfig
 import com.pede.emoney.R
 import com.pede.emoney.model.api.request.SignInRequestModel
@@ -20,7 +28,43 @@ import com.pede.emoney.presenter.AuthPresenter
 import com.pede.emoney.ui.component.IAction
 import support.FormValidation
 
+
 class ActionManager : IAction {
+
+    @SuppressLint("MissingPermission")
+    override fun setupGeoLocation(activity: Activity) {
+        Dexter.withActivity(activity)
+            .withPermissions(
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            )
+            .withListener(object : MultiplePermissionsListener {
+                override fun onPermissionsChecked(report: MultiplePermissionsReport?) {}
+                override fun onPermissionRationaleShouldBeShown(
+                    permissions: MutableList<com.karumi.dexter.listener.PermissionRequest>?,
+                    token: PermissionToken?
+                ) {
+
+                }
+            }).check()
+
+        val locationManager = activity.getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        val providers = locationManager.getProviders(true)
+        var bestLocation: Location? = null
+        for (provider in providers) {
+            val l = locationManager.getLastKnownLocation(provider) ?: continue
+            if (bestLocation == null || l!!.getAccuracy() < bestLocation.accuracy) {
+                // Found best last known location: %s", l);
+                bestLocation = l
+
+                (activity as IAction.IGeoLocation).handleLocationManager(
+                    bestLocation.latitude,
+                    bestLocation.longitude
+                )
+            }
+        }
+    }
+
     override fun validateSignInForm(
         phone: String,
         pin: String,
@@ -31,7 +75,6 @@ class ActionManager : IAction {
         if (FormValidation.required(phone) && FormValidation.validPhone(phone)
             && FormValidation.required(pin) && FormValidation.validPin(pin)
         ) {
-//            isFormValidationSuccess = true
             target.setBackground(
                 ContextCompat.getDrawable(
                     activity,
@@ -39,7 +82,6 @@ class ActionManager : IAction {
                 )
             )
         } else {
-//            isFormValidationSuccess = false
             target.setBackground(
                 ContextCompat.getDrawable(
                     activity,

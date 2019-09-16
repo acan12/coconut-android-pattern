@@ -17,9 +17,11 @@ class AuthPresenter() : BasePresenter(), AuthDao.IAuthDao {
     lateinit var iSplashView: ISplashView
     lateinit var iSigninView: ISigninView
 
-    constructor(iview: IView) : this() {
-        this.iSplashView = iview as ISplashView
-        this.iSigninView = iview as ISigninView
+    internal constructor(iview: IView) : this() {
+        when(iview){
+            is ISplashView -> this.iSplashView = iview
+            is ISigninView -> this.iSigninView = iview
+        }
     }
 
     override fun signUp(request: SignUpRequesModel) {
@@ -56,5 +58,4 @@ class AuthPresenter() : BasePresenter(), AuthDao.IAuthDao {
     override fun getContext(): Context {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
-
 }

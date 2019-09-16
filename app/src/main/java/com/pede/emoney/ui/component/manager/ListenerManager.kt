@@ -13,7 +13,10 @@ import com.pede.emoney.ui.component.impl.IListener
 import com.pede.emoney.ui.impl.ISigninView
 
 class ListenerManager : IListener {
-    override fun onSigninWatcherListener(edits: Array<EditText>, signView: ISigninView): IListener {
+    override fun onSigninWatcherListener(
+        edits: Array<EditText>,
+        signinView: ISigninView
+    ): IListener {
         for (et in edits) {
             when (et.id) {
                 R.id.etNoHandphone ->
@@ -24,7 +27,7 @@ class ListenerManager : IListener {
                             before: Int,
                             count: Int
                         ) {
-                            signView.handlePhoneWatcher()
+                            signinView.handlePhoneWatcher()
                         }
                     })
 
@@ -36,7 +39,7 @@ class ListenerManager : IListener {
                             before: Int,
                             count: Int
                         ) {
-                            signView.handlePinWatcher()
+                            signinView.handlePinWatcher()
                         }
                     })
             }
@@ -47,13 +50,17 @@ class ListenerManager : IListener {
 
 
     override fun onSigninActionListener(
-        btn: Button,
-        request: SignInRequestModel?,
+        button: Button,
+        helper: Helper??,
         context: Context
     ): IListener {
-        btn.setOnClickListener {
-            when (btn.id) {
-                R.id.btnSigninAction -> Pede.getAction().signinAction(request!!, context)
+        button.setOnClickListener {
+            when (button.id) {
+                R.id.btnSigninAction -> {
+                    var request = helper!!.callback() as SignInRequestModel
+                    Pede.getAction().signinAction(request, context)
+                }
+
             }
         }
 
@@ -85,4 +92,10 @@ class ListenerManager : IListener {
 
     }
 
+    open class Helper {
+
+        open fun callback(): Object? {
+            return null
+        }
+    }
 }

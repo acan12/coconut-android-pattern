@@ -3,7 +3,7 @@ package com.pede.emoney.ui.component.impl
 import android.content.Context
 import android.widget.Button
 import android.widget.EditText
-import com.pede.emoney.model.api.request.SignInRequestModel
+import com.pede.emoney.ui.component.manager.ListenerManager
 import com.pede.emoney.ui.impl.ISigninView
 
 interface IListener {
@@ -16,7 +16,7 @@ interface IListener {
 
     fun onSigninActionListener(
         button: Button,
-        request: SignInRequestModel?,
+        helper: ListenerManager.Helper?,
         context: Context
     ): IListener
 
