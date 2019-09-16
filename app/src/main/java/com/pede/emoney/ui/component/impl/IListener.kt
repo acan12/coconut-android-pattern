@@ -15,10 +15,10 @@ interface IListener {
 
 
     fun onSigninActionListener(
-        buttons: Array<Button>,
-        request: SignInRequestModel,
+        button: Button,
+        request: SignInRequestModel?,
         context: Context
-    )
+    ): IListener
 
-    fun onSigninWatcherListener(edits: Array<EditText>, signinView: ISigninView)
+    fun onSigninWatcherListener(edits: Array<EditText>, signinView: ISigninView) : IListener
 }

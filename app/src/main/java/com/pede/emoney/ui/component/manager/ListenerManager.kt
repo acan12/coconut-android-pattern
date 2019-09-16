@@ -4,18 +4,16 @@ import android.content.Context
 import android.content.Intent
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import com.pede.emoney.Pede
 import com.pede.emoney.R
 import com.pede.emoney.model.api.request.SignInRequestModel
-import com.pede.emoney.ui.component.impl.IHomeNavigation
 import com.pede.emoney.ui.component.impl.IListener
 import com.pede.emoney.ui.impl.ISigninView
 
 class ListenerManager : IListener {
-    override fun onSigninWatcherListener(edits: Array<EditText>, signView: ISigninView) {
+    override fun onSigninWatcherListener(edits: Array<EditText>, signView: ISigninView): IListener {
         for (et in edits) {
             when (et.id) {
                 R.id.etNoHandphone ->
@@ -43,21 +41,23 @@ class ListenerManager : IListener {
                     })
             }
         }
+
+        return this
     }
 
 
     override fun onSigninActionListener(
-        buttons: Array<Button>,
-        request: SignInRequestModel,
+        btn: Button,
+        request: SignInRequestModel?,
         context: Context
-    ) {
-        for (btn in buttons) {
-            btn.setOnClickListener {
-                when (btn.id) {
-                    R.id.btnSigninAction -> Pede.getAction().signinAction(request, context)
-                }
+    ): IListener {
+        btn.setOnClickListener {
+            when (btn.id) {
+                R.id.btnSigninAction -> Pede.getAction().signinAction(request!!, context)
             }
         }
+
+        return this
     }
 
     override fun onSigninNavigationListener(
@@ -65,9 +65,9 @@ class ListenerManager : IListener {
         context: Context
     ) {
         val homeNavigation = Pede.getNavigationComponent().homeNavigation(Intent())
-        for (btn in buttons) {
-            btn.setOnClickListener {
-                when (btn.id) {
+        for (button in buttons) {
+            button.setOnClickListener {
+                when (button.id) {
                     R.id.btnSignin -> homeNavigation.goSignIn(context)
                     R.id.btnSignup -> homeNavigation.goSignUp(context)
                 }

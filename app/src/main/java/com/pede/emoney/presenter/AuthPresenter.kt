@@ -7,15 +7,19 @@ import app.beelabs.com.codebase.support.rx.RxObserver
 import com.pede.emoney.model.api.request.SignInRequestModel
 import com.pede.emoney.model.api.request.SignUpRequesModel
 import com.pede.emoney.model.api.response.CheckVersionResponseModel
+import com.pede.emoney.model.api.response.SignInResponseModel
 import com.pede.emoney.model.dao.AuthDao
+import com.pede.emoney.ui.impl.ISigninView
 import com.pede.emoney.ui.impl.ISplashView
 
 class AuthPresenter() : BasePresenter(), AuthDao.IAuthDao {
 
     lateinit var iSplashView: ISplashView
+    lateinit var iSigninView: ISigninView
 
     constructor(iview: IView) : this() {
         this.iSplashView = iview as ISplashView
+        this.iSigninView = iview as ISigninView
     }
 
     override fun signUp(request: SignUpRequesModel) {
@@ -23,7 +27,14 @@ class AuthPresenter() : BasePresenter(), AuthDao.IAuthDao {
     }
 
     override fun signIn(request: SignInRequestModel) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        AuthDao.instance.signIn(request)
+            .subscribe(object :
+                RxObserver<SignInResponseModel>(iSigninView, null, 10000){
+                override fun onNext(o: Any) {
+                    super.onNext(o)
+                    iSigninView.handleApiSignin(o as SignInResponseModel)
+                }
+            })
     }
 
     override fun getCheckVersion() {

@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.text.Html.fromHtml
 import android.text.SpannableString
 import android.text.style.UnderlineSpan
+import android.widget.Toast
 import com.pede.emoney.Pede
 import com.pede.emoney.R
+import com.pede.emoney.model.api.response.SignInResponseModel
 import com.pede.emoney.ui.impl.ISigninView
 import kotlinx.android.synthetic.main.content_sign_in.*
 
@@ -29,7 +31,9 @@ class SigninActivity : AppActivity(), ISigninView {
         content.setSpan(UnderlineSpan(), 0, forgotLabel.length, 0)
         btnForgotPin.text = content
 
-        Pede.getListener().onSigninWatcherListener(arrayOf(etNoHandphone, etPin), this)
+        Pede.getListener()
+            .onSigninWatcherListener(arrayOf(etNoHandphone, etPin), this)
+            .onSigninActionListener(btnSigninAction, null, this)
     }
 
     override fun handlePhoneWatcher() {
@@ -50,6 +54,9 @@ class SigninActivity : AppActivity(), ISigninView {
         )
     }
 
+    override fun handleApiSignin(response: SignInResponseModel) {
+        Toast.makeText(this, "ApiSignin", Toast.LENGTH_SHORT).show()
+    }
 
     //    private fun buildSigninRequest() : SignInRequestModel {
 //        val phone = PhoneUtil.countryCodeReplaceWithZero(etNoHandphone.getText().toString())
