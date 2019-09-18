@@ -32,8 +32,11 @@ class AuthPresenter() : BasePresenter(), AuthDao.IAuthDao {
         AuthDao.instance.signIn(request)
             .subscribe(object :
                 RxObserver<SignInResponseModel>(iSigninView, null, 10000){
+                override fun onError(e: Throwable) {
+                    super.onError(e)
+                }
+
                 override fun onNext(o: Any) {
-                    super.onNext(o)
                     iSigninView.handleApiSignin(o as SignInResponseModel)
                 }
             })

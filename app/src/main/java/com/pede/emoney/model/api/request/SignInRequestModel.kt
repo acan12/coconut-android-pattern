@@ -1,6 +1,6 @@
 package com.pede.emoney.model.api.request
 
-class SignInRequestModel {
+open class SignInRequestModel {
     constructor(
         mobilePhoneNumber: String?,
         pin: String?,
@@ -21,12 +21,12 @@ class SignInRequestModel {
         this.longitude = longitude
     }
 
-    private var mobilePhoneNumber: String? = null
-    private var pin: String? = null
-    private var deviceId: String? = null
-    private var firebaseToken: String? = null
-    private var trans: String? = null
-    private var provider: String? = null
-    private var latitude: String? = null
-    private var longitude: String? = null
+    var mobilePhoneNumber: String? = null
+    var pin: String? = null
+    var deviceId: String? = null
+    var firebaseToken: String? = null
+    var trans: String? = null
+    var provider: String? = null
+    var latitude: String? = null
+    var longitude: String? = null
 }

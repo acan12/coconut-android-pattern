@@ -20,6 +20,10 @@ interface ApiService {
     fun signUp(@HeaderMap headers: Map<String, String>, @Body signUpRequest: SignUpRequesModel): Observable<SignUpResponseModel>
 
     //Users - Sign In
+    @Headers("Cache-Control: no-cache",
+        "Cache-Control: no-store",
+        "Accept: application/json",
+        "Content-Type: application/json")
     @POST("users/login")
     fun signIn(@HeaderMap headers: Map<String, String>, @Body signInRequest: SignInRequestModel): Observable<SignInResponseModel>
 

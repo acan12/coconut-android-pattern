@@ -53,7 +53,7 @@ class ActionManager : IAction {
         var bestLocation: Location? = null
         for (provider in providers) {
             val l = locationManager.getLastKnownLocation(provider) ?: continue
-            if (bestLocation == null || l!!.getAccuracy() < bestLocation.accuracy) {
+            if (bestLocation == null || l.getAccuracy() < bestLocation.accuracy) {
                 // Found best last known location: %s", l);
                 bestLocation = l
 

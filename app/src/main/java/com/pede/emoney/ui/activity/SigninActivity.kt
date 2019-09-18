@@ -40,7 +40,6 @@ class SigninActivity : AppActivity(), ISigninView, IAction.IGeoLocation {
         Pede.getAction().setupGeoLocation(this)
         Pede.getListener()
             .onSigninWatcherListener(arrayOf(etNoHandphone, etPin), this)
-
     }
 
     override fun handlePhoneWatcher() {
@@ -62,19 +61,17 @@ class SigninActivity : AppActivity(), ISigninView, IAction.IGeoLocation {
     }
 
     override fun handleLocationManager(lat: Double, lng: Double) {
-
-
         Pede.getListener()
-            .onSigninActionListener(btnSigninAction, object: ListenerManager.Helper() {
-                override fun callback(): Object? {
+            .onSigninActionListener(btnSigninAction, object : ListenerManager.Helper() {
+                override fun callback(): Any? {
                     var request = buildSigninRequest(
                         etNoHandphone.getText().toString(),
                         etPin.getText().toString(),
-                        CacheUtil.getPreferenceString(IConfig.SESSION_FIREBASE_TOKEN, this@SigninActivity),
-                        lat, lng
+                        CacheUtil.getPreferenceString(IConfig.SESSION_FIREBASE_TOKEN, this@SigninActivity),lat,lng
                     )
 
-                    return request as Object
+
+                    return request
                 }
             }, this)
     }

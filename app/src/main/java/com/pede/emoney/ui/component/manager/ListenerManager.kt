@@ -51,7 +51,7 @@ class ListenerManager : IListener {
 
     override fun onSigninActionListener(
         button: Button,
-        helper: Helper??,
+        helper: Helper?,
         context: Context
     ): IListener {
         button.setOnClickListener {
@@ -94,7 +94,7 @@ class ListenerManager : IListener {
 
     open class Helper {
 
-        open fun callback(): Object? {
+        open fun callback(): Any? {
             return null
         }
     }
