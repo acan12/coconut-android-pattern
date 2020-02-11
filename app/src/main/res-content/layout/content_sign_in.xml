@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".ui.activity.SigninActivity"
+        tools:ignore="MissingPrefix"
+        tools:showIn="@layout/activity_signin">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnSignin"
+            android:layout_marginBottom="-5dp"
+            android:background="@color/white"
+            android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/banner_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/guideline"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                        android:id="@+id/img_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/background_firsttime_install" />
+
+                <LinearLayout
+                        android:id="@+id/bottom_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_alignParentTop="true"
+                        android:gravity="top|center_horizontal"
+                        android:orientation="horizontal"
+                        tools:ignore="MissingConstraints">
+
+                    <View
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/trio_bar_red"
+                            android:rotation="180" />
+
+                    <View
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/trio_bar_orange"
+                            android:rotation="180" />
+
+                    <View
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:background="@drawable/trio_bar_blue"
+                            android:rotation="180" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline1"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.30" />
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/logo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/guideline1"
+                        app:layout_constraintRight_toLeftOf="@id/guideline2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline2"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.70" />
+
+                <TextView
+                        android:id="@+id/tvVersion"
+                        fontPath="fonts/Regular.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        tools:text="Version: 123" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.35" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/guideline">
+
+                <LinearLayout
+                        android:id="@+id/form_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="32dp">
+
+                    <TextView
+                            fontPath="fonts/Bold.otf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sign_up_tab_title_sign_in"
+                            android:textColor="@color/text_black"
+                            android:textSize="16sp" />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal">
+
+                        <TextView
+                                fontPath="fonts/SemiBold.otf"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/sign_up_label_no_handphone"
+                                android:textColor="@color/text_black" />
+
+                        <ImageView
+                                android:id="@+id/img_phone_sign_in_status"
+                                android:layout_width="24dp"
+                                android:layout_height="16dp"
+                                android:src="@mipmap/ic_phone_invalid"
+                                android:tint="@color/cross_imageview_signup" />
+
+                    </LinearLayout>
+
+                    <EditText
+                            android:id="@+id/etNoHandphone"
+                            fontPath="fonts/Regular.otf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/transparent"
+                            android:ems="10"
+                            android:hint="@string/signin_no_handphone_hint"
+                            android:imeOptions="actionNext"
+                            android:inputType="phone"
+                            android:nextFocusDown="@id/etPin"
+                            android:nextFocusForward="@id/etPin"
+                            android:textColor="@color/text_edittext_black" />
+
+                    <View
+                            android:id="@+id/line_phone_sign_in_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/medium_grey" />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:orientation="horizontal">
+
+                        <TextView
+                                fontPath="fonts/SemiBold.otf"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/sign_up_label_pin"
+                                android:textColor="@color/text_black" />
+
+                        <ImageView
+                                android:id="@+id/img_pin_sign_in_status"
+                                android:layout_width="24dp"
+                                android:layout_height="16dp"
+                                android:src="@mipmap/ic_pin_invalid"
+                                android:tint="@color/cross_imageview_signup" />
+
+                    </LinearLayout>
+
+                    <EditText
+                            android:id="@+id/etPin"
+                            fontPath="fonts/Regular.otf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/transparent"
+                            android:ems="10"
+                            android:hint="@string/signin_pin_hint"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberPassword"
+                            android:maxLength="6"
+                            android:textColor="@color/text_edittext_black" />
+
+                    <View
+                            android:id="@+id/line_pin_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/medium_grey" />
+
+                    <Button
+                            android:id="@+id/btnForgotPin"
+                            fontPath="fonts/SemiBold.otf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:background="@color/transparent"
+                            android:text="@string/sign_up_btn_forgot_pin"
+                            android:textAllCaps="false"
+                            android:textColor="@color/cross_lupa_pin" />
+
+                    <TextView
+                            android:id="@+id/tvSignup"
+                            fontPath="fonts/SemiBold.otf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="center"
+                            android:text="@string/title_activity_no_account"
+                            android:textColor="@color/text_black" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+            android:id="@+id/btnSigninAction"
+            fontPath="fonts/SemiBold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button_primary_selected_bg"
+            android:text="@string/sign_up_btn_sign_in"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+</RelativeLayout>
