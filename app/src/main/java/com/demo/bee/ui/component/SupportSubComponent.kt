@@ -10,5 +10,5 @@ import dagger.Subcomponent
 interface SupportSubComponent {
 
     fun inject(logic: ILogic): ILogic
-    fun inject(event: IEvent): IEvent
+    fun inject(event: IAction): IAction
 }

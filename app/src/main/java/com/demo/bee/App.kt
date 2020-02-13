@@ -8,7 +8,7 @@ import app.beelabs.com.codebase.di.component.DaggerAppComponent
 import com.demo.bee.ui.component.*
 import com.demo.bee.ui.component.impl.INavigation
 import com.demo.bee.ui.component.manager.AnimationLogicManager
-import com.demo.bee.ui.component.manager.EventManager
+import com.demo.bee.ui.component.manager.ActionManager
 import com.demo.bee.ui.component.manager.NavigationManager
 import com.demo.bee.ui.component.manager.PaymentLogicManager
 import com.demo.bee.ui.component.module.NavModule
@@ -51,8 +51,8 @@ class App : BaseApp() {
 
 
         // Module Event
-        fun getEvent(): IEvent {
-            return supportSubComponent?.inject(EventManager())!!
+        fun getAction(): IAction {
+            return supportSubComponent?.inject(ActionManager())!!
         }
 
     }

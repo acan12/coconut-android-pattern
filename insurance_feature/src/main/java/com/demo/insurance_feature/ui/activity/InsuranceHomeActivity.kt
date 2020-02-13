@@ -12,6 +12,6 @@ class InsuranceHomeActivity : BaseActivity() {
         setContentView(R.layout.activity_insurance_home)
 
         val value = intent.getIntExtra("data", 0)
-        insuranceValue.text = value.toString()
+        insuranceValue.text = "Reactive passing Rp $value"
     }
 }

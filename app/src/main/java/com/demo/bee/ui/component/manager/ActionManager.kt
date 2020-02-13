@@ -2,10 +2,10 @@ package com.demo.bee.ui.component.manager
 
 import android.content.Context
 import android.widget.Toast
-import com.demo.bee.ui.component.IEvent
+import com.demo.bee.ui.component.IAction
 
-class EventManager : IEvent {
-    override fun setupEvent(context: Context) {
+class ActionManager : IAction {
+    override fun generalAction(context: Context) {
         Toast.makeText(context, "Show Event", Toast.LENGTH_SHORT).show()
     }
 }

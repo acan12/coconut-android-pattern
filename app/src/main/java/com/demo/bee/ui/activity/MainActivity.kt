@@ -10,15 +10,15 @@ import app.beelabs.com.codebase.base.BaseActivity
 import app.beelabs.com.codebase.component.ProgressDialogComponent.dismissProgressDialog
 import app.beelabs.com.codebase.component.ProgressDialogComponent.showProgressDialog
 import app.beelabs.com.codebase.support.rx.RxTimer
-import com.google.android.play.core.splitinstall.SplitInstallManager
-import com.google.android.play.core.splitinstall.SplitInstallManagerFactory
-import com.google.android.play.core.splitinstall.SplitInstallRequest
 import com.demo.bee.App
 import com.demo.bee.BuildConfig
 import com.demo.bee.IConfig.Companion.MODULE_INSURANCE_CLASSNAME
 import com.demo.bee.R
 import com.demo.bee.ui.component.impl.IAnimationLogic
 import com.demo.bee.ui.component.impl.IPaymentLogic
+import com.google.android.play.core.splitinstall.SplitInstallManager
+import com.google.android.play.core.splitinstall.SplitInstallManagerFactory
+import com.google.android.play.core.splitinstall.SplitInstallRequest
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -64,8 +64,8 @@ class MainActivity : BaseActivity() {
 
         RxTimer.doTimer(1000, false, object : RxTimer() {
             override fun onCallback(along: Long?) {
-                val supportEvent = App.getEvent()
-                supportEvent.setupEvent(this@MainActivity)
+                val supportAction = App.getAction()
+                supportAction.generalAction(this@MainActivity)
             }
         })
 
@@ -97,7 +97,7 @@ class MainActivity : BaseActivity() {
         intent = Intent()
         intent.setClassName(BuildConfig.APPLICATION_ID, className)
             .also {
-                it.putExtra("data", 123)
+                it.putExtra("data", 5000)
                 startActivity(it)
             }
     }
@@ -117,7 +117,7 @@ class MainActivity : BaseActivity() {
                 showResult(it)
                 if (it.toLowerCase().contains("done")) {
                     loadInsuranceModule()
-                    App.getNavigationComponent().homeNavigation(intent).goSecondPage(it, this)
+//                    App.getNavigationComponent().homeNavigation(intent).goSecondPage(it, this)
                 }
             }
 
@@ -133,7 +133,7 @@ class MainActivity : BaseActivity() {
             .map { searchEngine(it) }
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe {
-                //                dismissProgressDialog(this)
+                dismissProgressDialog(this)
                 showResult(it)
             }
     }
@@ -158,7 +158,12 @@ class MainActivity : BaseActivity() {
             val tw = object : TextWatcher {
                 override fun afterTextChanged(s: Editable?) = Unit
 
-                override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
+                override fun beforeTextChanged(
+                    s: CharSequence?,
+                    start: Int,
+                    count: Int,
+                    after: Int
+                ) = Unit
 
                 override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                     s?.toString()?.let { emit.onNext(it) }
