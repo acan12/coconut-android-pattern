@@ -40,7 +40,7 @@ class MainActivity : BaseActivity() {
 
         RxTimer.doTimer(10000, false, object : RxTimer() {
             override fun onCallback(along: Long?) {
-                navigation.homeNavigation(intent).showLabelManager(
+                App.getAction().showLabelManager(
                     "Demo Dependency Injection OK!",
                     labelText,
                     this@MainActivity

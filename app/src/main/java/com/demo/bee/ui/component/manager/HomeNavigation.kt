@@ -14,8 +14,4 @@ class HomeNavigation : IHomeNavigation {
         context.startActivity(intent)
     }
 
-    override fun showLabelManager(label: String, labelTextView: TextView, context: Context) {
-        labelTextView.text = label
-    }
-
 }

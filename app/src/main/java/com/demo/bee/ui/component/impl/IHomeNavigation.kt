@@ -7,5 +7,4 @@ interface IHomeNavigation : IBaseNavigation {
 
     fun goSecondPage(txt: String, context: Context)
 
-    fun showLabelManager(label: String, labelTextView: TextView, context: Context)
 }
