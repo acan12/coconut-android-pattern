@@ -37,6 +37,7 @@ class MainActivity : BaseActivity() {
         manager = SplitInstallManagerFactory.create(this)
         val navigation = App.getNavigationComponent()
 
+        App.getListener()?.textChangeListener(this)
 
         RxTimer.doTimer(10000, false, object : RxTimer() {
             override fun onCallback(along: Long?) {

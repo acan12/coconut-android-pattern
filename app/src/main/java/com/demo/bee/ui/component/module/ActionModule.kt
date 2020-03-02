@@ -7,7 +7,7 @@ import dagger.Provides
 import javax.inject.Singleton
 
 @Module
-class EventModule {
+class ActionModule {
 
     @Singleton
     @Provides

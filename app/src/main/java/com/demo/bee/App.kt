@@ -7,10 +7,7 @@ import app.beelabs.com.codebase.di.component.AppComponent
 import app.beelabs.com.codebase.di.component.DaggerAppComponent
 import com.demo.bee.ui.component.*
 import com.demo.bee.ui.component.impl.INavigation
-import com.demo.bee.ui.component.manager.AnimationLogicManager
-import com.demo.bee.ui.component.manager.ActionManager
-import com.demo.bee.ui.component.manager.NavigationManager
-import com.demo.bee.ui.component.manager.PaymentLogicManager
+import com.demo.bee.ui.component.manager.*
 import com.demo.bee.ui.component.module.NavModule
 
 class App : BaseApp() {
@@ -33,6 +30,10 @@ class App : BaseApp() {
 
         fun getNavigationComponent(): INavigation {
             return uiComponent?.inject(NavigationManager())!!
+        }
+
+        fun getListener(): IListener? {
+            return supportSubComponent?.inject(ListenerManager())
         }
 
 //        fun getHomeNavigationComponent(): IHomeNavigation {

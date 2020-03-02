@@ -1,8 +1,7 @@
-package com.demo.bee.ui.component.manager
+package com.demo.bee.ui.component.manager.nav
 
 import android.content.Context
 import android.content.Intent
-import android.widget.TextView
 import com.demo.bee.IConfig
 import com.demo.bee.ui.activity.SecondActivity
 import com.demo.bee.ui.component.impl.IHomeNavigation
