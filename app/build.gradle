@@ -81,7 +81,7 @@ dependencies {
     kapt "com.google.dagger:dagger-compiler:$dagger2_version"
     compileOnly "javax.annotation:jsr250-api:1.0"
     implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
-    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
+//    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
     implementation 'com.squareup.retrofit2:retrofit:2.3.0' // Retrofit
     implementation 'com.squareup.retrofit2:converter-jackson:2.3.0'
     implementation 'com.squareup.okhttp3:okhttp:3.4.1'

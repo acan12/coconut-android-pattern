@@ -7,8 +7,9 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import app.beelabs.com.codebase.base.BaseActivity
-import app.beelabs.com.codebase.component.ProgressDialogComponent.dismissProgressDialog
-import app.beelabs.com.codebase.component.ProgressDialogComponent.showProgressDialog
+import app.beelabs.com.codebase.component.dialog.ProgressDialogComponent.dismissProgressDialog
+import app.beelabs.com.codebase.component.dialog.ProgressDialogComponent.showProgressDialog
+
 import app.beelabs.com.codebase.support.rx.RxTimer
 import com.demo.bee.App
 import com.demo.bee.BuildConfig
@@ -69,7 +70,6 @@ class MainActivity : BaseActivity() {
                 supportAction.generalAction(this@MainActivity)
             }
         })
-
 
         doReactiveAction()
     }
