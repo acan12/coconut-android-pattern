@@ -1,13 +1,13 @@
-package app.clappingape.com.elevaniamartpos.model.api
+package com.demo.bee.model.api
 
 import app.beelabs.com.codebase.base.BaseApi
 import app.beelabs.com.codebase.component.interceptor.RSAInterceptor
 import com.demo.bee.App
 import com.demo.bee.BuildConfig
 import com.demo.bee.IConfig
-import com.demo.bee.model.api.ApiService
+import com.demo.bee.model.api.response.SourceResponse
 import com.demo.bee.ui.component.manager.SessionManager
-import okhttp3.Interceptor
+import io.reactivex.Observable
 
 
 class Api : BaseApi() {
@@ -32,6 +32,12 @@ class Api : BaseApi() {
                 BuildConfig.DEBUG,
                 arrayOf( RSAInterceptor() )
             ) as ApiService
+        }
+
+
+        @Synchronized
+        fun doApiRXSources(): Observable<SourceResponse?>? {
+            return Api.initApiDomain().callApiRXSources("en")
         }
 
     }
