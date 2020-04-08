@@ -9,7 +9,7 @@ interface IConfig {
             "Basic NzBlNEJTZ1ZOQ2hHbktoQlB4OTR6cTJBUDNRc0xFUXA6azhmazBxT0Q0MnZ6b2w4SQ=="
 
         val KEY_DATA_SECOND_ACTIVITY = "KEY_SECOND"
-        val API_BASE_URL = "https://indoalliz-test.apigee.net/indoalliz/api/v1/";
+        var API_BASE_URL = "https://newsapi.org/v1/"
         val SESSION_TOKEN_CREDENTIAL = ""
         val SESSION_LOGIN_KEY = "session_login"
 

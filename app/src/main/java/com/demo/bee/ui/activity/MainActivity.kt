@@ -6,17 +6,22 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.widget.Toast
 import app.beelabs.com.codebase.base.BaseActivity
 import app.beelabs.com.codebase.component.dialog.ProgressDialogComponent.dismissProgressDialog
 import app.beelabs.com.codebase.component.dialog.ProgressDialogComponent.showProgressDialog
+import app.beelabs.com.codebase.support.rx.RxObserver
 
 import app.beelabs.com.codebase.support.rx.RxTimer
 import com.demo.bee.App
 import com.demo.bee.BuildConfig
 import com.demo.bee.IConfig.Companion.MODULE_INSURANCE_CLASSNAME
 import com.demo.bee.R
+import com.demo.bee.model.api.response.SourceResponse
+import com.demo.bee.presenter.ResourcePresenter
 import com.demo.bee.ui.component.impl.IAnimationLogic
 import com.demo.bee.ui.component.impl.IPaymentLogic
+import com.demo.bee.ui.contract.IMainView
 import com.google.android.play.core.splitinstall.SplitInstallManager
 import com.google.android.play.core.splitinstall.SplitInstallManagerFactory
 import com.google.android.play.core.splitinstall.SplitInstallRequest
@@ -25,7 +30,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : BaseActivity() {
+class MainActivity : BaseActivity(), IMainView {
 
     private val moduleInsurance by lazy { getString(R.string.insurance_feature_module) }
     private lateinit var manager: SplitInstallManager
@@ -35,43 +40,44 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        manager = SplitInstallManagerFactory.create(this)
-        val navigation = App.getNavigationComponent()
+//        manager = SplitInstallManagerFactory.create(this)
+//        val navigation = App.getNavigationComponent()
 
-        App.getListener()?.textChangeListener(this)
+//        App.getListener()?.textChangeListener(this)
+//
+//        RxTimer.doTimer(10000, false, object : RxTimer() {
+//            override fun onCallback(along: Long?) {
+//                App.getAction().showLabelManager(
+//                    "Demo Dependency Injection OK!",
+//                    labelText,
+//                    this@MainActivity
+//                )
+//            }
+//        })
+//
+//        RxTimer.doTimer(1000, false, object : RxTimer() {
+//            override fun onCallback(along: Long?) {
+//                val supportPayment = App.getPaymentLogic() as IPaymentLogic
+//                supportPayment.setupPayment(this@MainActivity)
+//            }
+//        })
+//
+//        RxTimer.doTimer(1000, false, object : RxTimer() {
+//            override fun onCallback(along: Long?) {
+//                val supportAnimation = App.getAnimationLogic() as IAnimationLogic
+//                supportAnimation.setupAnimation(this@MainActivity)
+//            }
+//        })
+//
+//        RxTimer.doTimer(1000, false, object : RxTimer() {
+//            override fun onCallback(along: Long?) {
+//                val supportAction = App.getAction()
+//                supportAction.generalAction(this@MainActivity)
+//            }
+//        })
 
-        RxTimer.doTimer(10000, false, object : RxTimer() {
-            override fun onCallback(along: Long?) {
-                App.getAction().showLabelManager(
-                    "Demo Dependency Injection OK!",
-                    labelText,
-                    this@MainActivity
-                )
-            }
-        })
-
-        RxTimer.doTimer(1000, false, object : RxTimer() {
-            override fun onCallback(along: Long?) {
-                val supportPayment = App.getPaymentLogic() as IPaymentLogic
-                supportPayment.setupPayment(this@MainActivity)
-            }
-        })
-
-        RxTimer.doTimer(1000, false, object : RxTimer() {
-            override fun onCallback(along: Long?) {
-                val supportAnimation = App.getAnimationLogic() as IAnimationLogic
-                supportAnimation.setupAnimation(this@MainActivity)
-            }
-        })
-
-        RxTimer.doTimer(1000, false, object : RxTimer() {
-            override fun onCallback(along: Long?) {
-                val supportAction = App.getAction()
-                supportAction.generalAction(this@MainActivity)
-            }
-        })
-
-        doReactiveAction()
+//        doReactiveAction()
+        fetchDataSource()
     }
 
     private fun loadInsuranceModule() {
@@ -193,4 +199,20 @@ class MainActivity : BaseActivity() {
     }
 
 
+    private fun fetchDataSource() {
+        ResourcePresenter(this).getSource(
+            "Getting data Source...",
+            RxObserver.DialogTypeEnum.DEFAULT
+        )
+    }
+
+
+    override fun handleProcessing() {
+        TODO("Not yet implemented")
+    }
+
+
+    override fun handleDataSource(model: SourceResponse?) {
+        Toast.makeText(this, model!!.getSources()!!.size.toString() + "", Toast.LENGTH_SHORT).show()
+    }
 }
