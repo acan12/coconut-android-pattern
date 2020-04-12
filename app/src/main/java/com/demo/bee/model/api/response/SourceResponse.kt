@@ -1,7 +1,7 @@
 package com.demo.bee.model.api.response
 
 import app.beelabs.com.codebase.base.response.BaseResponse
-import com.demo.bee.model.data.Source
+import com.demo.bee.model.pojo.Source
 
 class SourceResponse : BaseResponse() {
     private var sources: List<Source?>? = null

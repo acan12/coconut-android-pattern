@@ -1,4 +1,4 @@
-package com.demo.bee.ui.component.manager
+package com.demo.bee.model.dao
 
 import android.content.Context
 import com.demo.bee.IConfig

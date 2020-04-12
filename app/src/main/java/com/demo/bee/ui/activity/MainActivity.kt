@@ -45,39 +45,53 @@ class MainActivity : BaseActivity(), IMainView {
 
 //        App.getListener()?.textChangeListener(this)
 //
-//        RxTimer.doTimer(10000, false, object : RxTimer() {
-//            override fun onCallback(along: Long?) {
-//                App.getAction().showLabelManager(
-//                    "Demo Dependency Injection OK!",
-//                    labelText,
-//                    this@MainActivity
-//                )
-//            }
-//        })
-//
-//        RxTimer.doTimer(1000, false, object : RxTimer() {
-//            override fun onCallback(along: Long?) {
-//                val supportPayment = App.getPaymentLogic() as IPaymentLogic
-//                supportPayment.setupPayment(this@MainActivity)
-//            }
-//        })
-//
-//        RxTimer.doTimer(1000, false, object : RxTimer() {
-//            override fun onCallback(along: Long?) {
-//                val supportAnimation = App.getAnimationLogic() as IAnimationLogic
-//                supportAnimation.setupAnimation(this@MainActivity)
-//            }
-//        })
-//
-//        RxTimer.doTimer(1000, false, object : RxTimer() {
-//            override fun onCallback(along: Long?) {
-//                val supportAction = App.getAction()
-//                supportAction.generalAction(this@MainActivity)
-//            }
-//        })
+//        RxTimer.doTimer(10000, false, doShowLabelManager())
+//        RxTimer.doTimer(1000, false, doSetupPayment())
+//        RxTimer.doTimer(1000, false, doSetupAnimation())
+//        RxTimer.doTimer(1000, false, doGeneralAction())
 
 //        doReactiveAction()
         fetchDataSource()
+    }
+
+    private fun doGeneralAction(): RxTimer? {
+        return object : RxTimer() {
+            override fun onCallback(along: Long?) {
+                val supportAction = App.getAction()
+                supportAction.generalAction(this@MainActivity)
+            }
+        }
+    }
+
+    private fun doSetupAnimation(): RxTimer? {
+        return object : RxTimer() {
+            override fun onCallback(along: Long?) {
+                val supportAnimation = App.getAnimationLogic() as IAnimationLogic
+                supportAnimation.setupAnimation(this@MainActivity)
+            }
+        }
+    }
+
+    private fun doSetupPayment(): RxTimer? {
+        return object : RxTimer() {
+            override fun onCallback(along: Long?) {
+                val supportPayment = App.getPaymentLogic() as IPaymentLogic
+                supportPayment.setupPayment(this@MainActivity)
+            }
+        }
+    }
+
+    private fun doShowLabelManager(): RxTimer? {
+        return object : RxTimer() {
+            override fun onCallback(along: Long?) {
+                App.getAction().showLabelManager(
+                    "Demo Dependency Injection OK!",
+                    labelText,
+                    this@MainActivity
+                )
+            }
+        }
+
     }
 
     private fun loadInsuranceModule() {
@@ -208,7 +222,7 @@ class MainActivity : BaseActivity(), IMainView {
 
 
     override fun handleProcessing() {
-        TODO("Not yet implemented")
+        Toast.makeText(this, "In processing...!", Toast.LENGTH_SHORT).show()
     }
 
 

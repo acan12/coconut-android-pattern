@@ -1,4 +1,4 @@
-package com.demo.bee.model.data
+package com.demo.bee.model.pojo
 
 import java.io.Serializable
 

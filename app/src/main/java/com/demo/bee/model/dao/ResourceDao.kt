@@ -14,7 +14,6 @@ class ResourceDao(var rdao: IResourceDao) : BaseDao() {
         fun getSource(messageLoading: String?, dialogType: Int)
     }
 
-
     fun getSourceRXDAO(): Observable<SourceResponse?>? {
         return Api.doApiRXSources()!!.subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())

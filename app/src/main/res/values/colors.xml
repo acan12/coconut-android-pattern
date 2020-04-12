@@ -4,6 +4,11 @@
     <color name="colorPrimaryDark">#1A1C40</color>
     <color name="colorAccent">#3AD4DE</color>
 
+    <!-- Coconut -->
+    <color name="colorCoconut_background_dialog">#CC000000</color>
+    <color name="colorCoconut_text_dialog">#fff</color>
+    <color name="colorCoconut_iconLoading_dialog">#4169E1</color>
+
     <!-- Basic Color -->
     <color name="black">#000000</color>
     <color name="red">#FF0000</color>
@@ -146,10 +151,6 @@
     <color name="bootstrap_alert_cross_default">#64818a91</color>
 
     <color name="shadow_center">#0D000000</color>
-
-
-    <!--  Dialog -->
-    <color name="colorCoconut_background_dialog">#66000000</color>
 
     <!-- END Bootstrap Brand Colors (Universal) -->
 

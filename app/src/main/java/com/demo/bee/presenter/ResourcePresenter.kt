@@ -16,7 +16,7 @@ class ResourcePresenter(var iView : IView) : BasePresenter(), ResourceDao.IResou
                     super.onNext(o)
                     (iView as IMainView).handleDataSource(o as SourceResponse)
                 }
-            })
+            }.setDialogType(dialogType))
     }
 
 //    fun getSourceRX(messageLoading: String?, dialogType: Int) {

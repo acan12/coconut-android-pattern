@@ -6,7 +6,7 @@ import com.demo.bee.App
 import com.demo.bee.BuildConfig
 import com.demo.bee.IConfig
 import com.demo.bee.model.api.response.SourceResponse
-import com.demo.bee.ui.component.manager.SessionManager
+import com.demo.bee.model.dao.SessionManager
 import io.reactivex.Observable
 
 
