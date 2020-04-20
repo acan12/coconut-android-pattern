@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+	<!--<base-config>-->
+		<!--<trust-anchors>-->
+			<!--<certificates src="system" />-->
+		<!--</trust-anchors>-->
+	<!--</base-config>-->
+	<!--<debug-overrides>-->
+		<!--<trust-anchors>-->
+			<!--<certificates src="user" />-->
+		<!--</trust-anchors>-->
+	<!--</debug-overrides>-->
+	<domain-config enforcePinning="true">
+		<domain includeSubdomains="true">nebula.pede.id</domain>
+		<pin-set>
+
+			<pin digest="SHA-256">Uguf6IpW3uF0eBxlcyIYvdPLClzFuhzMWZ2PJk/DnVU=</pin>
+			<pin digest="SHA-256">S0mHTmqv2QhJEfy5vyPVERSnyMEliJzdC8RXduOjhAs</pin>
+		</pin-set>
+		<trustkit-config enforcePinning="false" disableDefaultReportUri="false">
+			<report-uri>https://overmind.datatheorem.com/trustkit/report</report-uri>
+		</trustkit-config>
+	</domain-config>
+</network-security-config>

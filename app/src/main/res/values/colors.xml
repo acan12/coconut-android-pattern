@@ -1,6 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#1F204D</color>
+    <color name="colorPrimaryDark">#1A1C40</color>
+    <color name="colorAccent">#3AD4DE</color>
+
+    <!-- Coconut -->
+    <color name="colorCoconut_background_dialog">#CC000000</color>
+    <color name="colorCoconut_text_dialog">#fff</color>
+    <color name="colorCoconut_iconLoading_dialog">#4169E1</color>
+
+    <!-- Basic Color -->
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="orange">#FF9900</color>
+    <color name="orange_88">#88FF9900</color>
+    <color name="orange_AA">#AAFF9900</color>
+    <color name="bright_orange">#FDCE23</color>
+    <color name="orange_label_home">#FFB800</color>
+    <color name="black_88">#88000000</color>
+    <color name="black_aa">#AA000000</color>
+    <color name="white_88">#88FFFFFF</color>
+    <color name="white_AA">#AAFFFFFF</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="default_background">#fffafafa</color>
+    <color name="blue_light">#DCF8FA</color>
+
+    <!-- Grey -->
+    <color name="super_soft_grey">#eeeeee</color>
+    <color name="snackbar_grey">#40A0A0A0</color>
+    <color name="soft_grey_2">#E5E5E5</color>
+    <color name="soft_grey_3">#f3f3f3</color>
+    <color name="soft_grey">#dddddd</color>
+    <color name="medium_grey">#cccccc</color>
+    <color name="grey">#999999</color>
+    <color name="avatar_grey_bg">#FAFAFA</color>
+    <color name="text_grey_33">#331F204D</color>
+    <color name="text_dark_grey">#666666</color>
+    <color name="text_suva_grey">#8B8B8B</color>
+    <color name="text_alice_grey">#ECEFF0</color>
+
+    <!-- Themes Colors -->
+    <color name="aqua">#3AD4DE</color>
+    <color name="aqua_33">#333AD4DE</color>
+    <color name="soft_aqua">#553AD4DE</color>
+    <color name="medium_aqua">#66dde5</color>
+    <color name="link_color">#56CCF2</color>
+    <color name="tab_orange">#FFB800</color>
+    <color name="tab_orange_soft">#ffd466</color>
+    <color name="soft_yellow">#FFFBF2</color>
+    <color name="snackbar_red">#F26253</color>
+    <color name="snackbar_orange">#FFB800</color>
+    <color name="snackbar_green">#82D96C</color>
+    <color name="snackbar_green_progress">#c0ecb6</color>
+    <color name="text_orange">#F9A01B</color>
+    <color name="indicator_orange">#FFB800</color>
+    <color name="indicator_blue">#3AD4DE</color>
+    <color name="my_qr_bg">#DCF8FA</color>
+    <color name="disable_color">#DADADA</color>
+
+    <!-- Text Colors -->
+    <color name="text_grey">@color/text_edittext_black</color>
+    <color name="text_grey_disable">#727272</color>
+    <color name="text_black">#1F204D</color>
+    <color name="text_edittext_black">#484848</color>
+    <color name="text_signin">#1F204C</color>
+    <color name="text_green">#82D96C</color>
+
+    <!-- Trio Bar Colors -->
+    <color name="trio_bar_blue">#3AD4DE</color>
+    <color name="trio_bar_orange">#FFB800</color>
+    <color name="trio_bar_red">#F26253</color>
+
+    <!-- Cross Pede Colors -->
+    <color name="cross_text_title">#484848</color>
+    <color name="cross_text_content">#484848</color>
+    <color name="cross_text_home_title">#3AD4DE</color>
+    <color name="cross_text_home_content">#FFFFFF</color>
+    <color name="cross_statusbar_color">#1A1C40</color>
+    <color name="cross_toolbar_color">#1A1C40</color>
+    <color name="cross_toolbar_text_color">#FFFFFF</color>
+    <color name="cross_side_menu_header">#1F204D</color>
+    <color name="cross_side_menu_body">#1A1C40</color>
+    <color name="cross_home_header">#1F204D</color>
+    <color name="cross_btn_primary_color">#1f204c</color>
+    <color name="cross_btn_secondary_stroke_color">#dddddd</color>
+    <color name="cross_btn_primary_light_color">#773AD4DE</color>
+    <color name="cross_btn_primary_selected_color">#eeeeee</color>
+    <color name="cross_score_circle_color">#3AD4DE</color>
+    <color name="cross_score_circle_color_33">#333AD4DE</color>
+    <color name="cross_lupa_pin">#1F204D</color>
+    <color name="cross_bottom_line">#3AD4DE</color>
+    <color name="cross_bottom_line_tab_signup">#dddddd</color>
+    <color name="cross_imageview_signup">@android:color/transparent</color>
+    <color name="cross_imageview_invalid">#3AD4DE</color>
+    <color name="cross_split_phl">@android:color/transparent</color>
+    <color name="cross_tint_adapter_phl_history">@android:color/transparent</color>
+    <color name="cross_divider_phl_history">#1F204D</color>
+    <color name="cross_text_processing">#3AD4DE</color>
+    <color name="cross_text_payment_title">#3AD4DE</color>
+    <color name="cross_text_payment_content">#FFFFFF</color>
+    <color name="cross_btn_resend">#331F204D</color>
+    <color name="cross_bubble_chat_color_left">#3AD4DE</color>
+    <color name="cross_bubble_chat_color_right">#1da6ff</color>
+    <color name="cross_bubble_chat_color_text">#FFFFFF</color>
+    <color name="cross_chat_border_left">@android:color/transparent</color>
+    <color name="cross_marker_bg">#1A1C40</color>
+    <color name="cross_text_button">#484848</color>
+    <color name="cross_payment_bg">#1A1C40</color>
+    <color name="cross_text_pulsa_denom_title">#484848</color>
+    <color name="cross_text_pulsa_denom_content">#484848</color>
+    <color name="cross_text_setup_otp">#1F204D</color>
+    <color name="cross_tabs_line_color">#cccccc</color>
+    <color name="cross_text_transaction_date">#484848</color>
+    <color name="cross_border_denom">#dddddd</color>
+    <color name="cross_pede_plus_progress">#FF9900</color>
+    <color name="cross_text_saldo_otto_hasil_lebih">#FF9900</color>
+    <color name="cross_text_top_up_ohl">#1F204D</color>
+    <color name="cross_text_pilihan_paket_asuransi">@color/text_edittext_black</color>
+
+
+    <!-- START Bootstrap Brand Colors (Universal) -->
+    <!-- Grayscale -->
+    <color name="bootstrap_gray_dark">#373a3c</color>
+    <color name="bootstrap_gray">#55595c</color>
+    <color name="bootstrap_gray_light">#818a91</color>
+    <color name="bootstrap_gray_lighter">#eceeef</color>
+    <color name="bootstrap_gray_lightest">#f7f7f9</color>
+
+    <!-- Brand -->
+    <color name="bootstrap_brand_primary">#0275d8</color>
+    <color name="bootstrap_brand_success">#5cb85c</color>
+    <color name="bootstrap_brand_info">#5bc0de</color>
+    <color name="bootstrap_brand_warning">#f0ad4e</color>
+    <color name="bootstrap_brand_danger">#d9534f</color>
+
+    <!-- View Specific -->
+
+    <!-- Buttons -->
+    <color name="bootstrap_brand_secondary_fill">#ffffff</color>
+    <color name="bootstrap_brand_secondary_border">#cccccc</color>
+    <color name="bootstrap_brand_secondary_text">#373a3c</color>
+
+    <!-- Misc -->
+    <color name="bootstrap_edittext_disabled">#ffe0e0e0</color>
+    <color name="bootstrap_thumbnail_background">#ffffffff</color>
+    <color name="bootstrap_well_background">#F5F5F5</color>
+    <color name="bootstrap_dropdown_divider">#e7e7e7</color>
+    <color name="bootstrap_well_border_color">#E7E7E7</color>
+    <color name="bootstrap_alert_cross_default">#64818a91</color>
+
+    <color name="shadow_center">#0D000000</color>
+
+    <!-- END Bootstrap Brand Colors (Universal) -->
+
 </resources>
