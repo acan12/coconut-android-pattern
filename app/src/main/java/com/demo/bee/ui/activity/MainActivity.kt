@@ -216,7 +216,7 @@ class MainActivity : BaseActivity(), IMainView {
     private fun fetchDataSource() {
         ResourcePresenter(this).getSource(
             "Getting data Source...",
-            RxObserver.DialogTypeEnum.DEFAULT
+            RxObserver.DialogTypeEnum.SPINKIT
         )
     }
 

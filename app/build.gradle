@@ -15,9 +15,13 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+            buildConfigField "boolean", "IS_DEBUG", "true"
+        }
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "IS_DEBUG", "false"
         }
     }
 
@@ -54,7 +58,7 @@ dependencies {
         google_version = '1.0.0'
         dagger2_version = '2.24'
         android_support_version = '28.0.0'
-        coconut_version = '2.3.0-rc.2'
+        coconut_version = '2.3.0-rc.3'
     }
 
     // Base
@@ -80,8 +84,11 @@ dependencies {
     implementation "com.google.dagger:dagger:$dagger2_version"
     kapt "com.google.dagger:dagger-compiler:$dagger2_version"
     compileOnly "javax.annotation:jsr250-api:1.0"
-    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
-//    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
+
+    implementation 'io.github.inflationx:calligraphy3:3.1.1'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+//    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
     implementation 'com.squareup.retrofit2:retrofit:2.3.0' // Retrofit
     implementation 'com.squareup.retrofit2:converter-jackson:2.3.0'
     implementation 'com.squareup.okhttp3:okhttp:3.4.1'
